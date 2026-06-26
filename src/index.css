@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-linen: #F9F6F0;
+  --color-walnut: #3D2B1F;
+  --color-muted-sage: #8A9A86;
+}
+
+@layer base {
+  body {
+    @apply bg-warm-linen text-walnut font-sans m-0;
+  }
+}
