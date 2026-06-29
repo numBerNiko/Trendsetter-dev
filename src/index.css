@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-warm-linen: #F9F6F0;
-  --color-walnut: #3D2B1F;
-  --color-muted-sage: #8A9A86;
+  --color-white: #F5F5DC;
+  --color-neutral-bg: #EAE6DF;
+  --color-slate: #1A2421;
+  --color-deep-teal: #1B4D3E;
+  --color-coral: #D8D3CC;
 }
 
 @layer base {
   body {
-    @apply bg-warm-linen text-walnut font-sans m-0;
+    @apply bg-neutral-bg text-slate font-sans m-0;
   }
 }

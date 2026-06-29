@@ -1,68 +1,71 @@
 import React from 'react';
+import { Activity, Stethoscope, Building, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function MedicalClinicsPage() {
   return (
-    <div className="flex flex-col w-full">
-      {/* Hero Section */}
-      <section className="py-24 bg-walnut text-warm-linen text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Textiles for Medical Clinics & Healthcare Facilities</h1>
+    <div className="bg-neutral-bg text-slate min-h-screen pb-20">
+      
+      {/* Hero */}
+      <section className="bg-slate text-neutral-bg py-24 text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Medical Clinics</h1>
           <p className="text-xl opacity-90 leading-relaxed">
-            Clinical environments demand sanitary, resilient textiles engineered to withstand rigorous cleaning protocols. From scrubs to specialized barrier gowns, our solutions ensure compliance without sacrificing comfort.
+            Specialized textiles for Outpatient, Urgent Care, and Specialty Clinics. Focus on workflow fit, compliance, and patient comfort.
           </p>
         </div>
       </section>
 
-      {/* Product Showcase */}
-      <section className="py-24 bg-warm-linen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-walnut mb-12">Essential Products for Clinics</h2>
+      {/* Categories */}
+      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Clinical Towels", img: "Bath_Mats_&_Pool_Towels.png", attrs: ["High GSM absorbency", "Reinforced edges", "Quick-drying fabric"] },
-              { title: "Medical Uniforms & Scrubs", img: "professional_medical_scrubs.png", attrs: ["Industrial durability", "Stain-release tech", "Ergonomic cuts"] },
-              { title: "Specialty Textiles & Gowns", img: "patient_gowns.png", attrs: ["Custom sizing", "Barrier properties", "Patient-specific gowns"] },
-            ].map((product, idx) => (
-              <div key={idx} className="bg-white border border-walnut/10 rounded-2xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-300">
-                <div className="h-56 overflow-hidden">
-                  <img 
-                    src={`/Trendsetter-website-photos/${product.img}`} 
-                    alt={product.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-8 flex flex-col h-[calc(100%-14rem)]">
-                  <h3 className="text-2xl font-bold mb-4 text-walnut">{product.title}</h3>
-                  <ul className="space-y-3 mb-6 flex-grow">
-                    {product.attrs.map((attr, i) => (
-                      <li key={i} className="flex items-start text-walnut opacity-80 font-medium">
-                        <CheckCircle2 size={18} className="text-muted-sage mr-3 mt-0.5 flex-shrink-0" />
-                        <span>{attr}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link to="/products" className="inline-flex items-center font-bold text-walnut hover:text-muted-sage transition-colors">
-                    View in Catalog <ArrowRight size={20} className="ml-2" />
-                  </Link>
-                </div>
-              </div>
-            ))}
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
+            <Activity size={36} className="text-deep-teal mb-6" />
+            <h3 className="text-2xl font-bold mb-4">Exam & Treatment Rooms</h3>
+            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
+              <li>• Exam table covers/drapes</li>
+              <li>• Flat sheets, pillowcases</li>
+              <li>• Lightweight blankets</li>
+              <li>• Pillow protectors, wipe-clean pillows</li>
+              <li>• Privacy curtains</li>
+            </ul>
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-muted-sage text-walnut text-center">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Ready to Equip Your Clinic?</h2>
-          <p className="text-xl mb-10 opacity-90">
-            Get in touch with our sourcing experts today to discuss volume pricing and compliant medical textile solutions.
-          </p>
-          <Link to="/contact" className="bg-walnut text-warm-linen px-10 py-5 rounded-lg text-xl font-bold hover:bg-white hover:text-walnut transition-all shadow-lg inline-block">
-            Get a Quote
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
+            <Stethoscope size={36} className="text-deep-teal mb-6" />
+            <h3 className="text-2xl font-bold mb-4">Staff & Patient Wear</h3>
+            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
+              <li>• Patient gowns (maternity, pediatric prints)</li>
+              <li>• Scrubs (custom colors, logo embroidery)</li>
+              <li>• Lab coats (short/long)</li>
+              <li>• Non-slip socks</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
+            <Building size={36} className="text-deep-teal mb-6" />
+            <h3 className="text-2xl font-bold mb-4">Ancillary Spaces</h3>
+            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
+              <li>• Waiting-room textiles (washable cushion covers, accent blankets)</li>
+              <li>• Washroom textiles (hand towels, bath mats)</li>
+              <li>• Cleaning & operations (laundry bags, mop-head textiles)</li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Optional Upsell Section */}
+        <div className="mt-12 max-w-3xl mx-auto bg-deep-teal/5 border border-deep-teal/20 p-8 rounded-xl text-center">
+          <ShoppingBag size={32} className="text-deep-teal mx-auto mb-4" />
+          <h4 className="text-xl font-bold mb-2 text-slate">Patient Discharge / Welcome Kits</h4>
+          <p className="opacity-80 text-sm mb-4">Optional upsell: Custom branded tote bags for patient belongings or new-patient information packets.</p>
+          <Link to="/custom-programs" className="text-deep-teal font-bold hover:underline">Explore Custom Branding</Link>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-md">
+            Request Quote for Clinics
           </Link>
         </div>
       </section>
