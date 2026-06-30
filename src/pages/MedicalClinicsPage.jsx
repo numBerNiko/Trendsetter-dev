@@ -9,7 +9,7 @@ export default function MedicalClinicsPage() {
       {/* Hero */}
       <section className="bg-slate text-neutral-bg py-24 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Medical Clinics</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Textile Solutions for Outpatient and Specialty Clinics</h1>
           <p className="text-xl opacity-90 leading-relaxed">
             Specialized textiles for Outpatient, Urgent Care, and Specialty Clinics. Focus on workflow fit, compliance, and patient comfort.
           </p>
@@ -22,7 +22,7 @@ export default function MedicalClinicsPage() {
           
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
             <Activity size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Exam & Treatment Rooms</h3>
+            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">EXAM & TREATMENT ROOMS</h3>
             <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
               <li>• Exam table covers/drapes</li>
               <li>• Flat sheets, pillowcases</li>
@@ -34,7 +34,7 @@ export default function MedicalClinicsPage() {
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
             <Stethoscope size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Staff & Patient Wear</h3>
+            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">STAFF & PATIENT WEAR</h3>
             <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
               <li>• Patient gowns (maternity, pediatric prints)</li>
               <li>• Scrubs (custom colors, logo embroidery)</li>
@@ -45,7 +45,7 @@ export default function MedicalClinicsPage() {
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
             <Building size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Ancillary Spaces</h3>
+            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">ANCILLARY SPACES</h3>
             <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
               <li>• Waiting-room textiles (washable cushion covers, accent blankets)</li>
               <li>• Washroom textiles (hand towels, bath mats)</li>
@@ -58,14 +58,14 @@ export default function MedicalClinicsPage() {
         {/* Optional Upsell Section */}
         <div className="mt-12 max-w-3xl mx-auto bg-deep-teal/5 border border-deep-teal/20 p-8 rounded-xl text-center">
           <ShoppingBag size={32} className="text-deep-teal mx-auto mb-4" />
-          <h4 className="text-xl font-bold mb-2 text-slate">Patient Discharge / Welcome Kits</h4>
+          <h4 className="text-xl font-bold uppercase tracking-wider mb-2 text-slate">PATIENT DISCHARGE / WELCOME KITS</h4>
           <p className="opacity-80 text-sm mb-4">Optional upsell: Custom branded tote bags for patient belongings or new-patient information packets.</p>
-          <Link to="/custom-programs" className="text-deep-teal font-bold hover:underline">Explore Custom Branding</Link>
+          <Link to="/custom-programs" className="text-deep-teal font-bold uppercase tracking-wider hover:underline">EXPLORE CUSTOM BRANDING</Link>
         </div>
         
         <div className="mt-16 text-center">
           <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-md">
-            Request Quote for Clinics
+            REQUEST QUOTE FOR CLINICS
           </Link>
         </div>
       </section>

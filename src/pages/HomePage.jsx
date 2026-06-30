@@ -29,173 +29,129 @@ export default function HomePage() {
     <div className="flex flex-col w-full text-slate bg-neutral-bg">
       
       {/* Section 1: Hero Banner */}
-      <section 
-        className="relative py-32 lg:py-48 bg-neutral-bg text-slate overflow-hidden"
-        style={{ 
-          backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.65), rgba(248, 250, 252, 0.85)), url('https://placehold.co/1920x1080/e2e8f0/94a3b8?text=Commercial+Facility+Placeholder')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-5xl mx-auto mb-6">
-            Comfort, consistency, and customization — textiles designed for nursing homes, medical clinics, and hospitality spaces.
-          </h1>
-          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-10 font-medium">
-            Reliable textile procurement for healthcare facilities, commercial enterprises, and custom apparel programs nationwide.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8">
-            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md text-lg font-bold shadow-lg hover:bg-slate transition-colors duration-300">
-              Schedule a Product Presentation
-            </Link>
-            <Link to="/contact" className="bg-transparent text-slate border-2 border-slate px-8 py-4 rounded-md text-lg font-bold shadow-lg hover:bg-slate hover:text-white transition-colors duration-300 backdrop-blur-sm">
-              Request a Quote
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 2: Industries Served */}
-      <section className="py-24 bg-white border-b border-slate/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Industries Served</h2>
-            <p className="text-lg opacity-80 max-w-2xl mx-auto">Specialized textile engineering for high-turnover commercial environments.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-coral text-slate border border-slate/10 p-10 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
-              <h3 className="text-2xl font-bold mb-4 text-slate group-hover:text-deep-teal transition-colors">Nursing Homes</h3>
-              <p className="opacity-80 mb-8 flex-grow text-lg">
-                Reliable, hygiene-compliant linens engineered for long-term care.
-              </p>
-              <Link to="/industries/nursing-homes" className="inline-flex items-center font-bold text-deep-teal hover:text-slate transition-colors">
-                View Solutions <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+      <section className="relative pt-24 pb-32 lg:pt-32 lg:pb-40 overflow-hidden bg-gradient-to-b from-neutral-bg to-white text-slate">
+        <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            <div className="bg-coral text-slate border border-slate/10 p-10 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
-              <h3 className="text-2xl font-bold mb-4 text-slate group-hover:text-deep-teal transition-colors">Medical Clinics</h3>
-              <p className="opacity-80 mb-8 flex-grow text-lg">
-                Seamless workflow integration and uncompromising regulatory compliance.
+            {/* Left Column: Text & CTA */}
+            <div className="text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Commercial Textiles for Care Facilities and Hospitality Spaces
+              </h1>
+              <p className="text-xl md:text-2xl opacity-90 mb-10 font-medium">
+                Dependable bedding, towels, uniforms, and custom programs for nursing homes, clinics, and hotels.
               </p>
-              <Link to="/industries/medical-clinics" className="inline-flex items-center font-bold text-deep-teal hover:text-slate transition-colors">
-                View Solutions <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
+              
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+                <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md text-lg font-bold shadow-lg hover:bg-slate transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider">
+                  SCHEDULE A PRODUCT PRESENTATION
+                </Link>
+                <Link to="/contact" className="bg-transparent text-slate border-2 border-slate px-8 py-4 rounded-md text-lg font-bold shadow-sm hover:bg-slate hover:text-white transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider">
+                  REQUEST A QUOTE
+                </Link>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate/10">
+                <div className="flex items-center gap-2">
+                  <BadgeCheck size={20} className="text-deep-teal" />
+                  <span className="text-sm font-bold opacity-80">OEKO-TEX® Standard 100</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award size={20} className="text-deep-teal" />
+                  <span className="text-sm font-bold opacity-80">WRAP Certified</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-coral text-slate border border-slate/10 p-10 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
-              <h3 className="text-2xl font-bold mb-4 text-slate group-hover:text-deep-teal transition-colors">Concert Merch Store</h3>
-              <p className="opacity-80 mb-8 flex-grow text-lg">
-                Premium blanks and high-volume custom apparel for touring artists.
-              </p>
-              <Link to="/industries/concert-merch" className="inline-flex items-center font-bold text-deep-teal hover:text-slate transition-colors">
-                View Solutions <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
+            {/* Right Column: Visual Placeholder */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate/10 relative group">
+                <div className="absolute inset-0 bg-slate/5 group-hover:bg-slate/0 transition-colors duration-500 z-10"></div>
+                <img 
+                  src="https://placehold.co/800x600/e2e8f0/94a3b8?text=Crisp+Hospital+Linens+Macro" 
+                  alt="High-quality macro of crisp hospital linens"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Section 3: Product Categories */}
-      <section className="py-24 bg-slate/5 border-y border-slate/10">
+      {/* Section 2: Comprehensive Care Suites */}
+      <section className="py-24 bg-white border-b border-slate/10">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Product Categories</h2>
-            <p className="text-lg opacity-80 max-w-2xl mx-auto">High-demand commercial textiles engineered for performance.</p>
+            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4 text-slate">COMPREHENSIVE CARE SUITES</h2>
+            <p className="text-lg opacity-80 max-w-2xl mx-auto">High-demand commercial textiles engineered for specific operational environments.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { 
-                title: "Sheets", 
-                icon: <BedDouble size={48} className="text-deep-teal opacity-80" />, 
-                bullets: ["Up to 600TC durability", "Resists industrial laundering", "Consistent PAR supply"] 
-              },
-              { 
-                title: "Blankets", 
-                icon: <BedDouble size={48} className="text-deep-teal opacity-80" />, 
-                bullets: ["Thermal retention", "Snag-free knits", "Bulk fulfillment ready"] 
-              },
-              { 
-                title: "Pillows", 
-                icon: <ShieldCheck size={48} className="text-deep-teal opacity-80" />, 
-                bullets: ["Hypoallergenic fills", "Shape-retaining core", "Fluid-resistant options"] 
-              },
-              { 
-                title: "Towels", 
-                icon: <Bath size={48} className="text-deep-teal opacity-80" />, 
-                bullets: ["High GSM absorbency", "Double-stitched hems", "Quick-dry loops"] 
-              },
-              { 
-                title: "Uniforms", 
-                icon: <Shirt size={48} className="text-deep-teal opacity-80" />, 
-                bullets: ["Stain-release finishes", "Breathable scrub fabrics", "Ergonomic fits"] 
-              },
-              { 
-                title: "Merchandise", 
-                icon: <Tag size={48} className="text-deep-teal opacity-80" />, 
-                bullets: ["T-shirts & Sweatshirts", "Hats & Beanies", "Custom branding available"] 
-              },
-            ].map((product, idx) => (
-              <div key={idx} className="bg-white border border-slate/10 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full items-center text-center">
-                <div className="mb-6 bg-slate/5 p-4 rounded-full">
-                  {product.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-slate mb-4">{product.title}</h3>
-                <ul className="space-y-2 opacity-80 text-sm flex-grow mb-6 text-left w-full">
-                  {product.bullets.map((bullet, i) => (
-                    <li key={i} className="flex items-start"><CheckCircle2 size={16} className="text-deep-teal mr-2 mt-0.5 shrink-0" /> {bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <div className="flex flex-col gap-6">
+            {/* Top Row: 2 Wider Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { title: "RESIDENT BEDDING SUITE", desc: "Commercial-grade sheets, thermal blankets, and hypoallergenic pillows designed for high-turnover laundering.", link: "/products#resident-bedding" },
+                { title: "HYGIENE & PERSONAL CARE SUITE", desc: "High GSM absorbency towels and washcloths engineered for durability and quick-dry performance.", link: "/products#hygiene" }
+              ].map((suite, idx) => (
+                <Link to={suite.link} key={idx} className="group relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                  <img src={`https://placehold.co/1200x600/e2e8f0/94a3b8?text=${suite.title.replace(/ /g, '+')}`} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 w-full">
+                    <h3 className="text-2xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
+                    <div className="overflow-hidden max-h-0 group-hover:max-h-24 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                      <p className="text-white/90 text-sm md:text-base mb-4">{suite.desc}</p>
+                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW COLLECTION</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
 
-          <div className="mt-16 text-center">
-            <Link to="/products" className="inline-block bg-slate text-neutral-bg px-10 py-4 rounded-md font-bold text-lg hover:bg-deep-teal transition-colors shadow-md">
-              View Full Catalog
-            </Link>
+            {/* Bottom Row: 3 Square Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { title: "RESIDENT APPAREL & SAFETY", desc: "Comfortable, stain-release apparel ensuring dignity and ease of care.", link: "/products#apparel" },
+                { title: "CLINICAL COMPLIANCE & SAFETY", desc: "Higher-spec textiles meeting stringent healthcare regulatory standards.", link: "/products#clinical" },
+                { title: "FACILITY & STAFF ESSENTIALS", desc: "Ergonomic scrubs, uniforms, and facility linens for daily operations.", link: "/products#facility" }
+              ].map((suite, idx) => (
+                <Link to={suite.link} key={idx} className="group relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                  <img src={`https://placehold.co/800x800/e2e8f0/94a3b8?text=${suite.title.replace(/ /g, '+')}`} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-6 w-full">
+                    <h3 className="text-xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
+                    <div className="overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                      <p className="text-white/90 text-sm mb-4">{suite.desc}</p>
+                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW COLLECTION</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4: Custom Programs */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Custom Programs</h2>
-            <p className="text-lg opacity-80 max-w-2xl mx-auto">Bespoke textile solutions tailored to your brand identity and operational needs.</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center mb-16">
-            <div className="flex flex-col items-center">
-              <div className="bg-slate/5 p-4 rounded-full mb-4 text-deep-teal border border-slate/10 shadow-sm"><Tag size={32} /></div>
-              <h4 className="font-bold text-sm">Private Labeling</h4>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-slate/5 p-4 rounded-full mb-4 text-deep-teal border border-slate/10 shadow-sm"><Scissors size={32} /></div>
-              <h4 className="font-bold text-sm">Embroidery</h4>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-slate/5 p-4 rounded-full mb-4 text-deep-teal border border-slate/10 shadow-sm"><Package size={32} /></div>
-              <h4 className="font-bold text-sm">Packaging</h4>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-slate/5 p-4 rounded-full mb-4 text-deep-teal border border-slate/10 shadow-sm"><Box size={32} /></div>
-              <h4 className="font-bold text-sm">Bulk Orders</h4>
-            </div>
-            <div className="flex flex-col items-center col-span-2 md:col-span-1">
-              <div className="bg-slate/5 p-4 rounded-full mb-4 text-deep-teal border border-slate/10 shadow-sm"><RefreshCcw size={32} /></div>
-              <h4 className="font-bold text-sm">Sourcing Flexibility</h4>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link to="/custom-programs" className="inline-block bg-deep-teal text-neutral-bg px-10 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-md">
-              Start Custom Order
-            </Link>
-          </div>
+      {/* Section 3: Custom Apparel & Merch Breakout */}
+      <section className="relative py-32 bg-slate overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://placehold.co/1920x1080/1A2421/EAE6DF?text=Custom+Apparel+Manufacturing" 
+            alt="Custom apparel manufacturing" 
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-6">
+            BEYOND THE CLINIC: HIGH-VOLUME CUSTOM APPAREL & PRIVATE LABELING
+          </h2>
+          <p className="text-xl opacity-90 mb-10 max-w-3xl mx-auto">
+            From concert merchandise to corporate uniforms, our vertically integrated supply chain delivers bespoke textile solutions tailored to your brand identity.
+          </p>
+          <Link to="/custom-programs" className="inline-block bg-white text-slate px-10 py-4 rounded-md font-bold text-lg hover:bg-deep-teal hover:text-white transition-colors shadow-xl uppercase tracking-wider">
+            EXPLORE CUSTOM PROGRAMS
+          </Link>
         </div>
       </section>
 
@@ -203,13 +159,13 @@ export default function HomePage() {
       <section className="py-24 bg-slate text-neutral-bg border-t border-slate/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Buyers Choose Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">WHY BUYERS CHOOSE US</h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             {/* Trust Signals */}
             <div>
-              <h3 className="text-2xl font-bold mb-8 text-deep-teal border-b border-deep-teal/30 pb-4">Institutional Credibility</h3>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 text-deep-teal border-b border-deep-teal/30 pb-4">INSTITUTIONAL CREDIBILITY</h3>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
                   <BadgeCheck size={28} className="text-deep-teal" />
@@ -234,7 +190,7 @@ export default function HomePage() {
 
             {/* Benefits List */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-2xl font-bold mb-8 text-deep-teal border-b border-deep-teal/30 pb-4">Core Procurement Benefits</h3>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 text-deep-teal border-b border-deep-teal/30 pb-4">CORE PROCUREMENT BENEFITS</h3>
               <ul className="space-y-6">
                 <li className="flex items-start">
                   <ShieldCheck size={28} className="text-deep-teal mr-4 shrink-0" />
@@ -260,8 +216,8 @@ export default function HomePage() {
               </ul>
               <div className="mt-10">
                 <p className="font-bold mb-4 opacity-90">Easy Next Step:</p>
-                <Link to="#contact-section" className="inline-block bg-neutral-bg text-slate px-8 py-3 rounded-md font-bold hover:bg-deep-teal hover:text-neutral-bg transition-colors shadow-md">
-                  Get a Quote or Sample
+                <Link to="#contact-section" className="inline-block bg-neutral-bg text-slate px-8 py-3 rounded-md font-bold hover:bg-deep-teal hover:text-neutral-bg transition-colors shadow-md uppercase tracking-wider">
+                  GET A QUOTE OR SAMPLE
                 </Link>
               </div>
             </div>
@@ -277,7 +233,7 @@ export default function HomePage() {
             
             {/* Direct Contact & CTA Info */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-4xl font-bold mb-6 text-slate">Let's Discuss Your Needs</h2>
+              <h2 className="text-4xl font-bold uppercase tracking-wider mb-6 text-slate">LET'S DISCUSS YOUR NEEDS</h2>
               <p className="text-lg opacity-80 mb-10 leading-relaxed">
                 Whether you need a quick quote on standard inventory or a comprehensive product presentation for your executive team, our procurement specialists are ready to assist.
               </p>
@@ -300,37 +256,37 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-deep-teal text-neutral-bg px-6 py-4 rounded-md font-bold shadow-md hover:bg-slate transition-colors flex-1">
-                  Schedule Presentation
+                <button className="bg-deep-teal text-neutral-bg px-6 py-4 rounded-md font-bold uppercase tracking-wider shadow-md hover:bg-slate transition-colors flex-1">
+                  SCHEDULE A PRODUCT PRESENTATION
                 </button>
-                <button className="bg-transparent border-2 border-slate text-slate px-6 py-4 rounded-md font-bold hover:bg-slate hover:text-neutral-bg transition-colors flex-1">
-                  Request a Quote
+                <button className="bg-transparent border-2 border-slate text-slate px-6 py-4 rounded-md font-bold uppercase tracking-wider hover:bg-slate hover:text-neutral-bg transition-colors flex-1">
+                  REQUEST A QUOTE
                 </button>
               </div>
             </div>
 
             {/* Short Lead Form */}
             <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-slate/10">
-              <h3 className="text-2xl font-bold mb-6 text-slate">Send a Message</h3>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-6 text-slate">SEND A MESSAGE</h3>
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-2 opacity-80">Name</label>
+                  <label className="block text-sm font-bold mb-2 opacity-80">Full Name</label>
                   <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="Your Name" />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-2 opacity-80">Company</label>
+                  <label className="block text-sm font-bold mb-2 opacity-80">Company</label>
                   <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="Facility or Organization" />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-2 opacity-80">Email</label>
+                  <label className="block text-sm font-bold mb-2 opacity-80">Email</label>
                   <input type="email" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="you@company.com" />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-2 opacity-80">Message</label>
+                  <label className="block text-sm font-bold mb-2 opacity-80">Message</label>
                   <textarea rows="4" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal resize-none" placeholder="How can we help?"></textarea>
                 </div>
-                <button type="submit" className="w-full flex justify-center items-center gap-3 bg-slate text-neutral-bg font-bold py-4 rounded-md text-lg hover:bg-deep-teal transition-colors shadow-md">
-                  <Send size={20} /> Submit
+                <button type="submit" className="w-full flex justify-center items-center gap-3 bg-slate text-neutral-bg font-bold uppercase tracking-wider py-4 rounded-md text-lg hover:bg-deep-teal transition-colors shadow-md">
+                  <Send size={20} /> SUBMIT REQUEST
                 </button>
               </form>
             </div>

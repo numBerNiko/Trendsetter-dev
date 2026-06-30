@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Stethoscope, Music } from 'lucide-react';
+import { ShieldCheck, Stethoscope, Building } from 'lucide-react';
 
 export default function IndustriesPage() {
   return (
@@ -9,9 +9,9 @@ export default function IndustriesPage() {
       {/* Hero */}
       <section className="bg-slate text-neutral-bg py-24 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries Served</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries We Serve</h1>
           <p className="text-xl opacity-90 leading-relaxed">
-            Select an industry below to view our specialized product lines and institutional capabilities.
+            Tailored textile solutions for nursing homes, medical clinics, and hospitality businesses.
           </p>
         </div>
       </section>
@@ -24,35 +24,50 @@ export default function IndustriesPage() {
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
               <ShieldCheck size={32} className="text-deep-teal" />
             </div>
-            <h2 className="text-2xl font-bold mb-4 text-slate">Nursing Homes & Hospitals</h2>
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">NURSING HOMES & HOSPITALS</h2>
             <p className="opacity-80 leading-relaxed flex-grow text-lg">
               Specialized textiles for Harbor Post Acute Care and long-term facilities. Focus on resident comfort, wipe-clean surfaces, and wash-stability.
             </p>
-            <span className="text-deep-teal font-bold mt-6 inline-block group-hover:underline">View Catalog &rarr;</span>
+            <span className="text-deep-teal font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline">VIEW CATALOG &rarr;</span>
           </Link>
 
           <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full">
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
               <Stethoscope size={32} className="text-deep-teal" />
             </div>
-            <h2 className="text-2xl font-bold mb-4 text-slate">Medical Clinics</h2>
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">MEDICAL CLINICS</h2>
             <p className="opacity-80 leading-relaxed flex-grow text-lg">
               Apparel and linens for Outpatient, Urgent Care, and Specialty clinics. Focus on staff scrubs, exam table covers, and patient gowns.
             </p>
-            <span className="text-deep-teal font-bold mt-6 inline-block group-hover:underline">View Catalog &rarr;</span>
+            <span className="text-deep-teal font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline">VIEW CATALOG &rarr;</span>
           </Link>
 
-          <Link to="/industries/concert-merch" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full">
+          <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full">
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
-              <Music size={32} className="text-deep-teal" />
+              <Building size={32} className="text-deep-teal" />
             </div>
-            <h2 className="text-2xl font-bold mb-4 text-slate">Concert Merch Store</h2>
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">HOTELS & HOSPITALITY</h2>
             <p className="opacity-80 leading-relaxed flex-grow text-lg">
-              Tour-ready merchandise for venues and touring artists. Focus on premium tees, hoodies, headwear, and custom VIP accessories.
+              Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
             </p>
-            <span className="text-deep-teal font-bold mt-6 inline-block group-hover:underline">View Catalog &rarr;</span>
+            <span className="text-deep-teal font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline">VIEW CATALOG &rarr;</span>
           </Link>
 
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-24 bg-coral text-slate border-t border-slate/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate uppercase tracking-wider">Ready to Get Started?</h2>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg">
+              REQUEST A QUOTE
+            </Link>
+            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm">
+              SCHEDULE A PRODUCT PRESENTATION
+            </Link>
+          </div>
         </div>
       </section>
     </div>

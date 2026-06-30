@@ -41,25 +41,38 @@ export default function Layout() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
-              <NavLink to="/home" className={({isActive}) => `font-semibold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>Home</NavLink>
+              <NavLink to="/home" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>HOME</NavLink>
               
               <div className="relative group py-8">
-                <NavLink to="/industries" className={({isActive}) => `flex items-center gap-1 font-semibold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>
-                  Industries <ChevronDown size={16} />
+                <NavLink to="/industries" className={({isActive}) => `flex items-center gap-1 uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>
+                  INDUSTRIES <ChevronDown size={16} />
                 </NavLink>
-                <div className="absolute top-full left-0 w-56 bg-white border border-slate/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                <div className="absolute top-full left-0 w-56 bg-white border border-slate/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
                   <div className="py-2">
                     <Link to="/industries/nursing-homes" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Nursing Homes</Link>
                     <Link to="/industries/medical-clinics" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Medical Clinics</Link>
-                    <Link to="/industries/concert-merch" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Concert Merch Store</Link>
+                    <Link to="/industries/hotels" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Hotels</Link>
                   </div>
                 </div>
               </div>
 
-              <NavLink to="/products" className={({isActive}) => `font-semibold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>Products</NavLink>
-              <NavLink to="/custom-programs" className={({isActive}) => `font-semibold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>Custom Programs</NavLink>
-              <NavLink to="/about" className={({isActive}) => `font-semibold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>About</NavLink>
-              <NavLink to="/contact" className={({isActive}) => `font-semibold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>Contact</NavLink>
+              <div className="relative group py-8">
+                <NavLink to="/products" className={({isActive}) => `flex items-center gap-1 uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>
+                  PRODUCTS <ChevronDown size={16} />
+                </NavLink>
+                <div className="absolute top-full left-0 w-72 bg-white border border-slate/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                  <div className="py-2">
+                    <Link to="/products#resident-bedding" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Resident Bedding Suite</Link>
+                    <Link to="/products#hygiene" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Hygiene & Personal Care</Link>
+                    <Link to="/products#apparel" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Resident Apparel & Safety</Link>
+                    <Link to="/products#clinical" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Clinical Compliance & Safety</Link>
+                    <Link to="/products#facility" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Facility & Staff Essentials</Link>
+                  </div>
+                </div>
+              </div>
+              <NavLink to="/custom-programs" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>CUSTOM PROGRAMS</NavLink>
+              <NavLink to="/about" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>ABOUT</NavLink>
+              <NavLink to="/contact" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>CONTACT</NavLink>
             </nav>
             
             {/* Mobile Menu Button */}
@@ -104,7 +117,7 @@ export default function Layout() {
               <ul className="space-y-2 text-sm opacity-80">
                 <li><Link to="/industries/nursing-homes" className="hover:text-white transition-colors">Nursing Homes / Hospitals</Link></li>
                 <li><Link to="/industries/medical-clinics" className="hover:text-white transition-colors">Medical Clinics</Link></li>
-                <li><Link to="/industries/concert-merch" className="hover:text-white transition-colors">Concert Merch Store</Link></li>
+                <li><Link to="/industries/hotels" className="hover:text-white transition-colors">Hotels</Link></li>
               </ul>
             </div>
 

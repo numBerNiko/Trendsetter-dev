@@ -10,13 +10,10 @@ export default function NursingHomesPage() {
       <section className="bg-slate text-neutral-bg py-24 text-center border-b-8 border-deep-teal">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-            Harbor Post Acute Care Logistics Hub
+            Resident Comfort & Care Essentials for Post-Acute Facilities
           </h1>
-          <h2 className="text-2xl md:text-3xl text-deep-teal font-medium mb-8">
-            High-Volume Institutional Textiles Engineered for Long-Term Care
-          </h2>
           <p className="text-xl opacity-90 leading-relaxed max-w-3xl mx-auto font-light">
-            At Trendsetter Textiles Inc., we understand that managing a premier long-term care environment requires a delicate balance between rigid clinical compliance and warm, resident-centered comfort. The Harbor Post Acute Care program delivers commercial-grade textile solutions engineered to withstand rigorous industrial laundering protocols while maintaining tactile softness, preventing stockouts, and preserving resident dignity.
+            Durable bedding, hygiene textiles, and apparel designed for resident comfort and institutional reliability.
           </p>
         </div>
       </section>
@@ -24,7 +21,7 @@ export default function NursingHomesPage() {
       {/* Core Product Suites */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate mb-4">Core Product Suites</h2>
+          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider text-slate mb-4">CORE PRODUCT SUITES</h2>
           <div className="w-24 h-1 bg-deep-teal mx-auto rounded-full"></div>
         </div>
 
@@ -37,7 +34,7 @@ export default function NursingHomesPage() {
                 <BedSingle size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate">Resident Bedding Suite</h3>
+                <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">RESIDENT BEDDING SUITE</h3>
                 <p className="opacity-80 text-sm">Engineered for continuous institutional wash cycles and precise physical fit.</p>
               </div>
             </div>
@@ -76,7 +73,7 @@ export default function NursingHomesPage() {
                 <Bath size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate">Hygiene & Personal Care Suite</h3>
+                <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">HYGIENE & PERSONAL CARE SUITE</h3>
                 <p className="opacity-80 text-sm">Absorbent, durable essentials built for moisture management and patient safety.</p>
               </div>
             </div>
@@ -111,7 +108,7 @@ export default function NursingHomesPage() {
                 <Shirt size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate">Resident Apparel & Safety</h3>
+                <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">RESIDENT APPAREL & SAFETY</h3>
                 <p className="opacity-80 text-sm">Dignified designs that simplify daily dressing routines for residents and caregivers.</p>
               </div>
             </div>
@@ -142,7 +139,7 @@ export default function NursingHomesPage() {
                 <ShieldCheck size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate">Clinical Compliance & Safety (Higher-Spec)</h3>
+                <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">CLINICAL COMPLIANCE & SAFETY (HIGHER-SPEC)</h3>
                 <p className="opacity-80 text-sm">Advanced technical textiles targeting specialized risk-mitigation zones.</p>
               </div>
             </div>
@@ -169,7 +166,7 @@ export default function NursingHomesPage() {
                 <BriefcaseMedical size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate">Facility & Staff Essentials</h3>
+                <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">FACILITY & STAFF ESSENTIALS</h3>
                 <p className="opacity-80 text-sm">Optimized workwear and logistics textiles to keep your staff moving comfortably.</p>
               </div>
             </div>
@@ -199,7 +196,7 @@ export default function NursingHomesPage() {
       {/* The Trendsetter Provisioning Advantage */}
       <section className="py-24 bg-slate text-neutral-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-neutral-bg">The Trendsetter Provisioning Advantage</h2>
+          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-12 text-neutral-bg">THE TRENDSETTER PROVISIONING ADVANTAGE</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
             <div className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-deep-teal/50 transition-colors">
@@ -229,7 +226,7 @@ export default function NursingHomesPage() {
       {/* Optimize Your Supply Chain Today */}
       <section className="py-24 bg-coral text-slate border-t border-slate/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate">Optimize Your Supply Chain Today</h2>
+          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 text-slate">OPTIMIZE YOUR SUPPLY CHAIN TODAY</h2>
           <p className="text-lg opacity-80 mb-12 leading-relaxed">
             Connect with a dedicated Institutional Procurement Specialist to review your bulk fulfillment requirements, establish your facility profile, or order product samples.
           </p>
@@ -253,11 +250,11 @@ export default function NursingHomesPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-lg">
-              Schedule a Product Presentation
+            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg">
+              REQUEST A QUOTE
             </Link>
-            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm">
-              Request a Bulk Fulfillment Quote
+            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm">
+              SCHEDULE A PRODUCT PRESENTATION
             </Link>
           </div>
         </div>

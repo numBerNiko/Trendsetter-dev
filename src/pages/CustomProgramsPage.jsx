@@ -7,7 +7,7 @@ export default function CustomProgramsPage() {
     <section className="py-20 bg-neutral-bg text-slate min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Custom Programs</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Flexible Customization for Institutional Buyers</h1>
           <p className="text-xl opacity-80 max-w-2xl mx-auto">
             Bespoke textile solutions for institutional branding and specialized operational requirements.
           </p>

@@ -7,7 +7,7 @@ import IndustriesPage from './pages/IndustriesPage';
 import ProductsPage from './pages/ProductsPage';
 import NursingHomesPage from './pages/NursingHomesPage';
 import MedicalClinicsPage from './pages/MedicalClinicsPage';
-import ConcertMerchPage from './pages/ConcertMerchPage';
+import HotelsPage from './pages/HotelsPage';
 import CustomProgramsPage from './pages/CustomProgramsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -25,7 +25,7 @@ function App() {
             <Route index element={<IndustriesPage />} />
             <Route path="nursing-homes" element={<NursingHomesPage />} />
             <Route path="medical-clinics" element={<MedicalClinicsPage />} />
-            <Route path="concert-merch" element={<ConcertMerchPage />} />
+            <Route path="hotels" element={<HotelsPage />} />
           </Route>
           
           <Route path="products" element={<ProductsPage />} />
