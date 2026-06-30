@@ -80,29 +80,76 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 2: Comprehensive Care Suites */}
+      {/* Section 2: Industries We Serve */}
+      <section className="py-24 bg-neutral-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Industries We Serve</h2>
+            <p className="text-lg opacity-80 max-w-2xl mx-auto">Tailored textile solutions for nursing homes, medical clinics, and hospitality businesses.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Nursing Homes Card */}
+            <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full text-left">
+              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
+                <ShieldCheck size={32} className="text-deep-teal" />
+              </div>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">NURSING HOMES</h3>
+              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
+                Specialized textiles focusing on resident comfort and wash-stability. Featuring our Bedding, Hygiene, and Apparel suites.
+              </p>
+              <span className="text-deep-teal font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
+            </Link>
+            {/* Medical Clinics Card */}
+            <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full text-left">
+              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
+                <Stethoscope size={32} className="text-deep-teal" />
+              </div>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">MEDICAL CLINICS</h3>
+              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
+                Apparel and linens for Outpatient and Specialty clinics. Focus on staff scrubs, exam table covers, and patient gowns.
+              </p>
+              <span className="text-deep-teal font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
+            </Link>
+            {/* Hotels Card */}
+            <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full text-left">
+              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
+                <Building2 size={32} className="text-deep-teal" />
+              </div>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">HOTELS & HOSPITALITY</h3>
+              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
+                Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
+              </p>
+              <span className="text-deep-teal font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Explore Our Textile Suites */}
       <section className="py-24 bg-white border-b border-slate/10">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4 text-slate">COMPREHENSIVE CARE SUITES</h2>
-            <p className="text-lg opacity-80 max-w-2xl mx-auto">High-demand commercial textiles engineered for specific operational environments.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Explore Our Textile Suites</h2>
+            <p className="text-lg opacity-80 max-w-2xl mx-auto">Examples of durable, reliable textiles designed for healthcare, hospitality, and events.</p>
           </div>
           
           <div className="flex flex-col gap-6">
             {/* Top Row: 2 Wider Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "RESIDENT BEDDING SUITE", desc: "Commercial-grade sheets, thermal blankets, and hypoallergenic pillows designed for high-turnover laundering.", link: "/products#resident-bedding" },
-                { title: "HYGIENE & PERSONAL CARE SUITE", desc: "High GSM absorbency towels and washcloths engineered for durability and quick-dry performance.", link: "/products#hygiene" }
+                { title: "RESIDENT BEDDING SUITE", bullets: ["Sheets", "Pillowcases", "Blankets", "Mattress protectors"], link: "/products#resident-bedding" },
+                { title: "HYGIENE & PERSONAL CARE SUITE", bullets: ["Towels", "Washcloths", "Bath mats", "Shower curtains"], link: "/products#hygiene" }
               ].map((suite, idx) => (
                 <Link to={suite.link} key={idx} className="group relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                   <img src={`https://placehold.co/1200x600/e2e8f0/94a3b8?text=${suite.title.replace(/ /g, '+')}`} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-8 w-full">
                     <h3 className="text-2xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
-                    <div className="overflow-hidden max-h-0 group-hover:max-h-24 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                      <p className="text-white/90 text-sm md:text-base mb-4">{suite.desc}</p>
-                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW COLLECTION</span>
+                    <div className="overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                      <ul className="text-white/90 text-sm md:text-base mb-4 space-y-1 text-left list-disc list-inside">
+                        {suite.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                      </ul>
+                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW SUITE DETAILS</span>
                     </div>
                   </div>
                 </Link>
@@ -112,18 +159,20 @@ export default function HomePage() {
             {/* Bottom Row: 3 Square Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { title: "RESIDENT APPAREL & SAFETY", desc: "Comfortable, stain-release apparel ensuring dignity and ease of care.", link: "/products#apparel" },
-                { title: "CLINICAL COMPLIANCE & SAFETY", desc: "Higher-spec textiles meeting stringent healthcare regulatory standards.", link: "/products#clinical" },
-                { title: "FACILITY & STAFF ESSENTIALS", desc: "Ergonomic scrubs, uniforms, and facility linens for daily operations.", link: "/products#facility" }
+                { title: "RESIDENT APPAREL & SAFETY", bullets: ["Gowns", "Adaptive clothing", "Non-slip socks", "Robes"], link: "/products#apparel" },
+                { title: "CLINICAL COMPLIANCE", bullets: ["Flame-retardant bedding", "Wipe-clean pillows", "Waterproof pillows"], link: "/products#clinical" },
+                { title: "FACILITY & STAFF ESSENTIALS", bullets: ["Scrubs", "Lab coats", "Laundry bags", "Dining linens"], link: "/products#facility" }
               ].map((suite, idx) => (
                 <Link to={suite.link} key={idx} className="group relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                   <img src={`https://placehold.co/800x800/e2e8f0/94a3b8?text=${suite.title.replace(/ /g, '+')}`} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-6 w-full">
                     <h3 className="text-xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
-                    <div className="overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                      <p className="text-white/90 text-sm mb-4">{suite.desc}</p>
-                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW COLLECTION</span>
+                    <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                      <ul className="text-white/90 text-sm mb-4 space-y-1 text-left list-disc list-inside">
+                        {suite.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                      </ul>
+                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW SUITE DETAILS</span>
                     </div>
                   </div>
                 </Link>
