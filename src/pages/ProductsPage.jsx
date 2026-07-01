@@ -14,7 +14,7 @@ export default function ProductsPage() {
         "Duvet covers",
         "Mattress protectors"
       ],
-      image: "https://placehold.co/1200x800/e2e8f0/94a3b8?text=Resident+Bedding+Suite"
+      image: "/Trendsetter-website-photos(2)/RESIDENT BEDDING SUITE.png"
     },
     {
       id: "hygiene",
@@ -26,7 +26,7 @@ export default function ProductsPage() {
         "Bath mats",
         "Shower curtains"
       ],
-      image: "https://placehold.co/1200x800/e2e8f0/94a3b8?text=Hygiene+and+Personal+Care"
+      image: "/Trendsetter-website-photos(2)/HYGIENE & PERSONAL CARE SUITE.png"
     },
     {
       id: "apparel",
@@ -37,7 +37,7 @@ export default function ProductsPage() {
         "Non-slip socks",
         "Robes"
       ],
-      image: "https://placehold.co/1200x800/e2e8f0/94a3b8?text=Resident+Apparel+and+Safety"
+      image: "/Trendsetter-website-photos(2)/RESIDENT APPAREL & SAFETY.png"
     },
     {
       id: "clinical",
@@ -47,7 +47,7 @@ export default function ProductsPage() {
         "Wipe-clean pillows",
         "Waterproof pillows"
       ],
-      image: "https://placehold.co/1200x800/e2e8f0/94a3b8?text=Clinical+Compliance+and+Safety"
+      image: "/Trendsetter-website-photos(2)/CLINICAL COMPLIANCE & SAFETY (HIGHER-SPEC).png"
     },
     {
       id: "facility",
@@ -59,7 +59,7 @@ export default function ProductsPage() {
         "Privacy curtains",
         "Dining linens"
       ],
-      image: "https://placehold.co/1200x800/e2e8f0/94a3b8?text=Facility+and+Staff+Essentials"
+      image: "/Trendsetter-website-photos(2)/FACILITY & STAFF ESSENTIALS.png"
     }
   ];
 

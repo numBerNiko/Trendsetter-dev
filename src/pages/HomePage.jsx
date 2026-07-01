@@ -21,7 +21,8 @@ import {
   BedDouble,
   Shirt,
   Bath,
-  BadgeCheck
+  BadgeCheck,
+  Stethoscope
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -36,18 +37,18 @@ export default function HomePage() {
             {/* Left Column: Text & CTA */}
             <div className="text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Commercial Textiles for Care Facilities and Hospitality Spaces
+                Institutional Textile Solutions for Healthcare and Hospitality
               </h1>
               <p className="text-xl md:text-2xl opacity-90 mb-10 font-medium">
-                Dependable bedding, towels, uniforms, and custom programs for nursing homes, clinics, and hotels.
+                Reliable bedding, linens, and apparel designed for nursing homes, clinics, and hotels.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
                 <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md text-lg font-bold shadow-lg hover:bg-slate transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider">
-                  SCHEDULE A PRODUCT PRESENTATION
+                  REQUEST A QUOTE
                 </Link>
                 <Link to="/contact" className="bg-transparent text-slate border-2 border-slate px-8 py-4 rounded-md text-lg font-bold shadow-sm hover:bg-slate hover:text-white transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider">
-                  REQUEST A QUOTE
+                  SCHEDULE A PRESENTATION
                 </Link>
               </div>
 
@@ -69,7 +70,7 @@ export default function HomePage() {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate/10 relative group">
                 <div className="absolute inset-0 bg-slate/5 group-hover:bg-slate/0 transition-colors duration-500 z-10"></div>
                 <img 
-                  src="https://placehold.co/800x600/e2e8f0/94a3b8?text=Crisp+Hospital+Linens+Macro" 
+                  src="/Trendsetter-website-photos(2)/Hero section.png" 
                   alt="High-quality macro of crisp hospital linens"
                   className="w-full h-full object-cover"
                 />
@@ -137,11 +138,11 @@ export default function HomePage() {
             {/* Top Row: 2 Wider Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "RESIDENT BEDDING SUITE", bullets: ["Sheets", "Pillowcases", "Blankets", "Mattress protectors"], link: "/products#resident-bedding" },
-                { title: "HYGIENE & PERSONAL CARE SUITE", bullets: ["Towels", "Washcloths", "Bath mats", "Shower curtains"], link: "/products#hygiene" }
+                { title: "RESIDENT BEDDING SUITE", bullets: ["Sheets", "Pillowcases", "Blankets", "Mattress protectors"], link: "/products#resident-bedding", image: "/Trendsetter-website-photos(2)/RESIDENT BEDDING SUITE.png" },
+                { title: "HYGIENE & PERSONAL CARE SUITE", bullets: ["Towels", "Washcloths", "Bath mats", "Shower curtains"], link: "/products#hygiene", image: "/Trendsetter-website-photos(2)/HYGIENE & PERSONAL CARE SUITE.png" }
               ].map((suite, idx) => (
                 <Link to={suite.link} key={idx} className="group relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                  <img src={`https://placehold.co/1200x600/e2e8f0/94a3b8?text=${suite.title.replace(/ /g, '+')}`} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={suite.image} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-8 w-full">
                     <h3 className="text-2xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
@@ -159,12 +160,12 @@ export default function HomePage() {
             {/* Bottom Row: 3 Square Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { title: "RESIDENT APPAREL & SAFETY", bullets: ["Gowns", "Adaptive clothing", "Non-slip socks", "Robes"], link: "/products#apparel" },
-                { title: "CLINICAL COMPLIANCE", bullets: ["Flame-retardant bedding", "Wipe-clean pillows", "Waterproof pillows"], link: "/products#clinical" },
-                { title: "FACILITY & STAFF ESSENTIALS", bullets: ["Scrubs", "Lab coats", "Laundry bags", "Dining linens"], link: "/products#facility" }
+                { title: "RESIDENT APPAREL & SAFETY", bullets: ["Gowns", "Adaptive clothing", "Non-slip socks", "Robes"], link: "/products#apparel", image: "/Trendsetter-website-photos(2)/RESIDENT APPAREL & SAFETY.png" },
+                { title: "CLINICAL COMPLIANCE", bullets: ["Flame-retardant bedding", "Wipe-clean pillows", "Waterproof pillows"], link: "/products#clinical", image: "/Trendsetter-website-photos(2)/CLINICAL COMPLIANCE & SAFETY (HIGHER-SPEC).png" },
+                { title: "FACILITY & STAFF ESSENTIALS", bullets: ["Scrubs", "Lab coats", "Laundry bags", "Dining linens"], link: "/products#facility", image: "/Trendsetter-website-photos(2)/FACILITY & STAFF ESSENTIALS.png" }
               ].map((suite, idx) => (
                 <Link to={suite.link} key={idx} className="group relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                  <img src={`https://placehold.co/800x800/e2e8f0/94a3b8?text=${suite.title.replace(/ /g, '+')}`} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={suite.image} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-6 w-full">
                     <h3 className="text-xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
@@ -292,7 +293,8 @@ export default function HomePage() {
                   <Phone size={24} className="text-deep-teal" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Call Us Directly</p>
-                    <a href="tel:+1-800-555-0199" className="text-xl font-bold hover:text-deep-teal transition-colors">+1-800-555-0199</a>
+                    <a href="tel:+639178884059" className="text-xl font-bold hover:text-deep-teal transition-colors">+63 917 888 4059</a>
+                    <p className="text-xs opacity-75 mt-1">(Available via WhatsApp / Viber)</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-slate/10">

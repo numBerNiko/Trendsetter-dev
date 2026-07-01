@@ -25,7 +25,8 @@ export default function ContactPage() {
                   <Phone size={24} className="text-deep-teal mt-1" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Phone</p>
-                    <a href="tel:+639178884059" className="text-lg hover:text-deep-teal transition-colors">+63-917-888-4059</a>
+                    <a href="tel:+639178884059" className="text-lg hover:text-deep-teal transition-colors">+63 917 888 4059</a>
+                    <p className="text-xs opacity-75 mt-1">(Available via WhatsApp / Viber)</p>
                   </div>
                 </div>
                 
@@ -71,14 +72,14 @@ export default function ContactPage() {
                     <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="Jane Doe" />
                   </div>
                   <div>
-                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Corporate Email</label>
+                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Email</label>
                     <input type="email" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="jane@facility.com" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Facility / Company Name</label>
+                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Company</label>
                     <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="Hospital or Hotel Name" />
                   </div>
                   <div>
@@ -93,7 +94,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Message / Requirements</label>
+                  <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Message</label>
                   <textarea rows="5" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal resize-none" placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
                 </div>
                 

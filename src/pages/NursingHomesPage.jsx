@@ -236,7 +236,8 @@ export default function NursingHomesPage() {
               <Phone size={28} className="text-deep-teal" />
               <div className="text-left">
                 <p className="text-sm font-bold uppercase tracking-wider opacity-60">Call Us Directly</p>
-                <a href="tel:+18005550199" className="text-xl font-bold hover:text-deep-teal transition-colors text-slate">1-800-555-0199</a>
+                <a href="tel:+639178884059" className="text-xl font-bold hover:text-deep-teal transition-colors text-slate">+63 917 888 4059</a>
+                <p className="text-xs opacity-75 mt-1">(Available via WhatsApp / Viber)</p>
               </div>
             </div>
             

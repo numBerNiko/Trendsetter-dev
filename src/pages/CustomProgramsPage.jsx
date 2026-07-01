@@ -72,8 +72,8 @@ export default function CustomProgramsPage() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Our procurement engineers are ready to review your tech packs or help develop specifications from scratch. 
           </p>
-          <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-10 py-4 rounded-lg font-bold text-lg hover:bg-neutral-bg hover:text-slate transition-colors shadow-md">
-            Schedule a Consultation
+          <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider hover:bg-neutral-bg hover:text-slate transition-colors shadow-md">
+            START CUSTOM ORDER
           </Link>
         </div>
       </div>

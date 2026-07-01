@@ -9,10 +9,13 @@ export default function Layout() {
       <div className="bg-slate text-neutral-bg py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
-            <a href="tel:+1-800-555-0199" className="flex items-center hover:text-deep-teal transition-colors">
-              <Phone size={14} className="mr-2" />
-              1-800-555-0199
-            </a>
+            <div className="flex items-center">
+              <a href="tel:+639178884059" className="flex items-center hover:text-deep-teal transition-colors">
+                <Phone size={14} className="mr-2" />
+                +63 917 888 4059
+              </a>
+              <span className="ml-2 text-xs opacity-75">(Available via WhatsApp / Viber)</span>
+            </div>
             <a href="mailto:customerservice@trendsettertextiles.com" className="flex items-center hover:text-deep-teal transition-colors">
               <Mail size={14} className="mr-2" />
               customerservice@trendsettertextiles.com
@@ -56,20 +59,7 @@ export default function Layout() {
                 </div>
               </div>
 
-              <div className="relative group py-8">
-                <NavLink to="/products" className={({isActive}) => `flex items-center gap-1 uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>
-                  PRODUCTS <ChevronDown size={16} />
-                </NavLink>
-                <div className="absolute top-full left-0 w-72 bg-white border border-slate/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
-                  <div className="py-2">
-                    <Link to="/products#resident-bedding" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Resident Bedding Suite</Link>
-                    <Link to="/products#hygiene" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Hygiene & Personal Care</Link>
-                    <Link to="/products#apparel" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Resident Apparel & Safety</Link>
-                    <Link to="/products#clinical" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Clinical Compliance & Safety</Link>
-                    <Link to="/products#facility" className="block px-4 py-2 hover:bg-neutral-bg hover:text-deep-teal transition-colors font-medium">Facility & Staff Essentials</Link>
-                  </div>
-                </div>
-              </div>
+              <NavLink to="/products" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>PRODUCTS</NavLink>
               <NavLink to="/custom-programs" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>CUSTOM PROGRAMS</NavLink>
               <NavLink to="/about" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>ABOUT</NavLink>
               <NavLink to="/contact" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>CONTACT</NavLink>
@@ -101,10 +91,13 @@ export default function Layout() {
                 Dependable institutional bedding, towels, and uniforms for care facilities and touring artists across the USA.
               </p>
               <div className="space-y-2">
-                <a href="tel:+1-800-555-0199" className="flex items-center text-sm hover:text-deep-teal transition-colors">
-                  <Phone size={14} className="mr-2" />
-                  1-800-555-0199
-                </a>
+                <div>
+                  <a href="tel:+639178884059" className="flex items-center text-sm hover:text-deep-teal transition-colors">
+                    <Phone size={14} className="mr-2" />
+                    +63 917 888 4059
+                  </a>
+                  <p className="text-xs opacity-75 mt-1 ml-5">(Available via WhatsApp / Viber)</p>
+                </div>
                 <a href="mailto:customerservice@trendsettertextiles.com" className="flex items-center text-sm hover:text-deep-teal transition-colors">
                   <Mail size={14} className="mr-2" />
                   customerservice@trendsettertextiles.com
