@@ -10,7 +10,7 @@ export default {
         'white': '#F5F5DC',
         'neutral-bg': '#EAE6DF',
         'slate': '#1A2421',
-        'deep-teal': '#1B4D3E',
+        'deep-teal': '#1B332D',
         'coral': '#D8D3CC',
       },
       fontFamily: {

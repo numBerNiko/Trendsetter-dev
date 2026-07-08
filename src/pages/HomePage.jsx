@@ -49,7 +49,7 @@ export default function HomePage() {
                 <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md text-lg font-bold shadow-lg hover:bg-slate transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider" style={{ backgroundColor: region.theme.primaryBg }}>
                   REQUEST A QUOTE
                 </Link>
-                <Link to="/contact" className="bg-transparent text-slate border-2 border-slate px-8 py-4 rounded-md text-lg font-bold shadow-sm hover:bg-slate hover:text-white transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider">
+                <Link to="/contact" className="bg-transparent px-8 py-4 rounded-md text-lg font-bold shadow-sm hover:bg-slate hover:text-white transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider" style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg, borderWidth: '2px' }}>
                   SCHEDULE A PRESENTATION
                 </Link>
               </div>
@@ -217,24 +217,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             {/* Trust Signals */}
             <div>
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 text-neutral-bg border-b border-neutral-bg/30 pb-4">INSTITUTIONAL CREDIBILITY</h3>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 text-deep-teal border-b border-deep-teal/30 pb-4">INSTITUTIONAL CREDIBILITY</h3>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <BadgeCheck size={28} className="text-neutral-bg" />
+                  <BadgeCheck size={28} className="text-deep-teal" />
                   <div>
                     <p className="font-bold text-sm">OEKO-TEX® Standard 100</p>
                     <p className="text-xs opacity-70">Certified Safe Textiles</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <Award size={28} className="text-neutral-bg" />
+                  <Award size={28} className="text-deep-teal" />
                   <div>
                     <p className="font-bold text-sm">WRAP Certified</p>
                     <p className="text-xs opacity-70">Ethical Manufacturing</p>
                   </div>
                 </div>
               </div>
-              <blockquote className="bg-white/5 p-6 rounded-lg border-l-4 border-neutral-bg italic text-lg leading-relaxed opacity-90">
+              <blockquote className="bg-white/5 p-6 rounded-lg border-l-4 border-deep-teal italic text-lg leading-relaxed opacity-90">
                 "Trendsetter’s consistent supply chain allowed us to standardize apparel across all our locations seamlessly. Highly recommended for bulk fulfillment."
                 <footer className="text-sm font-bold mt-4 opacity-100">— Sarah Jenkins, Director of Procurement, Apex Regional Healthcare</footer>
               </blockquote>

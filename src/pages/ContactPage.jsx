@@ -1,10 +1,12 @@
 import React from 'react';
 import { Send, Phone, Mail, MapPin, CalendarDays } from 'lucide-react';
+import { useRegion } from '../hooks/useRegion';
 
 export default function ContactPage() {
+  const region = useRegion();
   return (
     <div className="bg-neutral-bg text-slate min-h-screen font-sans">
-      <section className="relative py-20 md:py-32 bg-slate text-neutral-bg border-b-8 border-deep-teal overflow-hidden">
+      <section className="relative py-20 md:py-32 bg-slate text-neutral-bg border-b-8" style={{ borderBottomColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/procurement_consultation.png" alt="Procurement Consultation" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Connect With Trendsetter Textiles USA</h1>
@@ -100,7 +102,7 @@ export default function ContactPage() {
                   <textarea rows="5" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal resize-none" placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
                 </div>
                 
-                <button type="submit" className="w-full flex justify-center items-center gap-3 bg-deep-teal text-neutral-bg font-bold uppercase tracking-wider py-5 rounded-md text-lg hover:bg-slate transition-colors shadow-md">
+                <button type="submit" className="w-full flex justify-center items-center gap-3 text-neutral-bg font-bold uppercase tracking-wider py-5 rounded-md text-lg hover:bg-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
                   <Send size={20} /> SUBMIT REQUEST
                 </button>
               </form>
