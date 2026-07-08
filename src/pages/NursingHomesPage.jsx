@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BedSingle, Bath, Shirt, ShieldCheck, BriefcaseMedical, CheckCircle2, Phone, Mail } from 'lucide-react';
+import { useRegion } from '../hooks/useRegion';
 
 export default function NursingHomesPage() {
+  const region = useRegion();
   return (
     <div className="bg-neutral-bg text-slate min-h-screen pb-24 font-sans">
       
@@ -252,7 +254,7 @@ export default function NursingHomesPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center">
+            <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center" style={{ backgroundColor: region.theme.primaryBg }}>
               REQUEST A QUOTE
             </Link>
             <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm w-full sm:w-auto text-center">

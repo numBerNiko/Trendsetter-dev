@@ -9,7 +9,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen bg-neutral-bg text-slate font-sans flex flex-col">
       {/* Top Contact Bar */}
-      <div className="bg-slate text-neutral-bg py-2 sm:py-3">
+      <div className="text-neutral-bg py-2 sm:py-3" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center lg:justify-between items-center text-sm">
           <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-2 md:space-y-0 text-center">
             <div className="flex flex-col sm:flex-row items-center">
@@ -47,10 +47,10 @@ export default function Layout() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
-              <NavLink to="/home" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>HOME</NavLink>
+              <NavLink to="/home" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'hover:text-deep-teal'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>HOME</NavLink>
               
               <div className="relative group py-8">
-                <NavLink to="/industries" className={({isActive}) => `flex items-center gap-1 uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>
+                <NavLink to="/industries" className={({isActive}) => `flex items-center gap-1 uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'hover:text-deep-teal'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>
                   INDUSTRIES <ChevronDown size={16} />
                 </NavLink>
                 <div className="absolute top-full left-0 w-56 bg-white border border-slate/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
@@ -62,10 +62,10 @@ export default function Layout() {
                 </div>
               </div>
 
-              <NavLink to="/products" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>PRODUCTS</NavLink>
-              <NavLink to="/custom-programs" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>CUSTOM PROGRAMS</NavLink>
-              <NavLink to="/about" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>ABOUT</NavLink>
-              <NavLink to="/contact" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'hover:text-deep-teal'}`}>CONTACT</NavLink>
+              <NavLink to="/products" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'hover:text-deep-teal'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>PRODUCTS</NavLink>
+              <NavLink to="/custom-programs" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'hover:text-deep-teal'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>CUSTOM PROGRAMS</NavLink>
+              <NavLink to="/about" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'hover:text-deep-teal'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>ABOUT</NavLink>
+              <NavLink to="/contact" className={({isActive}) => `uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'hover:text-deep-teal'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>CONTACT</NavLink>
             </nav>
             
             {/* Mobile Menu Button */}

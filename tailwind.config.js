@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
         'white': '#F5F5DC',
         'neutral-bg': '#EAE6DF',
         'slate': '#1A2421',

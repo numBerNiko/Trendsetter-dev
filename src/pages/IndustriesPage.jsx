@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Stethoscope, Building } from 'lucide-react';
+import { useRegion } from '../hooks/useRegion';
 
 export default function IndustriesPage() {
+  const region = useRegion();
   return (
     <div className="bg-neutral-bg text-slate min-h-screen">
       
@@ -62,7 +64,7 @@ export default function IndustriesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate uppercase tracking-wider">Ready to Get Started?</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center">
+            <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center" style={{ backgroundColor: region.theme.primaryBg }}>
               REQUEST A QUOTE
             </Link>
             <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm w-full sm:w-auto text-center">
