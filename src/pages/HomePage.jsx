@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useRegion } from '../hooks/useRegion';
 import { 
   ArrowRight, 
   ShieldCheck, 
@@ -26,6 +27,7 @@ import {
 } from 'lucide-react';
 
 export default function HomePage() {
+  const region = useRegion();
   return (
     <div className="flex flex-col w-full text-slate bg-neutral-bg">
       
@@ -293,15 +295,15 @@ export default function HomePage() {
                   <Phone size={24} className="text-deep-teal" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Call Us Directly</p>
-                    <a href="tel:+639178884059" className="text-xl font-bold hover:text-deep-teal transition-colors">+63 917 888 4059</a>
-                    <p className="text-xs opacity-75 mt-1">(Available via WhatsApp / Viber)</p>
+                    <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-xl font-bold hover:text-deep-teal transition-colors">{region.phone}</a>
+                    <p className="text-xs opacity-75 mt-1">{region.phoneLabel}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-slate/10">
                   <Mail size={24} className="text-deep-teal" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Email Us</p>
-                    <a href="mailto:customerservice@trendsettertextiles.com" className="text-xl font-bold hover:text-deep-teal transition-colors break-all">customerservice@trendsettertextiles.com</a>
+                    <a href={`mailto:${region.email}`} className="text-xl font-bold hover:text-deep-teal transition-colors break-all">{region.email}</a>
                   </div>
                 </div>
               </div>
