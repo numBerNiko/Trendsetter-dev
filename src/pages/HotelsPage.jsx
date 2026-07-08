@@ -7,10 +7,11 @@ export default function HotelsPage() {
     <div className="bg-neutral-bg text-slate min-h-screen pb-20">
       
       {/* Hero */}
-      <section className="bg-slate text-neutral-bg py-24 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Hospitality Linens Designed for Guest Comfort and Brand Presentation</h1>
-          <p className="text-xl opacity-90 leading-relaxed">
+      <section className="bg-slate text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8 border-deep-teal">
+        <img src="/Trendsetter-website-photos/premium_bathrobe.jpeg" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Hotels Textiles" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Hospitality Linens Designed for Guest Comfort and Brand Presentation</h1>
+          <p className="text-lg md:text-xl opacity-90 leading-relaxed">
             Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
           </p>
         </div>
@@ -61,9 +62,11 @@ export default function HotelsPage() {
           <p className="text-lg opacity-80 mb-8 max-w-2xl mx-auto text-slate">
             Elevate your property's brand with custom embroidery on robes, towels, and staff uniforms. Consistent visual identity across all guest touchpoints.
           </p>
-          <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-md">
-            REQUEST HOSPITALITY QUOTE
-          </Link>
+          <div className="px-4 sm:px-0">
+            <Link to="/contact" className="inline-block w-full sm:w-auto bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-md">
+              REQUEST HOSPITALITY QUOTE
+            </Link>
+          </div>
         </div>
       </section>
     </div>

@@ -7,10 +7,11 @@ export default function MedicalClinicsPage() {
     <div className="bg-neutral-bg text-slate min-h-screen pb-20">
       
       {/* Hero */}
-      <section className="bg-slate text-neutral-bg py-24 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Textile Solutions for Outpatient and Specialty Clinics</h1>
-          <p className="text-xl opacity-90 leading-relaxed">
+      <section className="bg-slate text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8 border-deep-teal">
+        <img src="/Trendsetter-website-photos/professional_medical_scrubs.png" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Medical Clinics Textiles" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Textile Solutions for Outpatient and Specialty Clinics</h1>
+          <p className="text-lg md:text-xl opacity-90 leading-relaxed">
             Specialized textiles for Outpatient, Urgent Care, and Specialty Clinics. Focus on workflow fit, compliance, and patient comfort.
           </p>
         </div>
@@ -63,8 +64,8 @@ export default function MedicalClinicsPage() {
           <Link to="/custom-programs" className="text-deep-teal font-bold uppercase tracking-wider hover:underline">EXPLORE CUSTOM BRANDING</Link>
         </div>
         
-        <div className="mt-16 text-center">
-          <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-md">
+        <div className="mt-16 text-center px-4 sm:px-0">
+          <Link to="/contact" className="inline-block w-full sm:w-auto bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-md">
             REQUEST QUOTE FOR CLINICS
           </Link>
         </div>

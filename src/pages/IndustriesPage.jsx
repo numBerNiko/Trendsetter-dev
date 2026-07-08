@@ -7,10 +7,11 @@ export default function IndustriesPage() {
     <div className="bg-neutral-bg text-slate min-h-screen">
       
       {/* Hero */}
-      <section className="bg-slate text-neutral-bg py-24 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries We Serve</h1>
-          <p className="text-xl opacity-90 leading-relaxed">
+      <section className="bg-slate text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8 border-deep-teal">
+        <img src="/Trendsetter-website-photos/stacked_pillows.png" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Industries Textiles" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Industries We Serve</h1>
+          <p className="text-lg md:text-xl opacity-90 leading-relaxed">
             Tailored textile solutions for nursing homes, medical clinics, and hospitality businesses.
           </p>
         </div>
@@ -60,11 +61,11 @@ export default function IndustriesPage() {
       <section className="py-24 bg-coral text-slate border-t border-slate/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate uppercase tracking-wider">Ready to Get Started?</h2>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center">
               REQUEST A QUOTE
             </Link>
-            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm">
+            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm w-full sm:w-auto text-center">
               SCHEDULE A PRODUCT PRESENTATION
             </Link>
           </div>

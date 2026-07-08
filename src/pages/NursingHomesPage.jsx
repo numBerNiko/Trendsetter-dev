@@ -7,9 +7,10 @@ export default function NursingHomesPage() {
     <div className="bg-neutral-bg text-slate min-h-screen pb-24 font-sans">
       
       {/* Header Section */}
-      <section className="bg-slate text-neutral-bg py-24 text-center border-b-8 border-deep-teal">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+      <section className="bg-slate text-neutral-bg py-20 md:py-32 text-center border-b-8 border-deep-teal relative overflow-hidden">
+        <img src="/Trendsetter-website-photos/patient_gowns.png" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Nursing Home Textiles" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 tracking-tight">
             Resident Comfort & Care Essentials for Post-Acute Facilities
           </h1>
           <p className="text-xl opacity-90 leading-relaxed max-w-3xl mx-auto font-light">
@@ -250,11 +251,11 @@ export default function NursingHomesPage() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+            <Link to="/contact" className="bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center">
               REQUEST A QUOTE
             </Link>
-            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm">
+            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm w-full sm:w-auto text-center">
               SCHEDULE A PRODUCT PRESENTATION
             </Link>
           </div>

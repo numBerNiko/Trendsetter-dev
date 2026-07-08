@@ -3,16 +3,18 @@ import { Send, Phone, Mail, MapPin, CalendarDays } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <section className="py-20 bg-neutral-bg text-slate min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Connect With Trendsetter Textiles USA</h1>
-          <p className="text-lg opacity-80 max-w-2xl mx-auto">
+    <div className="bg-neutral-bg text-slate min-h-screen font-sans">
+      <section className="relative py-20 md:py-32 bg-slate text-neutral-bg border-b-8 border-deep-teal overflow-hidden">
+        <img src="/Trendsetter-website-photos/procurement_consultation.png" alt="Procurement Consultation" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Connect With Trendsetter Textiles USA</h1>
+          <p className="text-lg md:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
             Schedule an in-person product presentation, request physical samples, or submit an RFQ for your facility.
           </p>
         </div>
+      </section>
 
+      <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           
           {/* Direct Contact Info */}
@@ -104,9 +106,9 @@ export default function ContactPage() {
               </form>
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
+
+      </section>
+    </div>
   );
 }

@@ -1,0 +1,9 @@
+{
+  "name": "trendsetter-dev",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

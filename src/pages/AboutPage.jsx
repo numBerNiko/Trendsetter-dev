@@ -4,16 +4,18 @@ import { Target, ShieldCheck, Factory } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <section className="py-20 bg-neutral-bg text-slate min-h-screen">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Story: Supplying Reliable Textiles Across the USA</h1>
-          <p className="text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
+    <div className="bg-neutral-bg text-slate min-h-screen font-sans">
+      <section className="relative py-20 md:py-32 bg-slate text-neutral-bg border-b-8 border-deep-teal overflow-hidden">
+        <img src="/Trendsetter-website-photos/procurement_warehouse.png" alt="Warehouse Operations" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Our Story: Supplying Reliable Textiles Across the USA</h1>
+          <p className="text-lg md:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
             Trendsetter Textiles is a premier institutional sourcing partner, bridging the gap between manufacturing excellence and facility-grade demands.
           </p>
         </div>
+      </section>
 
+      <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl p-10 shadow-lg border border-slate/10 mb-16">
           <h2 className="text-3xl font-bold mb-6 text-deep-teal">Our Story</h2>
           <p className="text-lg opacity-80 leading-relaxed mb-6">
@@ -47,7 +49,7 @@ export default function AboutPage() {
           </Link>
         </div>
 
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

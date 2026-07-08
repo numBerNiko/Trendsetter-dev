@@ -1,28 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
-import { Phone, Mail, ChevronDown } from 'lucide-react';
+import { Phone, Mail, ChevronDown, Menu, X } from 'lucide-react';
+import { useRegion } from '../hooks/useRegion';
 
 export default function Layout() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const region = useRegion();
   return (
     <div className="min-h-screen bg-neutral-bg text-slate font-sans flex flex-col">
       {/* Top Contact Bar */}
-      <div className="bg-slate text-neutral-bg py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center">
-              <a href="tel:+639178884059" className="flex items-center hover:text-deep-teal transition-colors">
-                <Phone size={14} className="mr-2" />
-                +63 917 888 4059
+      <div className="bg-slate text-neutral-bg py-2 sm:py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center lg:justify-between items-center text-sm">
+          <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-2 md:space-y-0 text-center">
+            <div className="flex flex-col sm:flex-row items-center">
+              <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center hover:text-deep-teal transition-colors font-medium whitespace-nowrap">
+                <Phone size={14} className="mr-1.5 shrink-0" />
+                {region.phone}
               </a>
-              <span className="ml-2 text-xs opacity-75">(Available via WhatsApp / Viber)</span>
+              <span className="mt-1 sm:mt-0 sm:ml-2 text-xs opacity-75">{region.phoneLabel}</span>
             </div>
-            <a href="mailto:customerservice@trendsettertextiles.com" className="flex items-center hover:text-deep-teal transition-colors">
-              <Mail size={14} className="mr-2" />
-              customerservice@trendsettertextiles.com
+            <a href={`mailto:${region.email}`} className="flex items-center hover:text-deep-teal transition-colors text-xs sm:text-sm">
+              <Mail size={14} className="mr-1.5 shrink-0" />
+              <span className="truncate max-w-[280px] sm:max-w-none">{region.email}</span>
             </a>
           </div>
-          <div className="hidden sm:block opacity-80 text-xs tracking-wider uppercase font-medium">
-            USA Institutional Procurement Hub
+          <div className="hidden lg:block opacity-80 text-xs tracking-wider uppercase font-medium mt-3 lg:mt-0">
+            {region.heroTagline}
           </div>
         </div>
       </div>
@@ -67,10 +70,24 @@ export default function Layout() {
             
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
-              <span className="font-bold text-deep-teal">Menu</span>
+              <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-deep-teal p-2 focus:outline-none">
+                {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
             </div>
           </div>
         </div>
+
+        {/* Mobile Navigation Overlay */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden absolute top-20 left-0 w-full h-[calc(100vh-80px)] bg-white overflow-y-auto border-b border-slate/10 shadow-2xl py-6 px-4 flex flex-col space-y-2 z-40">
+            <NavLink to="/home" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`}>HOME</NavLink>
+            <NavLink to="/industries" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`}>INDUSTRIES</NavLink>
+            <NavLink to="/products" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`}>PRODUCTS</NavLink>
+            <NavLink to="/custom-programs" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`}>CUSTOM PROGRAMS</NavLink>
+            <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`}>ABOUT</NavLink>
+            <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'bg-deep-teal text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`}>CONTACT</NavLink>
+          </div>
+        )}
       </header>
 
       <main className="flex-grow">
@@ -88,19 +105,19 @@ export default function Layout() {
                 className="w-[150px] h-auto object-contain bg-white/90 p-2 rounded mb-6"
               />
               <p className="opacity-80 text-sm leading-relaxed mb-6">
-                Dependable institutional bedding, towels, and uniforms for care facilities and touring artists across the USA.
+                {region.footerDescription}
               </p>
               <div className="space-y-2">
                 <div>
-                  <a href="tel:+639178884059" className="flex items-center text-sm hover:text-deep-teal transition-colors">
+                  <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center text-sm hover:text-deep-teal transition-colors">
                     <Phone size={14} className="mr-2" />
-                    +63 917 888 4059
+                    {region.phone}
                   </a>
-                  <p className="text-xs opacity-75 mt-1 ml-5">(Available via WhatsApp / Viber)</p>
+                  <p className="text-xs opacity-75 mt-1 ml-5">{region.phoneLabel}</p>
                 </div>
-                <a href="mailto:customerservice@trendsettertextiles.com" className="flex items-center text-sm hover:text-deep-teal transition-colors">
+                <a href={`mailto:${region.email}`} className="flex items-center text-sm hover:text-deep-teal transition-colors">
                   <Mail size={14} className="mr-2" />
-                  customerservice@trendsettertextiles.com
+                  {region.email}
                 </a>
               </div>
             </div>

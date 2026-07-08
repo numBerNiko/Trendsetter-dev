@@ -30,16 +30,16 @@ export default function HomePage() {
     <div className="flex flex-col w-full text-slate bg-neutral-bg">
       
       {/* Section 1: Hero Banner */}
-      <section className="relative pt-24 pb-32 lg:pt-32 lg:pb-40 overflow-hidden bg-gradient-to-b from-neutral-bg to-white text-slate">
+      <section className="relative pt-12 pb-20 md:pt-24 md:pb-32 lg:pt-32 lg:pb-40 overflow-hidden bg-gradient-to-b from-neutral-bg to-white text-slate">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             
             {/* Left Column: Text & CTA */}
             <div className="text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
                 Institutional Textile Solutions for Healthcare and Hospitality
               </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-10 font-medium">
+              <p className="text-lg sm:text-xl md:text-2xl opacity-90 mb-8 sm:mb-10 font-medium">
                 Reliable bedding, linens, and apparel designed for nursing homes, clinics, and hotels.
               </p>
               
@@ -187,7 +187,7 @@ export default function HomePage() {
       <section className="relative py-32 bg-slate overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://placehold.co/1920x1080/1A2421/EAE6DF?text=Custom+Apparel+Manufacturing" 
+            src="/Trendsetter-website-photos/Bespoke_Embroidery_&_Monogramming.png" 
             alt="Custom apparel manufacturing" 
             className="w-full h-full object-cover opacity-40"
           />
