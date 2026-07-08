@@ -312,7 +312,7 @@ export default function HomePage() {
                 <button className="text-neutral-bg px-6 py-4 rounded-md font-bold uppercase tracking-wider shadow-md hover:bg-slate transition-colors flex-1" style={{ backgroundColor: region.theme.primaryBg }}>
                   SCHEDULE A PRODUCT PRESENTATION
                 </button>
-                <button className="bg-transparent border-2 border-slate text-slate px-6 py-4 rounded-md font-bold uppercase tracking-wider hover:bg-slate hover:text-neutral-bg transition-colors flex-1">
+                <button className="bg-transparent border-2 px-6 py-4 rounded-md font-bold uppercase tracking-wider hover:bg-slate hover:text-neutral-bg transition-colors flex-1" style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg }}>
                   REQUEST A QUOTE
                 </button>
               </div>
@@ -338,8 +338,8 @@ export default function HomePage() {
                   <label className="block text-sm font-bold mb-2 opacity-80">Message</label>
                   <textarea rows="4" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal resize-none" placeholder="How can we help?"></textarea>
                 </div>
-                <button type="submit" className="w-full flex justify-center items-center gap-3 bg-slate text-neutral-bg font-bold uppercase tracking-wider py-4 rounded-md text-lg hover:bg-deep-teal transition-colors shadow-md">
-                  <Send size={20} /> SUBMIT REQUEST
+                <button type="submit" className="w-full flex justify-center items-center gap-3 text-neutral-bg font-bold uppercase tracking-wider py-4 rounded-md text-lg hover:opacity-90 transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
+                  <Send size={20} /> SUBMIT QUICK REQUEST
                 </button>
               </form>
             </div>

@@ -9,7 +9,7 @@ export default function IndustriesPage() {
     <div className="bg-neutral-bg text-slate min-h-screen">
       
       {/* Hero */}
-      <section className="bg-slate text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8 border-deep-teal">
+      <section className="text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/stacked_pillows.png" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Industries Textiles" />
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Industries We Serve</h1>

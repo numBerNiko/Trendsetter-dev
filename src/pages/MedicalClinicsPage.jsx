@@ -1,13 +1,15 @@
 import React from 'react';
-import { Activity, Stethoscope, Building, ShoppingBag } from 'lucide-react';
+import { Stethoscope, Droplets, Target, ShieldCheck, Activity, Building, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useRegion } from '../hooks/useRegion';
 
 export default function MedicalClinicsPage() {
+  const region = useRegion();
   return (
     <div className="bg-neutral-bg text-slate min-h-screen pb-20">
       
       {/* Hero */}
-      <section className="bg-slate text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8 border-deep-teal">
+      <section className="text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/professional_medical_scrubs.png" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Medical Clinics Textiles" />
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Textile Solutions for Outpatient and Specialty Clinics</h1>

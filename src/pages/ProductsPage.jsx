@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2 } from 'lucide-react';
+import { useRegion } from '../hooks/useRegion';
 
 export default function ProductsPage() {
+  const region = useRegion();
   const suites = [
     {
       id: "resident-bedding",
@@ -67,7 +69,7 @@ export default function ProductsPage() {
     <div className="bg-neutral-bg text-slate min-h-screen">
       
       {/* Hero */}
-      <section className="bg-slate text-neutral-bg pt-32 pb-24 text-center border-b border-slate/10">
+      <section className="text-neutral-bg pt-32 pb-24 text-center border-b border-slate/10" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">Explore Our Textile Suites</h1>
           <p className="text-xl opacity-90 leading-relaxed font-light">
@@ -107,7 +109,7 @@ export default function ProductsPage() {
                     ))}
                   </ul>
 
-                  <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider hover:bg-slate transition-colors shadow-md">
+                  <Link to="/contact" className="inline-block text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider hover:bg-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
                     VIEW SUITE DETAILS
                   </Link>
                 </div>
@@ -121,7 +123,7 @@ export default function ProductsPage() {
             <p className="text-lg opacity-80 mb-8 max-w-2xl mx-auto text-slate">
               Discover how our suites align perfectly with specific environments like nursing homes, clinics, and hotels.
             </p>
-            <Link to="/industries" className="inline-block bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm">
+            <Link to="/industries" className="inline-block bg-transparent border-2 px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm" style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg }}>
               EXPLORE INDUSTRIES
             </Link>
           </div>
@@ -136,7 +138,7 @@ export default function ProductsPage() {
           <p className="text-xl opacity-90 mb-10 max-w-3xl mx-auto font-light">
             Our comprehensive catalog includes detailed technical specifications, GSM ratings, and material safety data for all products.
           </p>
-          <Link to="/contact" className="inline-block bg-neutral-bg text-deep-teal px-10 py-4 rounded-md font-bold text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-xl uppercase tracking-wider">
+          <Link to="/contact" className="inline-block bg-neutral-bg px-10 py-4 rounded-md font-bold text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-xl uppercase tracking-wider" style={{ color: region.theme.primaryBg }}>
             DOWNLOAD CATALOG
           </Link>
         </div>

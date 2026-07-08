@@ -95,7 +95,7 @@ export default function Layout() {
       </main>
 
       {/* Enterprise Footer */}
-      <footer className="bg-slate text-neutral-bg pt-16 pb-8 mt-auto">
+      <footer className="text-neutral-bg pt-16 pb-8 mt-auto" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div>

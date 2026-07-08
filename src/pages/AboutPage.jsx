@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Target, ShieldCheck, Factory } from 'lucide-react';
+import { useRegion } from '../hooks/useRegion';
+import { Link } from 'react-router-dom';
 
 export default function AboutPage() {
+  const region = useRegion();
   return (
     <div className="bg-neutral-bg text-slate min-h-screen font-sans">
-      <section className="relative py-20 md:py-32 bg-slate text-neutral-bg border-b-8 border-deep-teal overflow-hidden">
+      <section className="relative py-20 md:py-32 text-neutral-bg border-b-8 overflow-hidden" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/procurement_warehouse.png" alt="Warehouse Operations" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Our Story: Supplying Reliable Textiles Across the USA</h1>

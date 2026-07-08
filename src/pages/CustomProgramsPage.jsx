@@ -1,8 +1,10 @@
 import React from 'react';
 import { Scissors, Tag, Package, Box, RefreshCcw } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useRegion } from '../hooks/useRegion';
 
 export default function CustomProgramsPage() {
+  const region = useRegion();
   return (
     <section className="py-12 md:py-20 bg-neutral-bg text-slate min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +89,7 @@ export default function CustomProgramsPage() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Our procurement engineers are ready to review your tech packs or help develop specifications from scratch. 
           </p>
-          <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider hover:bg-neutral-bg hover:text-slate transition-colors shadow-md">
+          <Link to="/contact" className="inline-block text-neutral-bg px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider hover:bg-neutral-bg hover:text-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
             START CUSTOM ORDER
           </Link>
         </div>

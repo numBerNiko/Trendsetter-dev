@@ -9,7 +9,7 @@ export default function NursingHomesPage() {
     <div className="bg-neutral-bg text-slate min-h-screen pb-24 font-sans">
       
       {/* Header Section */}
-      <section className="bg-slate text-neutral-bg py-20 md:py-32 text-center border-b-8 border-deep-teal relative overflow-hidden">
+      <section className="text-neutral-bg py-20 md:py-32 text-center border-b-8 relative overflow-hidden" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/patient_gowns.png" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Nursing Home Textiles" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 tracking-tight">

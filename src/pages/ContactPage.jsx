@@ -6,7 +6,7 @@ export default function ContactPage() {
   const region = useRegion();
   return (
     <div className="bg-neutral-bg text-slate min-h-screen font-sans">
-      <section className="relative py-20 md:py-32 bg-slate text-neutral-bg border-b-8" style={{ borderBottomColor: region.theme.primaryBg }}>
+      <section className="relative py-20 md:py-32 text-neutral-bg border-b-8" style={{ borderBottomColor: region.theme.primaryBg, backgroundColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/procurement_consultation.png" alt="Procurement Consultation" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Connect With Trendsetter Textiles USA</h1>

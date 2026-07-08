@@ -6,7 +6,7 @@ export const regionalContent = {
     footerDescription: "Dependable institutional bedding, towels, and uniforms for care facilities and touring artists across the USA.",
     phoneLabel: "(Toll-Free USA)",
     theme: {
-      primaryBg: "#1B332D" // Dark green
+      primaryBg: "#1B4D3E" // Dark green
     }
   },
   ph: {
@@ -16,7 +16,7 @@ export const regionalContent = {
     footerDescription: "Dependable institutional bedding, towels, and uniforms for care facilities across the Philippines.",
     phoneLabel: "(Available via WhatsApp / Viber)",
     theme: {
-      primaryBg: "#C4A484" // Light brown
+      primaryBg: "#b57e1d" // Light brown update
     }
   }
 };
