@@ -52,7 +52,7 @@ export default function NursingHomesPage() {
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Pillowcases:</strong> High-thread-count standard/queen sizes providing an elevated, non-institutional hand-feel.</p>
+                <p className="text-base"><strong className="text-slate">Pillowcases:</strong> Durable, high-density standard sizes providing an elevated, comfortable hand-feel that withstands rigorous commercial laundering.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
@@ -60,11 +60,11 @@ export default function NursingHomesPage() {
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Duvet Covers & Bedspreads:</strong> Easy-care fabrics featuring subtle, color-coded piping for rapid sorting in high-volume laundry facilities.</p>
+                <p className="text-base"><strong className="text-slate">Duvet Covers & Bedspreads:</strong> Easy-care bedspreads and utility covers featuring subtle, color-coded piping for rapid sorting in high-volume laundry facilities.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Mattress Protectors:</strong> Quilted, fluid-resistant, waterproof barriers styled in an ergonomic draw-sheet configuration.</p>
+                <p className="text-base"><strong className="text-slate">Mattress Protectors:</strong> Quilted, fluid-resistant, waterproof barriers engineered for full mattress longevity and optimal fluid management.</p>
               </li>
             </ul>
           </div>
@@ -91,15 +91,15 @@ export default function NursingHomesPage() {
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Safety Bath Mats:</strong> High-traction, non-slip backing engineered for wet-room stability.</p>
+                <p className="text-base"><strong className="text-slate">Safety Bath Mats:</strong> High-traction, densely woven textures engineered for resident bathroom safety and slip resistance.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Shower Curtains:</strong> Heavy-gauge, commercial-grade curtains treated for advanced mildew and moisture resistance.</p>
+                <p className="text-base"><strong className="text-slate">Shower Curtains:</strong> Heavy-gauge, antimicrobial, and flame-retardant commercial curtains engineered for advanced moisture resistance and easy sanitation.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Washable Underpads:</strong> Highly absorbent, multi-layer bed pads capable of repeated processing.</p>
+                <p className="text-base"><strong className="text-slate">Washable Underpads:</strong> Highly absorbent, multi-layer bed pads engineered to protect linens and withstand repeated commercial laundering cycles.</p>
               </li>
             </ul>
           </div>
@@ -112,21 +112,21 @@ export default function NursingHomesPage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">RESIDENT APPAREL & SAFETY</h3>
-                <p className="opacity-80 text-sm">Dignified designs that simplify daily dressing routines for residents and caregivers.</p>
+                <p className="opacity-80 text-sm">Dignified designs engineered to streamline assisted dressing while withstanding high-volume facility laundering.</p>
               </div>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Patient Gowns:</strong> Utility-driven styles with varied secure closure options (ties, snaps, and telemetry slots).</p>
+                <p className="text-base"><strong className="text-slate">Patient Gowns:</strong> Clinical-grade gowns featuring secure closure options (ties, snaps) and integrated telemetry access to support diverse care requirements.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Adaptive Clothing Basics:</strong> Easy-wear garments featuring flexible closures to ease assisted dressing.</p>
+                <p className="text-base"><strong className="text-slate">Adaptive Clothing Basics:</strong> Durable, easy-wear garments featuring reinforced closures designed to streamline assisted dressing protocols.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Non-Slip Socks:</strong> Double-tread safety socks providing a reliable grip on both sides of the foot.</p>
+                <p className="text-base"><strong className="text-slate">Fall Management Socks:</strong> Double-tread safety socks engineered to provide reliable traction and support facility fall-reduction initiatives.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
@@ -142,22 +142,22 @@ export default function NursingHomesPage() {
                 <ShieldCheck size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">CLINICAL COMPLIANCE & SAFETY (HIGHER-SPEC)</h3>
-                <p className="opacity-80 text-sm">Advanced technical textiles targeting specialized risk-mitigation zones.</p>
+                <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">CLINICAL COMPLIANCE & SAFETY</h3>
+                <p className="opacity-80 text-sm">Advanced technical textiles engineered for specialized risk-mitigation and high-acuity care zones.</p>
               </div>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Flame-Retardant Bedding Sets:</strong> Certified flame-resistant (FR) fabrics meeting stringent state safety codes.</p>
+                <p className="text-base"><strong className="text-slate">Flame-Retardant Bedding Sets:</strong> Certified flame-resistant (FR) fabrics meeting stringent federal and state life safety codes.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Wipe-Clean Pillows:</strong> Fluid-resistant, antimicrobial, and FR waterproof pillows designed for swift sanitization between turns.</p>
+                <p className="text-base"><strong className="text-slate">Wipe-Clean Pillows:</strong> Fluid-resistant, antimicrobial, and FR waterproof pillows designed for rapid surface sanitization between patient transitions.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Ergonomic Transfer Sheets:</strong> Reusable slide and transfer sheets designed to reduce caregiver strain and friction during patient repositioning.</p>
+                <p className="text-base"><strong className="text-slate">Ergonomic Transfer Sheets:</strong> Reusable slide and transfer sheets engineered to reduce caregiver strain and friction during patient repositioning.</p>
               </li>
             </ul>
           </div>
@@ -170,13 +170,13 @@ export default function NursingHomesPage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold uppercase tracking-wider text-slate">FACILITY & STAFF ESSENTIALS</h3>
-                <p className="opacity-80 text-sm">Optimized workwear and logistics textiles to keep your staff moving comfortably.</p>
+                <p className="opacity-80 text-sm">Optimized workwear and operational textiles engineered for staff comfort and facility efficiency.</p>
               </div>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Ergonomic Scrubs & Lab Coats:</strong> Breathable, stain-release technical fabrics built for flexibility and long shifts.</p>
+                <p className="text-base"><strong className="text-slate">Performance Scrubs & Lab Coats:</strong> Breathable, stain-release technical fabrics built for flexibility and long shifts.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
@@ -184,11 +184,11 @@ export default function NursingHomesPage() {
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Privacy Curtains:</strong> Antimicrobial, flame-retardant mesh cubicle tracking screens.</p>
+                <p className="text-base"><strong className="text-slate">Privacy Curtains:</strong> Antimicrobial, flame-retardant cubicle curtains featuring code-compliant mesh headers for fire safety.</p>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={20} className="text-deep-teal shrink-0 mr-3 mt-1" />
-                <p className="text-base"><strong className="text-slate">Dining Linens:</strong> High-turnover tablecloths, napkins, and tray-liners featuring stain-blocking treatments.</p>
+                <p className="text-base"><strong className="text-slate">Dining Linens:</strong> High-durability tablecloths, napkins, and tray-liners featuring commercial-grade stain-blocking treatments.</p>
               </li>
             </ul>
           </div>
@@ -197,28 +197,28 @@ export default function NursingHomesPage() {
       </section>
 
       {/* The Trendsetter Provisioning Advantage */}
-      <section className="py-24 bg-slate text-neutral-bg">
+      <section className={`py-24 ${region.phone.includes('+63') ? 'bg-neutral-bg text-slate' : 'bg-slate text-neutral-bg'}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-12 text-neutral-bg">THE TRENDSETTER PROVISIONING ADVANTAGE</h2>
+          <h2 className={`text-3xl md:text-4xl font-bold uppercase tracking-wider mb-12 ${region.phone.includes('+63') ? 'text-deep-teal' : 'text-neutral-bg'}`}>THE TRENDSETTER PROVISIONING ADVANTAGE</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
-            <div className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-deep-teal/50 transition-colors">
-              <h3 className="text-xl font-bold mb-4 text-deep-teal flex items-center"><span className="text-2xl mr-2">1.</span> Commercial Wash Resistance</h3>
-              <p className="opacity-90 leading-relaxed">
+            <div className={`p-8 rounded-xl border transition-all ${region.phone.includes('+63') ? 'bg-[#FFFFFF] border-slate/10 shadow-sm hover:shadow-md hover:border-deep-teal/30' : 'bg-white/5 border-white/10 hover:border-deep-teal/50'}`}>
+              <h3 className="text-xl font-bold mb-4 flex items-center text-deep-teal"><span className="text-2xl mr-2">1.</span> Commercial Wash Resistance</h3>
+              <p className={`leading-relaxed ${region.phone.includes('+63') ? 'text-slate font-medium opacity-90' : 'opacity-90'}`}>
                 Every textile in the Harbor Post Acute Care program is treated to resist color fading, chemical yellowing, and tensile degradation during harsh bleaching cycles.
               </p>
             </div>
             
-            <div className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-deep-teal/50 transition-colors">
-              <h3 className="text-xl font-bold mb-4 text-deep-teal flex items-center"><span className="text-2xl mr-2">2.</span> Guaranteed PAR Supply Fulfillment</h3>
-              <p className="opacity-90 leading-relaxed">
+            <div className={`p-8 rounded-xl border transition-all ${region.phone.includes('+63') ? 'bg-[#FFFFFF] border-slate/10 shadow-sm hover:shadow-md hover:border-deep-teal/30' : 'bg-white/5 border-white/10 hover:border-deep-teal/50'}`}>
+              <h3 className="text-xl font-bold mb-4 flex items-center text-deep-teal"><span className="text-2xl mr-2">2.</span> Guaranteed PAR Supply Fulfillment</h3>
+              <p className={`leading-relaxed ${region.phone.includes('+63') ? 'text-slate font-medium opacity-90' : 'opacity-90'}`}>
                 We safeguard your operation against common supply chain bottlenecks with robust safety stocks to entirely eliminate stockouts.
               </p>
             </div>
             
-            <div className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-deep-teal/50 transition-colors">
-              <h3 className="text-xl font-bold mb-4 text-deep-teal flex items-center"><span className="text-2xl mr-2">3.</span> Customization & Private Labeling</h3>
-              <p className="opacity-90 leading-relaxed">
+            <div className={`p-8 rounded-xl border transition-all ${region.phone.includes('+63') ? 'bg-[#FFFFFF] border-slate/10 shadow-sm hover:shadow-md hover:border-deep-teal/30' : 'bg-white/5 border-white/10 hover:border-deep-teal/50'}`}>
+              <h3 className="text-xl font-bold mb-4 flex items-center text-deep-teal"><span className="text-2xl mr-2">3.</span> Customization & Private Labeling</h3>
+              <p className={`leading-relaxed ${region.phone.includes('+63') ? 'text-slate font-medium opacity-90' : 'opacity-90'}`}>
                 Elevate your facility’s identity with institutional embroidery, custom property tags, and specialized sorting labels.
               </p>
             </div>
@@ -239,8 +239,8 @@ export default function NursingHomesPage() {
               <Phone size={28} className="text-deep-teal" />
               <div className="text-left">
                 <p className="text-sm font-bold uppercase tracking-wider opacity-60">Call Us Directly</p>
-                <a href="tel:+639178884059" className="text-xl font-bold hover:text-deep-teal transition-colors text-slate">+63 917 888 4059</a>
-                <p className="text-xs opacity-75 mt-1">(Available via WhatsApp / Viber)</p>
+                <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-xl font-bold hover:text-deep-teal transition-colors text-slate">{region.phone}</a>
+                <p className="text-xs opacity-75 mt-1">{region.phoneLabel}</p>
               </div>
             </div>
             

@@ -29,8 +29,8 @@ export default function ContactPage() {
                   <Phone size={24} className="text-deep-teal mt-1" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Phone</p>
-                    <a href="tel:+639178884059" className="text-lg hover:text-deep-teal transition-colors">+63 917 888 4059</a>
-                    <p className="text-xs opacity-75 mt-1">(Available via WhatsApp / Viber)</p>
+                    <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg hover:text-deep-teal transition-colors">{region.phone}</a>
+                    <p className="text-xs opacity-75 mt-1">{region.phoneLabel}</p>
                   </div>
                 </div>
                 
@@ -52,13 +52,19 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-deep-teal text-neutral-bg p-8 rounded-2xl shadow-lg">
-              <CalendarDays size={32} className="mb-4 text-neutral-bg/80" />
+            <div 
+              className={`p-8 rounded-2xl shadow-lg ${region.phone.includes('+63') ? 'text-white' : 'bg-deep-teal text-neutral-bg'}`}
+              style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}
+            >
+              <CalendarDays size={32} className={`mb-4 ${region.phone.includes('+63') ? 'text-white' : 'text-neutral-bg/80'}`} />
               <h3 className="text-xl font-bold uppercase tracking-wider mb-2">SCHEDULE A PRESENTATION</h3>
               <p className="text-sm opacity-90 mb-6">
                 Our account managers can bring physical swatch books and sample products directly to your facility for review.
               </p>
-              <button className="w-full bg-neutral-bg text-deep-teal font-bold uppercase tracking-wider py-3 rounded hover:bg-slate hover:text-neutral-bg transition-colors">
+              <button 
+                className={`w-full font-bold uppercase tracking-wider py-3 rounded transition-colors ${region.phone.includes('+63') ? 'bg-[#F5F5DC] hover:opacity-80' : 'bg-neutral-bg text-deep-teal hover:bg-slate hover:text-neutral-bg'}`}
+                style={region.phone.includes('+63') ? { color: region.theme.primaryBg } : {}}
+              >
                 BOOK A DATE
               </button>
             </div>

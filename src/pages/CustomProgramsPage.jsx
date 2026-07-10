@@ -84,12 +84,12 @@ export default function CustomProgramsPage() {
 
         </div>
 
-        <div className="bg-slate text-neutral-bg rounded-2xl p-12 text-center max-w-4xl mx-auto shadow-xl">
-          <h2 className="text-3xl font-bold mb-6">Start Your Custom Project</h2>
-          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+        <div className="rounded-2xl p-12 text-center max-w-4xl mx-auto shadow-xl text-white" style={{ backgroundColor: region.theme.primaryBg }}>
+          <h2 className="text-3xl font-bold mb-6 text-white">Start Your Custom Project</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-white font-medium opacity-100">
             Our procurement engineers are ready to review your tech packs or help develop specifications from scratch. 
           </p>
-          <Link to="/contact" className="inline-block text-neutral-bg px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider hover:bg-neutral-bg hover:text-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
+          <Link to="/contact" className="inline-block px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-md bg-[#F5F5DC] hover:opacity-80" style={{ color: region.theme.primaryBg }}>
             START CUSTOM ORDER
           </Link>
         </div>

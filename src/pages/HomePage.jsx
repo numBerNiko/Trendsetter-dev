@@ -208,7 +208,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 5: Why Buyers Choose Us */}
-      <section className="py-24 text-neutral-bg border-t border-slate/10" style={{ backgroundColor: region.theme.primaryBg }}>
+      <section className={`py-24 border-t border-slate/10 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-neutral-bg'}`} style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">WHY BUYERS CHOOSE US</h2>
@@ -217,24 +217,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             {/* Trust Signals */}
             <div>
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 text-deep-teal border-b border-deep-teal/30 pb-4">INSTITUTIONAL CREDIBILITY</h3>
+              <h3 className={`text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 ${region.phone.includes('+63') ? 'text-[#F5F5DC] border-[#F5F5DC]/30' : 'text-deep-teal border-deep-teal/30'}`}>INSTITUTIONAL CREDIBILITY</h3>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <BadgeCheck size={28} className="text-deep-teal" />
+                  <BadgeCheck size={28} className={region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'} />
                   <div>
                     <p className="font-bold text-sm">OEKO-TEX® Standard 100</p>
                     <p className="text-xs opacity-70">Certified Safe Textiles</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <Award size={28} className="text-deep-teal" />
+                  <Award size={28} className={region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'} />
                   <div>
                     <p className="font-bold text-sm">WRAP Certified</p>
                     <p className="text-xs opacity-70">Ethical Manufacturing</p>
                   </div>
                 </div>
               </div>
-              <blockquote className="bg-white/5 p-6 rounded-lg border-l-4 border-deep-teal italic text-lg leading-relaxed opacity-90">
+              <blockquote className={`bg-white/5 p-6 rounded-lg border-l-4 italic text-lg leading-relaxed opacity-90 ${region.phone.includes('+63') ? 'border-[#F5F5DC]' : 'border-deep-teal'}`}>
                 "Trendsetter’s consistent supply chain allowed us to standardize apparel across all our locations seamlessly. Highly recommended for bulk fulfillment."
                 <footer className="text-sm font-bold mt-4 opacity-100">— Sarah Jenkins, Director of Procurement, Apex Regional Healthcare</footer>
               </blockquote>
@@ -242,24 +242,24 @@ export default function HomePage() {
 
             {/* Benefits List */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 text-deep-teal border-b border-deep-teal/30 pb-4">CORE PROCUREMENT BENEFITS</h3>
+              <h3 className={`text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 ${region.phone.includes('+63') ? 'text-[#F5F5DC] border-[#F5F5DC]/30' : 'text-deep-teal border-deep-teal/30'}`}>CORE PROCUREMENT BENEFITS</h3>
               <ul className="space-y-6">
                 <li className="flex items-start">
-                  <ShieldCheck size={28} className="text-deep-teal mr-4 shrink-0" />
+                  <ShieldCheck size={28} className={`mr-4 shrink-0 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'}`} />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Durable for frequent laundering</h4>
                     <p className="opacity-80">Engineered to withstand rigorous commercial wash protocols.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Truck size={28} className="text-deep-teal mr-4 shrink-0" />
+                  <Truck size={28} className={`mr-4 shrink-0 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'}`} />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Consistent supply and bulk fulfillment</h4>
                     <p className="opacity-80">Robust logistics ensuring your facility never faces a stockout.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Scissors size={28} className="text-deep-teal mr-4 shrink-0" />
+                  <Scissors size={28} className={`mr-4 shrink-0 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'}`} />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Custom branding options</h4>
                     <p className="opacity-80">Bespoke embroidery, tags, and packaging tailored to your brand.</p>

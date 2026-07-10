@@ -95,7 +95,7 @@ export default function Layout() {
       </main>
 
       {/* Enterprise Footer */}
-      <footer className="text-neutral-bg pt-16 pb-8 mt-auto" style={{ backgroundColor: region.theme.primaryBg }}>
+      <footer className="pt-16 pb-8 mt-auto text-neutral-bg" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div>
@@ -104,18 +104,20 @@ export default function Layout() {
                 alt="Trendsetter Textiles Logo" 
                 className="w-[150px] h-auto object-contain bg-white/90 p-2 rounded mb-6"
               />
-              <p className="opacity-80 text-sm leading-relaxed mb-6">
-                {region.footerDescription}
+              <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
+                {region.phone.includes('+63') 
+                  ? 'Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the Philippines.' 
+                  : 'Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the USA.'}
               </p>
               <div className="space-y-2">
                 <div>
-                  <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center text-sm hover:text-deep-teal transition-colors">
+                  <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center text-sm transition-colors text-white hover:opacity-80">
                     <Phone size={14} className="mr-2" />
                     {region.phone}
                   </a>
-                  <p className="text-xs opacity-75 mt-1 ml-5">{region.phoneLabel}</p>
+                  <p className="text-xs mt-1 ml-5 opacity-75 text-white">{region.phoneLabel}</p>
                 </div>
-                <a href={`mailto:${region.email}`} className="flex items-center text-sm hover:text-deep-teal transition-colors">
+                <a href={`mailto:${region.email}`} className="flex items-center text-sm transition-colors text-white hover:opacity-80">
                   <Mail size={14} className="mr-2" />
                   {region.email}
                 </a>
@@ -123,34 +125,34 @@ export default function Layout() {
             </div>
             
             <div>
-              <h4 className="font-bold text-lg mb-4 text-deep-teal">Industries</h4>
-              <ul className="space-y-2 text-sm opacity-80">
-                <li><Link to="/industries/nursing-homes" className="hover:text-white transition-colors">Nursing Homes / Hospitals</Link></li>
-                <li><Link to="/industries/medical-clinics" className="hover:text-white transition-colors">Medical Clinics</Link></li>
-                <li><Link to="/industries/hotels" className="hover:text-white transition-colors">Hotels</Link></li>
+              <h4 className="font-bold text-lg mb-4 text-white">Industries</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li><Link to="/industries/nursing-homes" className="transition-colors text-white hover:opacity-80">Nursing Homes / Hospitals</Link></li>
+                <li><Link to="/industries/medical-clinics" className="transition-colors text-white hover:opacity-80">Medical Clinics</Link></li>
+                <li><Link to="/industries/hotels" className="transition-colors text-white hover:opacity-80">Hotels</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-4 text-deep-teal">Company</h4>
-              <ul className="space-y-2 text-sm opacity-80">
-                <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link to="/custom-programs" className="hover:text-white transition-colors">Custom Programs</Link></li>
-                <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <h4 className="font-bold text-lg mb-4 text-white">Company</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li><Link to="/about" className="transition-colors text-white hover:opacity-80">About Us</Link></li>
+                <li><Link to="/custom-programs" className="transition-colors text-white hover:opacity-80">Custom Programs</Link></li>
+                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Contact</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-4 text-deep-teal">Procurement</h4>
-              <ul className="space-y-2 text-sm opacity-80">
-                <li><Link to="/contact" className="hover:text-white transition-colors">Schedule a Presentation</Link></li>
-                <li><Link to="/contact" className="hover:text-white transition-colors">Request a Quote</Link></li>
+              <h4 className="font-bold text-lg mb-4 text-white">Procurement</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Schedule a Presentation</Link></li>
+                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Request a Quote</Link></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-neutral-bg/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60">
-            <p>&copy; {new Date().getFullYear()} Trendsetter Textiles Inc. All rights reserved. Servicing the United States.</p>
+          <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center border-white/30 text-white opacity-80 gap-4 text-xs">
+            <p>&copy; {new Date().getFullYear()} Trendsetter Textiles Inc. All rights reserved. Servicing the {region.phone.includes('+63') ? 'Philippines' : 'United States'}.</p>
           </div>
         </div>
       </footer>

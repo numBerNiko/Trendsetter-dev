@@ -132,13 +132,13 @@ export default function ProductsPage() {
       </section>
 
       {/* Catalog CTA */}
-      <section className="bg-deep-teal text-neutral-bg py-24 border-t border-slate/10">
+      <section className={`py-24 border-t border-slate/10 ${region.phone.includes('+63') ? 'text-white' : 'bg-deep-teal text-neutral-bg'}`} style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 text-neutral-bg">REQUEST OUR FULL DIGITAL CATALOG</h2>
-          <p className="text-xl opacity-90 mb-10 max-w-3xl mx-auto font-light">
+          <h2 className={`text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 ${region.phone.includes('+63') ? 'text-white' : 'text-neutral-bg'}`}>REQUEST OUR FULL DIGITAL CATALOG</h2>
+          <p className={`text-xl mb-10 max-w-3xl mx-auto font-light ${region.phone.includes('+63') ? 'text-white opacity-100 font-medium' : 'opacity-90'}`}>
             Our comprehensive catalog includes detailed technical specifications, GSM ratings, and material safety data for all products.
           </p>
-          <Link to="/contact" className="inline-block bg-neutral-bg px-10 py-4 rounded-md font-bold text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-xl uppercase tracking-wider" style={{ color: region.theme.primaryBg }}>
+          <Link to="/contact" className={`inline-block px-10 py-4 rounded-md font-bold text-lg transition-colors shadow-xl uppercase tracking-wider ${region.phone.includes('+63') ? 'bg-[#F5F5DC] hover:opacity-80' : 'bg-neutral-bg hover:bg-slate hover:text-neutral-bg'}`} style={{ color: region.theme.primaryBg }}>
             DOWNLOAD CATALOG
           </Link>
         </div>

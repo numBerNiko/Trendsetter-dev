@@ -26,27 +26,30 @@ export default function AboutPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-slate text-neutral-bg p-8 rounded-xl text-center">
-            <Target size={40} className="text-deep-teal mx-auto mb-4" />
+          <div className={`p-8 rounded-xl text-center ${region.phone.includes('+63') ? 'text-white shadow-lg' : 'bg-slate text-neutral-bg'}`} style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}>
+            <Target size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-white' : 'text-deep-teal'}`} />
             <h3 className="text-xl font-bold mb-2">B2B Specialization</h3>
-            <p className="opacity-80 text-sm">Dedicated explicitly to institutional buyers, understanding the unique rigors of commercial laundering and strict PAR level maintenance.</p>
+            <p className={`text-sm ${region.phone.includes('+63') ? 'opacity-100 font-medium' : 'opacity-80'}`}>Dedicated explicitly to institutional buyers, understanding the unique rigors of commercial laundering and strict PAR level maintenance.</p>
           </div>
           
-          <div className="bg-slate text-neutral-bg p-8 rounded-xl text-center">
-            <ShieldCheck size={40} className="text-deep-teal mx-auto mb-4" />
+          <div className={`p-8 rounded-xl text-center ${region.phone.includes('+63') ? 'text-white shadow-lg' : 'bg-slate text-neutral-bg'}`} style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}>
+            <ShieldCheck size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-white' : 'text-deep-teal'}`} />
             <h3 className="text-xl font-bold mb-2">Uncompromising Quality</h3>
-            <p className="opacity-80 text-sm">From 600TC hotel percales to FDA-compliant medical barrier fabrics, our textiles meet rigorous international standards.</p>
+            <p className={`text-sm ${region.phone.includes('+63') ? 'opacity-100 font-medium' : 'opacity-80'}`}>From 600TC hotel percales to FDA-compliant medical barrier fabrics, our textiles meet rigorous international standards.</p>
           </div>
           
-          <div className="bg-slate text-neutral-bg p-8 rounded-xl text-center">
-            <Factory size={40} className="text-deep-teal mx-auto mb-4" />
+          <div className={`p-8 rounded-xl text-center ${region.phone.includes('+63') ? 'text-white shadow-lg' : 'bg-slate text-neutral-bg'}`} style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}>
+            <Factory size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-white' : 'text-deep-teal'}`} />
             <h3 className="text-xl font-bold mb-2">Sourcing Reliability</h3>
-            <p className="opacity-80 text-sm">Deep inventory reserves and SLA-backed delivery guarantees mean your facility will never face a stockout.</p>
+            <p className={`text-sm ${region.phone.includes('+63') ? 'opacity-100 font-medium' : 'opacity-80'}`}>Deep inventory reserves and SLA-backed delivery guarantees mean your facility will never face a stockout.</p>
           </div>
         </div>
 
         <div className="text-center">
-          <Link to="/contact" className="inline-block bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-md">
+          <Link to="/contact" 
+            className={`inline-block px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-md ${region.phone.includes('+63') ? 'bg-transparent border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-white' : 'bg-deep-teal text-neutral-bg hover:bg-slate'}`}
+            style={region.phone.includes('+63') ? { '--theme-color': region.theme.primaryBg } : {}}
+          >
             Partner With Us
           </Link>
         </div>
