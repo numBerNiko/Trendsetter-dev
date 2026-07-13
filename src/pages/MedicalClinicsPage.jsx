@@ -67,7 +67,7 @@ export default function MedicalClinicsPage() {
         </div>
         
         <div className="mt-16 text-center px-4 sm:px-0">
-          <Link to="/contact" className="inline-block w-full sm:w-auto bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold text-lg hover:bg-slate transition-colors shadow-md">
+          <Link to="/contact" className="inline-block w-full sm:w-auto px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-md text-white hover:opacity-80" style={{ backgroundColor: region.theme.primaryBg }}>
             REQUEST QUOTE FOR CLINICS
           </Link>
         </div>

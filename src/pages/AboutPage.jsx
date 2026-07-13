@@ -18,9 +18,12 @@ export default function AboutPage() {
       </section>
 
       <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl p-10 shadow-lg border border-slate/10 mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-deep-teal">Our Story</h2>
-          <p className="text-lg opacity-80 leading-relaxed mb-6">
+        <div 
+          className="bg-white rounded-2xl p-10 shadow-lg border border-slate/10 mb-16"
+          style={region.phone.includes('+63') ? { '--theme-color': region.theme.primaryBg } : {}}
+        >
+          <h2 className={`text-3xl font-bold mb-6 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-deep-teal'}`}>Our Story</h2>
+          <p className={`text-lg leading-relaxed mb-6 ${region.phone.includes('+63') ? 'text-neutral-800' : 'opacity-80'}`}>
             Trendsetter Textiles Inc. is a premier manufacturer and B2B distributor of high-performance institutional linens based in Manila, Philippines. Backed by three generations of textile expertise, we operate one of Southeast Asia's most advanced manufacturing and commercial laundering facilities. We provide end-to-end linen provisioning, uniform leasing, and turnkey logistics for the luxury hospitality, healthcare, and enterprise retail sectors. Our comprehensive product portfolio ranges from ultra-premium Egyptian cotton bedding and durable food-and-beverage linens to specialized healthcare textiles and facility equipment. Driven by a commitment to operational efficiency and certified product safety, every item we produce undergoes rigorous in-house quality assurance. Whether outfitting a luxury resort, a major hospital network, or a high-volume restaurant, we guarantee superior lifetime product value. At Trendsetter, we build long-term partnerships dedicated to reliability, consistency, and unparalleled service.
           </p>
         </div>

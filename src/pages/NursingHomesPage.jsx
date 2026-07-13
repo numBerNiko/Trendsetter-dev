@@ -136,7 +136,7 @@ export default function NursingHomesPage() {
           </div>
 
           {/* Clinical Compliance & Safety */}
-          <div className="bg-white rounded-2xl shadow-md border border-slate/10 p-8 md:p-12 border-l-8 border-l-deep-teal">
+          <div className="bg-white rounded-2xl shadow-md border border-slate/10 p-8 md:p-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-slate/5 p-4 rounded-full text-deep-teal">
                 <ShieldCheck size={32} />
@@ -196,29 +196,31 @@ export default function NursingHomesPage() {
         </div>
       </section>
 
-      {/* The Trendsetter Provisioning Advantage */}
-      <section className={`py-24 ${region.phone.includes('+63') ? 'bg-neutral-bg text-slate' : 'bg-slate text-neutral-bg'}`}>
+      <section 
+        className="py-24 text-white"
+        style={{ backgroundColor: region.theme.primaryBg }}
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className={`text-3xl md:text-4xl font-bold uppercase tracking-wider mb-12 ${region.phone.includes('+63') ? 'text-deep-teal' : 'text-neutral-bg'}`}>THE TRENDSETTER PROVISIONING ADVANTAGE</h2>
+          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-12 text-white">THE TRENDSETTER PROVISIONING ADVANTAGE</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
-            <div className={`p-8 rounded-xl border transition-all ${region.phone.includes('+63') ? 'bg-[#FFFFFF] border-slate/10 shadow-sm hover:shadow-md hover:border-deep-teal/30' : 'bg-white/5 border-white/10 hover:border-deep-teal/50'}`}>
+            <div className="p-8 rounded-xl shadow-md transition-all bg-[#F5F5DC]">
               <h3 className="text-xl font-bold mb-4 flex items-center text-deep-teal"><span className="text-2xl mr-2">1.</span> Commercial Wash Resistance</h3>
-              <p className={`leading-relaxed ${region.phone.includes('+63') ? 'text-slate font-medium opacity-90' : 'opacity-90'}`}>
+              <p className="leading-relaxed font-medium text-deep-teal opacity-90">
                 Every textile in the Harbor Post Acute Care program is treated to resist color fading, chemical yellowing, and tensile degradation during harsh bleaching cycles.
               </p>
             </div>
             
-            <div className={`p-8 rounded-xl border transition-all ${region.phone.includes('+63') ? 'bg-[#FFFFFF] border-slate/10 shadow-sm hover:shadow-md hover:border-deep-teal/30' : 'bg-white/5 border-white/10 hover:border-deep-teal/50'}`}>
+            <div className="p-8 rounded-xl shadow-md transition-all bg-[#F5F5DC]">
               <h3 className="text-xl font-bold mb-4 flex items-center text-deep-teal"><span className="text-2xl mr-2">2.</span> Guaranteed PAR Supply Fulfillment</h3>
-              <p className={`leading-relaxed ${region.phone.includes('+63') ? 'text-slate font-medium opacity-90' : 'opacity-90'}`}>
+              <p className="leading-relaxed font-medium text-deep-teal opacity-90">
                 We safeguard your operation against common supply chain bottlenecks with robust safety stocks to entirely eliminate stockouts.
               </p>
             </div>
             
-            <div className={`p-8 rounded-xl border transition-all ${region.phone.includes('+63') ? 'bg-[#FFFFFF] border-slate/10 shadow-sm hover:shadow-md hover:border-deep-teal/30' : 'bg-white/5 border-white/10 hover:border-deep-teal/50'}`}>
+            <div className="p-8 rounded-xl shadow-md transition-all bg-[#F5F5DC]">
               <h3 className="text-xl font-bold mb-4 flex items-center text-deep-teal"><span className="text-2xl mr-2">3.</span> Customization & Private Labeling</h3>
-              <p className={`leading-relaxed ${region.phone.includes('+63') ? 'text-slate font-medium opacity-90' : 'opacity-90'}`}>
+              <p className="leading-relaxed font-medium text-deep-teal opacity-90">
                 Elevate your facility’s identity with institutional embroidery, custom property tags, and specialized sorting labels.
               </p>
             </div>

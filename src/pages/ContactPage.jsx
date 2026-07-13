@@ -21,29 +21,32 @@ export default function ContactPage() {
           
           {/* Direct Contact Info */}
           <div className="lg:col-span-1 space-y-8">
-            <div className="bg-coral text-slate p-8 rounded-2xl shadow-lg border border-slate/10">
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-6 text-deep-teal">DIRECT CONTACT</h3>
+            <div 
+              className={`bg-coral p-8 rounded-2xl shadow-lg border border-slate/10 ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-slate'}`}
+              style={region.phone.includes('+63') ? { '--theme-color': region.theme.primaryBg } : {}}
+            >
+              <h3 className={`text-2xl font-bold uppercase tracking-wider mb-6 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-deep-teal'}`}>DIRECT CONTACT</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <Phone size={24} className="text-deep-teal mt-1" />
+                  <Phone size={24} className={`mt-1 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-deep-teal'}`} />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Phone</p>
-                    <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg hover:text-deep-teal transition-colors">{region.phone}</a>
+                    <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className={`text-lg transition-colors ${region.phone.includes('+63') ? 'hover:text-[var(--theme-color)]' : 'hover:text-deep-teal'}`}>{region.phone}</a>
                     <p className="text-xs opacity-75 mt-1">{region.phoneLabel}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <Mail size={24} className="text-deep-teal mt-1" />
+                  <Mail size={24} className={`mt-1 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-deep-teal'}`} />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Email</p>
-                    <a href="mailto:customerservice@trendsettertextiles.com" className="text-lg hover:text-deep-teal transition-colors break-all">customerservice@trendsettertextiles.com</a>
+                    <a href="mailto:customerservice@trendsettertextiles.com" className={`text-lg transition-colors break-all ${region.phone.includes('+63') ? 'hover:text-[var(--theme-color)]' : 'hover:text-deep-teal'}`}>customerservice@trendsettertextiles.com</a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <MapPin size={24} className="text-deep-teal mt-1" />
+                  <MapPin size={24} className={`mt-1 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-deep-teal'}`} />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Headquarters</p>
                     <p className="text-lg">Metro Manila, Philippines</p>
