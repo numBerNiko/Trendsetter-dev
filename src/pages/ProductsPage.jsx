@@ -79,7 +79,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Product Suites */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white" style={region.phone.includes('+63') ? { '--theme-color': region.theme.primaryBg } : {}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-24">
             {suites.map((suite, idx) => (
@@ -98,13 +98,13 @@ export default function ProductsPage() {
 
                 {/* Text Block */}
                 <div className="w-full lg:w-1/2 text-left">
-                  <h2 className="text-3xl font-bold uppercase tracking-wider mb-8 text-slate">{suite.title}</h2>
+                  <h2 className={`text-3xl font-bold uppercase tracking-wider mb-8 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-slate'}`}>{suite.title}</h2>
                   
                   <ul className="space-y-4 mb-10">
                     {suite.bullets.map((bullet, i) => (
-                      <li key={i} className="flex items-start text-lg opacity-90">
-                        <CheckCircle2 size={24} className="text-deep-teal mr-3 mt-0.5 shrink-0" />
-                        <span className="leading-relaxed text-slate">{bullet}</span>
+                      <li key={i} className={`flex items-start text-lg ${region.phone.includes('+63') ? 'opacity-100' : 'opacity-90'}`}>
+                        <CheckCircle2 size={24} className={`mr-3 mt-0.5 shrink-0 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-deep-teal'}`} />
+                        <span className={`leading-relaxed ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-slate'}`}>{bullet}</span>
                       </li>
                     ))}
                   </ul>
