@@ -20,54 +20,54 @@ export default function IndustriesPage() {
       </section>
 
       {/* Industry Cards */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ '--theme-color': region.theme.primaryBg }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           
-          <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full">
-            <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
-              <ShieldCheck size={32} className="text-deep-teal" />
+          <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
+            <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
+              <ShieldCheck size={32} className="text-[var(--theme-color)]" />
             </div>
-            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">NURSING HOMES & HOSPITALS</h2>
-            <p className="opacity-80 leading-relaxed flex-grow text-lg">
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">NURSING HOMES & HOSPITALS</h2>
+            <p className="leading-relaxed flex-grow text-lg text-neutral-800">
               Specialized textiles for Harbor Post Acute Care and long-term facilities. Focus on resident comfort, wipe-clean surfaces, and wash-stability.
             </p>
-            <span className="text-deep-teal font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline">VIEW CATALOG &rarr;</span>
+            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOG &rarr;</span>
           </Link>
 
-          <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full">
-            <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
-              <Stethoscope size={32} className="text-deep-teal" />
+          <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
+            <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
+              <Stethoscope size={32} className="text-[var(--theme-color)]" />
             </div>
-            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">MEDICAL CLINICS</h2>
-            <p className="opacity-80 leading-relaxed flex-grow text-lg">
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">MEDICAL CLINICS</h2>
+            <p className="leading-relaxed flex-grow text-lg text-neutral-800">
               Apparel and linens for Outpatient, Urgent Care, and Specialty clinics. Focus on staff scrubs, exam table covers, and patient gowns.
             </p>
-            <span className="text-deep-teal font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline">VIEW CATALOG &rarr;</span>
+            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOG &rarr;</span>
           </Link>
 
-          <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full">
-            <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
-              <Building size={32} className="text-deep-teal" />
+          <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
+            <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
+              <Building size={32} className="text-[var(--theme-color)]" />
             </div>
-            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">HOTELS & HOSPITALITY</h2>
-            <p className="opacity-80 leading-relaxed flex-grow text-lg">
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">HOTELS & HOSPITALITY</h2>
+            <p className="leading-relaxed flex-grow text-lg text-neutral-800">
               Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
             </p>
-            <span className="text-deep-teal font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline">VIEW CATALOG &rarr;</span>
+            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOG &rarr;</span>
           </Link>
 
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-coral text-slate border-t border-slate/10">
+      <section className="py-24 bg-coral text-slate border-t border-slate/10" style={{ '--theme-color': region.theme.primaryBg }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate uppercase tracking-wider">Ready to Get Started?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider text-[var(--theme-color)]">Ready to Get Started?</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center" style={{ backgroundColor: region.theme.primaryBg }}>
+            <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-lg w-full sm:w-auto text-center transition-colors hover:opacity-80" style={{ backgroundColor: region.theme.primaryBg }}>
               REQUEST A QUOTE
             </Link>
-            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm w-full sm:w-auto text-center">
+            <Link to="/contact" className="px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-sm w-full sm:w-auto text-center transition-colors bg-transparent border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-neutral-bg">
               SCHEDULE A PRODUCT PRESENTATION
             </Link>
           </div>

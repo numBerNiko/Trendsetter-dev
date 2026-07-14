@@ -48,10 +48,9 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="text-center" style={{ '--theme-color': region.theme.primaryBg }}>
           <Link to="/contact" 
-            className={`inline-block px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-md ${region.phone.includes('+63') ? 'bg-transparent border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-white' : 'bg-deep-teal text-neutral-bg hover:bg-slate'}`}
-            style={region.phone.includes('+63') ? { '--theme-color': region.theme.primaryBg } : {}}
+            className="inline-block px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 shadow-md border-2 border-[var(--theme-color)] bg-[var(--theme-color)] text-white hover:bg-transparent hover:text-[var(--theme-color)] hover:shadow-sm"
           >
             Partner With Us
           </Link>
