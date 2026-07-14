@@ -40,7 +40,9 @@ export default function Layout() {
                 <img 
                   src="/Trendsetter-website-photos/Trendsetter-Logo.png" 
                   alt="Trendsetter Textiles Logo" 
-                  className="w-[180px] h-auto object-contain bg-transparent"
+                  width="2031"
+                  height="738"
+                  className="w-[220px] h-auto object-contain mix-blend-multiply logo-optimize"
                 />
               </Link>
             </div>
@@ -102,7 +104,10 @@ export default function Layout() {
               <img 
                 src="/Trendsetter-website-photos/Trendsetter-Logo.png" 
                 alt="Trendsetter Textiles Logo" 
-                className="w-[150px] h-auto object-contain bg-white/90 p-2 rounded mb-6"
+                width="2031"
+                height="738"
+                className="w-[180px] h-auto object-contain mb-6 logo-optimize"
+                style={{ filter: 'grayscale(100%) contrast(500%) invert(100%)', mixBlendMode: 'screen' }}
               />
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
                 {region.phone.includes('+63') 

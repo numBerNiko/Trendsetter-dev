@@ -32,7 +32,9 @@ export default function HomePage() {
     <div className="flex flex-col w-full text-slate bg-neutral-bg">
       
       {/* Section 1: Hero Banner */}
-      <section className="relative pt-12 pb-20 md:pt-24 md:pb-32 lg:pt-32 lg:pb-40 overflow-hidden bg-gradient-to-b from-neutral-bg to-white text-slate">
+      <section className="relative pt-12 pb-20 md:pt-24 md:pb-32 lg:pt-32 lg:pb-40 overflow-hidden text-slate bg-cover bg-center" style={{ backgroundImage: "url('/Trendsetter-website-photos/Sourcing_&_Weaving_Flexibility.png')" }}>
+        {/* Semi-Transparent White Overlay */}
+        <div className="absolute inset-0 bg-white/85 z-0 backdrop-blur-[2px]"></div>
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             
@@ -44,15 +46,6 @@ export default function HomePage() {
               <p className="text-lg sm:text-xl md:text-2xl opacity-90 mb-8 sm:mb-10 font-medium">
                 Reliable bedding, linens, and apparel designed for nursing homes, clinics, and hotels.
               </p>
-              
-              <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
-                <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md text-lg font-bold shadow-lg hover:bg-slate transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider" style={{ backgroundColor: region.theme.primaryBg }}>
-                  REQUEST A QUOTE
-                </Link>
-                <Link to="/contact" className="bg-transparent px-8 py-4 rounded-md text-lg font-bold shadow-sm hover:bg-slate hover:text-white transition-colors duration-300 w-full sm:w-auto text-center uppercase tracking-wider" style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg, borderWidth: '2px' }}>
-                  SCHEDULE A PRESENTATION
-                </Link>
-              </div>
 
               {/* Trust Badges */}
               <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate/10">
@@ -201,7 +194,7 @@ export default function HomePage() {
           <p className="text-xl opacity-90 mb-10 max-w-3xl mx-auto">
             From concert merchandise to corporate uniforms, our vertically integrated supply chain delivers bespoke textile solutions tailored to your brand identity.
           </p>
-          <Link to="/custom-programs" className="inline-block bg-white text-slate px-10 py-4 rounded-md font-bold text-lg hover:bg-deep-teal hover:text-white transition-colors shadow-xl uppercase tracking-wider">
+          <Link to="/custom-programs" className={`inline-block px-10 py-4 rounded-md font-bold text-lg shadow-xl uppercase tracking-wider bg-white text-slate ${region.phone.includes('+63') ? 'hover:bg-[#b57e1d]' : 'hover:bg-deep-teal'} hover:text-[#F5F5DC] transition-all duration-300 ease-in-out`}>
             EXPLORE CUSTOM PROGRAMS
           </Link>
         </div>
@@ -217,24 +210,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             {/* Trust Signals */}
             <div>
-              <h3 className={`text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 ${region.phone.includes('+63') ? 'text-[#F5F5DC] border-[#F5F5DC]/30' : 'text-deep-teal border-deep-teal/30'}`}>INSTITUTIONAL CREDIBILITY</h3>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 text-[#F5F5DC] border-[#F5F5DC]/30">INSTITUTIONAL CREDIBILITY</h3>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <BadgeCheck size={28} className={region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'} />
+                  <BadgeCheck size={28} className="text-[#F5F5DC]" />
                   <div>
                     <p className="font-bold text-sm">OEKO-TEX® Standard 100</p>
                     <p className="text-xs opacity-70">Certified Safe Textiles</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <Award size={28} className={region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'} />
+                  <Award size={28} className="text-[#F5F5DC]" />
                   <div>
                     <p className="font-bold text-sm">WRAP Certified</p>
                     <p className="text-xs opacity-70">Ethical Manufacturing</p>
                   </div>
                 </div>
               </div>
-              <blockquote className={`bg-white/5 p-6 rounded-lg border-l-4 italic text-lg leading-relaxed opacity-90 ${region.phone.includes('+63') ? 'border-[#F5F5DC]' : 'border-deep-teal'}`}>
+              <blockquote className="bg-white/5 p-6 rounded-lg border-l-4 border-stone-100 italic text-lg leading-relaxed opacity-90">
                 "Trendsetter’s consistent supply chain allowed us to standardize apparel across all our locations seamlessly. Highly recommended for bulk fulfillment."
                 <footer className="text-sm font-bold mt-4 opacity-100">— Sarah Jenkins, Director of Procurement, Apex Regional Healthcare</footer>
               </blockquote>
@@ -242,24 +235,24 @@ export default function HomePage() {
 
             {/* Benefits List */}
             <div className="flex flex-col justify-center">
-              <h3 className={`text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 ${region.phone.includes('+63') ? 'text-[#F5F5DC] border-[#F5F5DC]/30' : 'text-deep-teal border-deep-teal/30'}`}>CORE PROCUREMENT BENEFITS</h3>
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 text-[#F5F5DC] border-[#F5F5DC]/30">CORE PROCUREMENT BENEFITS</h3>
               <ul className="space-y-6">
                 <li className="flex items-start">
-                  <ShieldCheck size={28} className={`mr-4 shrink-0 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'}`} />
+                  <ShieldCheck size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Durable for frequent laundering</h4>
                     <p className="opacity-80">Engineered to withstand rigorous commercial wash protocols.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Truck size={28} className={`mr-4 shrink-0 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'}`} />
+                  <Truck size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Consistent supply and bulk fulfillment</h4>
                     <p className="opacity-80">Robust logistics ensuring your facility never faces a stockout.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Scissors size={28} className={`mr-4 shrink-0 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-deep-teal'}`} />
+                  <Scissors size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Custom branding options</h4>
                     <p className="opacity-80">Bespoke embroidery, tags, and packaging tailored to your brand.</p>
@@ -267,8 +260,8 @@ export default function HomePage() {
                 </li>
               </ul>
               <div className="mt-10">
-                <p className="font-bold mb-4 opacity-90">Easy Next Step:</p>
-                <Link to="#contact-section" className="inline-block bg-neutral-bg text-slate px-8 py-3 rounded-md font-bold hover:bg-deep-teal hover:text-neutral-bg transition-colors shadow-md uppercase tracking-wider">
+                <p className="font-bold mb-4 opacity-90 text-[#F5F5DC]">Easy Next Step:</p>
+                <Link to="#contact-section" className={`inline-block px-8 py-3 rounded-md font-bold uppercase tracking-wider border-2 border-[#F5F5DC] bg-[#F5F5DC] ${region.phone.includes('+63') ? 'text-[#b57e1d]' : 'text-deep-teal'} hover:bg-transparent hover:text-[#F5F5DC] transition-all duration-300 ease-in-out shadow-md hover:shadow-none`}>
                   GET A QUOTE OR SAMPLE
                 </Link>
               </div>
@@ -312,7 +305,7 @@ export default function HomePage() {
                 <button className="text-neutral-bg px-6 py-4 rounded-md font-bold uppercase tracking-wider shadow-md hover:bg-slate transition-colors flex-1" style={{ backgroundColor: region.theme.primaryBg }}>
                   SCHEDULE A PRODUCT PRESENTATION
                 </button>
-                <button className="bg-transparent border-2 px-6 py-4 rounded-md font-bold uppercase tracking-wider hover:bg-slate hover:text-neutral-bg transition-colors flex-1" style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg }}>
+                <button className={`bg-transparent border-2 px-6 py-4 rounded-md font-bold uppercase tracking-wider flex-1 transition-all duration-300 ease-in-out ${region.phone.includes('+63') ? 'border-[#b57e1d] text-[#b57e1d] hover:bg-[#b57e1d] hover:text-[#F5F5DC]' : 'border-deep-teal text-deep-teal hover:bg-deep-teal hover:text-[#F5F5DC]'}`}>
                   REQUEST A QUOTE
                 </button>
               </div>

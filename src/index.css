@@ -13,3 +13,10 @@
     @apply bg-neutral-bg text-slate font-sans m-0;
   }
 }
+
+@layer utilities {
+  .logo-optimize {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
