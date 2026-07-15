@@ -23,7 +23,10 @@ import {
   Shirt,
   Bath,
   BadgeCheck,
-  Stethoscope
+  Stethoscope,
+  HeartHandshake,
+  Activity,
+  Hotel
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -102,39 +105,39 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Nursing Homes Card */}
             <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--theme-color)]/10 transition-colors">
-                <ShieldCheck size={32} className="text-[var(--theme-color)]" />
+              <div className="mb-6">
+                <HeartHandshake className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
               </div>
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate flex items-center gap-2">
-                <span className="text-3xl">👵</span> NURSING HOMES
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
+                NURSING HOMES
               </h3>
-              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
+              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6 text-slate">
                 Specialized textiles focusing on resident comfort and wash-stability. Featuring our Bedding, Hygiene, and Apparel suites.
               </p>
               <span className="text-[var(--theme-color)] font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
             </Link>
             {/* Medical Clinics Card */}
             <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--theme-color)]/10 transition-colors">
-                <Stethoscope size={32} className="text-[var(--theme-color)]" />
+              <div className="mb-6">
+                <Activity className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
               </div>
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate flex items-center gap-2">
-                <span className="text-3xl">🏥</span> MEDICAL CLINICS
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
+                MEDICAL CLINICS
               </h3>
-              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
+              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6 text-slate">
                 Apparel and linens for Outpatient and Specialty clinics. Focus on staff scrubs, exam table covers, and patient gowns.
               </p>
               <span className="text-[var(--theme-color)] font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
             </Link>
             {/* Hotels Card */}
             <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--theme-color)]/10 transition-colors">
-                <Building2 size={32} className="text-[var(--theme-color)]" />
+              <div className="mb-6">
+                <Hotel className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
               </div>
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate flex items-center gap-2">
-                <span className="text-3xl">🏨</span> HOTELS & RESORTS
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
+                HOTELS & RESORTS
               </h3>
-              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
+              <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6 text-slate">
                 Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
               </p>
               <span className="text-[var(--theme-color)] font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
