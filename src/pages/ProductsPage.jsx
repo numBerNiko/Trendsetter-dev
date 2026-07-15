@@ -117,17 +117,7 @@ export default function ProductsPage() {
             ))}
           </div>
 
-          {/* Cross Link to Industries */}
-          <div className="mt-20 border-t border-slate/10 pt-16 text-center">
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">Looking for Contextual Solutions?</h3>
-            <p className="text-lg opacity-80 mb-8 max-w-2xl mx-auto text-slate">
-              Discover how our suites align perfectly with specific environments like nursing homes, clinics, and hotels.
-            </p>
-            <Link to="/industries" className="inline-block bg-transparent border-2 px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm" style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg }}>
-              EXPLORE INDUSTRIES
-            </Link>
-          </div>
-
+          
         </div>
       </section>
 
