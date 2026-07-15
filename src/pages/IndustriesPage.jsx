@@ -52,7 +52,7 @@ export default function IndustriesPage() {
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
               <Building size={32} className="text-[var(--theme-color)]" />
             </div>
-            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">HOTELS & HOSPITALITY</h2>
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">HOTELS & RESORTS</h2>
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
               Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
             </p>

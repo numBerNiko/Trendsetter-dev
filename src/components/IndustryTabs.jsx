@@ -31,7 +31,7 @@ export default function IndustryTabs() {
             Medical Clinics
           </NavLink>
           <NavLink to="/industries/hotels" className={tabClass} style={tabStyle}>
-            Hotels
+            Hotels & Resorts
           </NavLink>
         </div>
       </div>
