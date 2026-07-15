@@ -106,7 +106,7 @@ export default function Layout() {
               <img 
                 src="/Trendsetter-Logo.svg" 
                 alt="Trendsetter Textiles Logo" 
-                className="h-10 w-auto max-w-[180px] object-contain mb-6 logo-optimize"
+                className="h-16 md:h-20 w-auto max-w-[250px] object-contain mb-6 logo-optimize"
                 style={{ filter: 'grayscale(100%) contrast(500%) invert(100%)', mixBlendMode: 'screen' }}
               />
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
