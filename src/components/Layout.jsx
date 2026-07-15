@@ -37,14 +37,14 @@ export default function Layout() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate/10 shadow-sm">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center py-4 md:py-6 min-h-[5rem]">
             {/* Logo */}
             <div className="flex items-center">
               <Link to="/">
                 <img 
                   src="/Trendsetter-Logo.svg" 
                   alt="Trendsetter Textiles Logo" 
-                  className="h-10 sm:h-12 w-auto max-w-[200px] object-contain mix-blend-multiply logo-optimize"
+                  className="w-48 md:w-64 lg:w-72 h-auto object-contain mix-blend-multiply logo-optimize"
                 />
               </Link>
             </div>
