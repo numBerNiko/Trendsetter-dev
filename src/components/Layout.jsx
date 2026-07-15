@@ -11,19 +11,18 @@ export default function Layout() {
     <div className="min-h-screen bg-neutral-bg text-slate font-sans flex flex-col" style={{ '--theme-color': region.theme.primaryBg }}>
       {/* Top Contact Bar */}
       <div className="text-neutral-bg py-2 sm:py-3" style={{ backgroundColor: region.theme.primaryBg }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center lg:justify-between items-center text-sm">
-          <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-2 md:space-y-0 text-center">
-            <div className="flex flex-col sm:flex-row items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center lg:justify-between items-center text-sm gap-2">
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-center">
+            <div className="flex items-center">
               <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center hover:opacity-80 transition-opacity font-medium whitespace-nowrap">
                 <Phone size={14} className="mr-1.5 shrink-0" />
                 {region.phone}
               </a>
-              <span className="mt-1 sm:mt-0 sm:ml-2 text-xs opacity-75">{region.phoneLabel}</span>
+              <span className="ml-2 text-xs opacity-75 hidden sm:inline">{region.phoneLabel}</span>
             </div>
-            <a href={`mailto:${region.email}`} className="flex items-center hover:opacity-80 transition-opacity text-xs sm:text-sm">
-              <Mail size={14} className="mr-1.5 shrink-0" />
-              <span className="truncate max-w-[280px] sm:max-w-none">{region.email}</span>
-            </a>
+            <Link to="/contact" className="px-3 py-0.5 rounded bg-white/10 hover:bg-white text-white hover:text-[var(--theme-color)] border border-white/20 hover:border-white font-bold text-xs uppercase tracking-wider transition-all duration-300">
+              Contact Us
+            </Link>
           </div>
           <div className="hidden lg:flex items-center gap-6 mt-3 lg:mt-0">
             <span className="opacity-80 text-xs tracking-wider uppercase font-medium">{region.heroTagline}</span>
@@ -120,13 +119,6 @@ export default function Layout() {
                   : 'Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the USA.'}
               </p>
               <div className="space-y-2">
-                <div>
-                  <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center text-sm transition-colors text-white hover:opacity-80">
-                    <Phone size={14} className="mr-2" />
-                    {region.phone}
-                  </a>
-                  <p className="text-xs mt-1 ml-5 opacity-75 text-white">{region.phoneLabel}</p>
-                </div>
                 <a href={`mailto:${region.email}`} className="flex items-center text-sm transition-colors text-white hover:opacity-80">
                   <Mail size={14} className="mr-2" />
                   {region.email}
@@ -166,6 +158,16 @@ export default function Layout() {
           
           <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center border-white/30 text-white opacity-80 gap-4 text-xs">
             <p>&copy; {new Date().getFullYear()} Trendsetter Textiles Inc. All rights reserved. Servicing the {region.phone.includes('+63') ? 'Philippines' : 'United States'}.</p>
+            <div className="flex items-center gap-2">
+              <Mail size={14} />
+              <a href={`mailto:${region.email}`} className="hover:underline">{region.email}</a>
+            </div>
+            <div className="flex gap-4">
+              <Link to="/home" className="hover:underline">Home</Link>
+              <Link to="/products" className="hover:underline">Products</Link>
+              <Link to="/about" className="hover:underline">About</Link>
+              <Link to="/contact" className="hover:underline">Contact</Link>
+            </div>
           </div>
         </div>
       </footer>
