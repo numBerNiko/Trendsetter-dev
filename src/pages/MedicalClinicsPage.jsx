@@ -38,19 +38,19 @@ export default function MedicalClinicsPage() {
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Flat sheets, pillowcases</span>
+                <span>Institutional-grade linens (T130/T180)</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Lightweight blankets</span>
+                <span>Lightweight thermal blankets</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Pillow protectors, wipe-clean pillows</span>
+                <span>Medical-grade barrier pillows & fluid-resistant protectors</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Privacy curtains</span>
+                <span>Antimicrobial privacy/cubicle curtains</span>
               </li>
             </ul>
           </div>
@@ -66,19 +66,19 @@ export default function MedicalClinicsPage() {
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Patient gowns (maternity, pediatric prints)</span>
+                <span>High-turnover patient gowns (telemetry, maternity, pediatric)</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Scrubs (custom colors, logo embroidery)</span>
+                <span>Industrial-wash scrubs (custom colors, logo embroidery)</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Lab coats (short/long)</span>
+                <span>Clinical lab coats (short/long)</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Non-slip socks</span>
+                <span>Fall-prevention treaded footwear</span>
               </li>
             </ul>
           </div>
@@ -89,20 +89,20 @@ export default function MedicalClinicsPage() {
               className="font-bold text-sm tracking-wider uppercase mb-5"
               style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
             >
-              ANCILLARY SPACES
+              EVS, FACILITIES & PUBLIC AREAS
             </h3>
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Waiting-room textiles (washable cushion covers, accent blankets)</span>
+                <span>Commercial-grade lobby textiles (heavy-duty upholstery covers)</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Washroom textiles (hand towels, bath mats)</span>
+                <span>Washroom textiles (bulk hand towels, bath mats)</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Cleaning & operations (laundry bags, mop-head textiles)</span>
+                <span>EVS supplies (isolation laundry bags, industrial microfiber systems)</span>
               </li>
             </ul>
           </div>
