@@ -112,6 +112,24 @@ export default function HotelsPage() {
 
         </div>
 
+        {/* Procurement Spec Box */}
+        <div className="mt-16 bg-white border border-slate/10 rounded-2xl p-8 shadow-sm flex flex-col md:flex-row items-center gap-8 text-left">
+          <div className="bg-slate/5 p-4 rounded-xl shrink-0" style={{ color: region.theme.primaryBg }}>
+            <BedDouble size={40} />
+          </div>
+          <div>
+            <h4 
+              className="text-xl font-bold uppercase tracking-wider mb-2" 
+              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+            >
+              The Science of Hotel Sleep
+            </h4>
+            <p className="text-sm leading-relaxed text-neutral-800">
+              We offer both Crisp Percale (for a cool, matte, breathable feel) and Silky Sateen (for a warmer, heavier, lustrous drape) woven strictly with extra-long staple (ELS) fibers. Zero short-staple filler cotton ensures a luxury feel that outlasts cheap alternatives.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-16 border rounded-2xl p-10 text-center max-w-4xl mx-auto bg-[var(--theme-color)]/5 border-[var(--theme-color)]/20">
           <Target size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
           <h2 className="text-3xl font-bold uppercase tracking-wider mb-4 text-slate">CUSTOM PRIVATE LABELING</h2>

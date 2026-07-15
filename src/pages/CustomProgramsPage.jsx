@@ -84,6 +84,31 @@ export default function CustomProgramsPage() {
 
         </div>
 
+        {/* Quality Assurance Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold mb-10 text-center text-[var(--theme-color)]">The Engineering Behind Our Craftsmanship</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm text-left">
+              <h3 className="text-xl font-bold mb-4 text-[var(--theme-color)]">Collar Recovery & Anti-Deformation</h3>
+              <p className="text-sm leading-relaxed text-neutral-800">
+                We eliminate 'bacon neck' in our knit wear. All collars are engineered with spandex/elastane-blended ribbing to ensure 100% elastic recovery and lay-flat geometry after industrial laundering.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm text-left">
+              <h3 className="text-xl font-bold mb-4 text-[var(--theme-color)]">Strict Geometrical Tolerances</h3>
+              <p className="text-sm leading-relaxed text-neutral-800">
+                While the standard fast-fashion tolerance is up to 1/2-inch variance, we enforce strict 1/4-inch to 1/8-inch manufacturing tolerances. Every bulk delivery aligns perfectly with your master pattern.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm text-left">
+              <h3 className="text-xl font-bold mb-4 text-[var(--theme-color)]">Statistical Quality Verification (AQL)</h3>
+              <p className="text-sm leading-relaxed text-neutral-800">
+                We utilize rigorous Acceptable Quality Level (AQL) statistical sampling standards. Every batch destined for clinical or hospitality use undergoes systematic stress testing for stitch density (SPI) and seam strength.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="rounded-2xl p-12 text-center max-w-4xl mx-auto shadow-xl text-white" style={{ backgroundColor: region.theme.primaryBg }}>
           <h2 className="text-3xl font-bold mb-6 text-white">Start Your Custom Project</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto text-white font-medium opacity-100">

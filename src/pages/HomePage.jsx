@@ -218,7 +218,7 @@ export default function HomePage() {
               </div>
               <div className="p-8 text-left">
                 <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">Institutional Bedding</h3>
-                <p className="opacity-80 text-sm mb-6 leading-relaxed text-slate">High-tensile T180/T250 flat & fitted sheets engineered for bulk commercial laundering cycles.</p>
+                <p className="opacity-80 text-sm mb-6 leading-relaxed text-slate">High-Tensile T180/T250 Bedding woven from Single-Ply, Long-Staple Ring-Spun Cotton. Engineered to withstand 150+ commercial wash-cycles without pilling, warping, or premature thinning.</p>
                 <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Bedding Suite &rarr;</Link>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function HomePage() {
               </div>
               <div className="p-8 text-left">
                 <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">Staff Uniforms & Scrubs</h3>
-                <p className="opacity-80 text-sm mb-6 leading-relaxed text-slate">Bespoke facility-colored scrubs, clinical lab coats, and protective isolation wear with logo embroidery options.</p>
+                <p className="opacity-80 text-sm mb-6 leading-relaxed text-slate">High-Performance Staff Wear featuring durable Interlock Knit structures and Reactive Dyeing. Colors stay vibrant and garments hold their shape with zero edge-curling, even under high-temp clinical sanitization.</p>
                 <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Uniforms Suite &rarr;</Link>
               </div>
             </div>

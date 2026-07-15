@@ -75,6 +75,24 @@ export default function NursingHomesPage() {
                 <p><strong className="text-neutral-800">Mattress Protectors:</strong> Quilted, fluid-resistant, waterproof barriers engineered for full mattress longevity and optimal fluid management.</p>
               </li>
             </ul>
+
+            {/* Procurement Spec Box */}
+            <div className="mt-8 border-t pt-8 flex flex-col md:flex-row items-center gap-6 text-left border-slate/10">
+              <div className="bg-slate/5 p-3 rounded-xl shrink-0" style={{ color: region.theme.primaryBg }}>
+                <ShieldCheck size={28} />
+              </div>
+              <div>
+                <h4 
+                  className="text-lg font-bold uppercase tracking-wider mb-2" 
+                  style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+                >
+                  Skin-Safety & Wash Stability
+                </h4>
+                <p className="text-sm leading-relaxed text-neutral-800">
+                  Every sheet in our resident care program is fully combed to remove short, scratchy fibers, eliminating friction-based skin irritation for long-term patients. Pre-shrunk (Sanforized) construction ensures a secure fit on clinical mattresses wash after wash.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Hygiene & Personal Care Suite */}
