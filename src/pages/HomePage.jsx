@@ -29,7 +29,7 @@ import {
 export default function HomePage() {
   const region = useRegion();
   return (
-    <div className="flex flex-col w-full text-slate bg-neutral-bg">
+    <div className="flex flex-col w-full text-slate bg-neutral-bg" style={{ '--theme-color': region.theme.primaryBg }}>
       
       {/* Section 1: Hero Banner */}
       <section className="relative pt-12 pb-20 md:pt-24 md:pb-32 lg:pt-32 lg:pb-40 overflow-hidden text-slate bg-cover bg-center" style={{ backgroundImage: "url('/Trendsetter-website-photos/Sourcing_&_Weaving_Flexibility.png')" }}>
@@ -43,18 +43,27 @@ export default function HomePage() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
                 Institutional Textile Solutions for Healthcare and Hospitality
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl opacity-90 mb-8 sm:mb-10 font-medium">
+              <p className="text-lg sm:text-xl md:text-2xl opacity-90 mb-6 font-medium">
                 Reliable bedding, linens, and apparel designed for nursing homes, clinics, and hotels.
               </p>
+
+              <div className="mb-8">
+                <Link 
+                  to="/products" 
+                  className="inline-block px-8 py-4 rounded-md font-bold text-lg uppercase tracking-wider text-white shadow-lg transition-all duration-300 bg-[var(--theme-color)] hover:bg-slate"
+                >
+                  Explore Our Textile Suites
+                </Link>
+              </div>
 
               {/* Trust Badges */}
               <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate/10">
                 <div className="flex items-center gap-2">
-                  <BadgeCheck size={20} className="text-deep-teal" />
+                  <BadgeCheck size={20} style={{ color: region.theme.primaryBg }} />
                   <span className="text-sm font-bold opacity-80">OEKO-TEX® Standard 100</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Award size={20} className="text-deep-teal" />
+                  <Award size={20} style={{ color: region.theme.primaryBg }} />
                   <span className="text-sm font-bold opacity-80">WRAP Certified</span>
                 </div>
               </div>
@@ -85,37 +94,37 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Nursing Homes Card */}
-            <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
-                <ShieldCheck size={32} className="text-deep-teal" />
+            <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
+              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--theme-color)]/10 transition-colors">
+                <ShieldCheck size={32} className="text-[var(--theme-color)]" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">NURSING HOMES</h3>
               <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
                 Specialized textiles focusing on resident comfort and wash-stability. Featuring our Bedding, Hygiene, and Apparel suites.
               </p>
-              <span className="text-deep-teal font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
+              <span className="text-[var(--theme-color)] font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
             </Link>
             {/* Medical Clinics Card */}
-            <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
-                <Stethoscope size={32} className="text-deep-teal" />
+            <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
+              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--theme-color)]/10 transition-colors">
+                <Stethoscope size={32} className="text-[var(--theme-color)]" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">MEDICAL CLINICS</h3>
               <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
                 Apparel and linens for Outpatient and Specialty clinics. Focus on staff scrubs, exam table covers, and patient gowns.
               </p>
-              <span className="text-deep-teal font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
+              <span className="text-[var(--theme-color)] font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
             </Link>
             {/* Hotels Card */}
-            <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-deep-teal hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-deep-teal/10 transition-colors">
-                <Building2 size={32} className="text-deep-teal" />
+            <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
+              <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--theme-color)]/10 transition-colors">
+                <Building2 size={32} className="text-[var(--theme-color)]" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">HOTELS & HOSPITALITY</h3>
               <p className="opacity-80 leading-relaxed flex-grow text-lg mb-6">
                 Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
               </p>
-              <span className="text-deep-teal font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
+              <span className="text-[var(--theme-color)] font-bold uppercase tracking-wider group-hover:underline">VIEW SOLUTIONS &rarr;</span>
             </Link>
           </div>
         </div>
@@ -194,7 +203,7 @@ export default function HomePage() {
           <p className="text-xl opacity-90 mb-10 max-w-3xl mx-auto">
             From concert merchandise to corporate uniforms, our vertically integrated supply chain delivers bespoke textile solutions tailored to your brand identity.
           </p>
-          <Link to="/custom-programs" className={`inline-block px-10 py-4 rounded-md font-bold text-lg shadow-xl uppercase tracking-wider bg-white text-slate ${region.phone.includes('+63') ? 'hover:bg-[#b57e1d]' : 'hover:bg-deep-teal'} hover:text-[#F5F5DC] transition-all duration-300 ease-in-out`}>
+          <Link to="/custom-programs" className="inline-block px-10 py-4 rounded-md font-bold text-lg shadow-xl uppercase tracking-wider bg-white text-slate hover:bg-[var(--theme-color)] hover:text-[#F5F5DC] transition-all duration-300 ease-in-out">
             EXPLORE CUSTOM PROGRAMS
           </Link>
         </div>
@@ -261,7 +270,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-10">
                 <p className="font-bold mb-4 opacity-90 text-[#F5F5DC]">Easy Next Step:</p>
-                <Link to="#contact-section" className={`inline-block px-8 py-3 rounded-md font-bold uppercase tracking-wider border-2 border-[#F5F5DC] bg-[#F5F5DC] ${region.phone.includes('+63') ? 'text-[#b57e1d]' : 'text-deep-teal'} hover:bg-transparent hover:text-[#F5F5DC] transition-all duration-300 ease-in-out shadow-md hover:shadow-none`}>
+                <Link to="#contact-section" className="inline-block px-8 py-3 rounded-md font-bold uppercase tracking-wider border-2 border-[#F5F5DC] bg-[#F5F5DC] text-[var(--theme-color)] hover:bg-transparent hover:text-[#F5F5DC] transition-all duration-300 ease-in-out shadow-md hover:shadow-none">
                   GET A QUOTE OR SAMPLE
                 </Link>
               </div>
@@ -285,18 +294,18 @@ export default function HomePage() {
               
               <div className="space-y-6 mb-10">
                 <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-slate/10">
-                  <Phone size={24} className="text-deep-teal" />
+                  <Phone size={24} className="text-[var(--theme-color)]" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Call Us Directly</p>
-                    <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-xl font-bold hover:text-deep-teal transition-colors">{region.phone}</a>
+                    <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-xl font-bold hover:text-[var(--theme-color)] transition-colors">{region.phone}</a>
                     <p className="text-xs opacity-75 mt-1">{region.phoneLabel}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-slate/10">
-                  <Mail size={24} className="text-deep-teal" />
+                  <Mail size={24} className="text-[var(--theme-color)]" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Email Us</p>
-                    <a href={`mailto:${region.email}`} className="text-xl font-bold hover:text-deep-teal transition-colors break-all">{region.email}</a>
+                    <a href={`mailto:${region.email}`} className="text-xl font-bold hover:text-[var(--theme-color)] transition-colors break-all">{region.email}</a>
                   </div>
                 </div>
               </div>
@@ -305,7 +314,7 @@ export default function HomePage() {
                 <button className="text-neutral-bg px-6 py-4 rounded-md font-bold uppercase tracking-wider shadow-md hover:bg-slate transition-colors flex-1" style={{ backgroundColor: region.theme.primaryBg }}>
                   SCHEDULE A PRODUCT PRESENTATION
                 </button>
-                <button className={`bg-transparent border-2 px-6 py-4 rounded-md font-bold uppercase tracking-wider flex-1 transition-all duration-300 ease-in-out ${region.phone.includes('+63') ? 'border-[#b57e1d] text-[#b57e1d] hover:bg-[#b57e1d] hover:text-[#F5F5DC]' : 'border-deep-teal text-deep-teal hover:bg-deep-teal hover:text-[#F5F5DC]'}`}>
+                <button className="bg-transparent border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-[#F5F5DC] px-6 py-4 rounded-md font-bold uppercase tracking-wider flex-1 transition-all duration-300 ease-in-out">
                   REQUEST A QUOTE
                 </button>
               </div>
@@ -317,19 +326,19 @@ export default function HomePage() {
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Full Name</label>
-                  <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="Your Name" />
+                  <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Your Name" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Company</label>
-                  <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="Facility or Organization" />
+                  <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Facility or Organization" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Email</label>
-                  <input type="email" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal" placeholder="you@company.com" />
+                  <input type="email" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="you@company.com" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Message</label>
-                  <textarea rows="4" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-teal resize-none" placeholder="How can we help?"></textarea>
+                  <textarea rows="4" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="How can we help?"></textarea>
                 </div>
                 <button type="submit" className="w-full flex justify-center items-center gap-3 text-neutral-bg font-bold uppercase tracking-wider py-4 rounded-md text-lg hover:opacity-90 transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
                   <Send size={20} /> SUBMIT QUICK REQUEST

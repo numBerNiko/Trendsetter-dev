@@ -13,6 +13,13 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ScrollToTop from './components/ScrollToTop';
 
+// New B2B Pages
+import PortalPage from './pages/PortalPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import RequestSamplesPage from './pages/RequestSamplesPage';
+import ResourcesPage from './pages/ResourcesPage';
+import CategoryPage from './pages/CategoryPage';
+
 function App() {
   return (
     <BrowserRouter>
@@ -31,9 +38,14 @@ function App() {
           </Route>
           
           <Route path="products" element={<ProductsPage />} />
+          <Route path="products/:category" element={<CategoryPage />} />
           <Route path="custom-programs" element={<CustomProgramsPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="portal" element={<PortalPage />} />
+          <Route path="case-studies" element={<CaseStudiesPage />} />
+          <Route path="request-samples" element={<RequestSamplesPage />} />
+          <Route path="resources" element={<ResourcesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
