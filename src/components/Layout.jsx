@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
-import { Phone, Mail, ChevronDown, Menu, X } from 'lucide-react';
+import { Phone, Mail, ChevronDown, Menu, X, MessageCircle } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
 
 export default function Layout() {
@@ -167,6 +167,22 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+
+      {/* Floating Action Button for Philippine Site */}
+      {region.countryCode === 'ph' && (
+        <a 
+          href="https://wa.me/639178884059"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 transition-transform hover:scale-110 group cursor-pointer"
+        >
+          <MessageCircle size={28} />
+          {/* Tooltip / Badge */}
+          <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate">
+            Chat with Us
+          </span>
+        </a>
+      )}
     </div>
   );
 }
