@@ -7,7 +7,7 @@ import IndustryTabs from '../components/IndustryTabs';
 export default function HotelsPage() {
   const region = useRegion();
   return (
-    <div className="bg-neutral-bg text-slate min-h-screen pb-20">
+    <div className="bg-neutral-bg text-slate min-h-screen pb-20 font-sans" style={{ '--theme-color': region.theme.primaryBg }}>
       
       {/* Hero */}
       <section className="text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
@@ -26,49 +26,100 @@ export default function HotelsPage() {
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-deep-teal transition-colors">
-            <BedDouble size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">GUEST BEDDING SUITE</h3>
-            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
-              <li>• High thread-count flat & fitted sheets</li>
-              <li>• Premium duvet covers and inserts</li>
-              <li>• Luxury pillows (down & hypoallergenic alternatives)</li>
-              <li>• Waterproof mattress protectors</li>
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-[var(--theme-color)] transition-colors">
+            <BedDouble size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <h3 
+              className="font-bold text-sm tracking-wider uppercase mb-5"
+              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+            >
+              GUEST BEDDING SUITE
+            </h3>
+            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>High thread-count flat & fitted sheets</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Premium duvet covers and inserts</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Luxury pillows (down & hypoallergenic alternatives)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Waterproof mattress protectors</span>
+              </li>
             </ul>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-deep-teal transition-colors">
-            <Bath size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">BATH & SPA SUITE</h3>
-            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
-              <li>• Oversized premium bath towels</li>
-              <li>• Hand towels & washcloths</li>
-              <li>• Plush spa and bath robes</li>
-              <li>• Heavy-duty pool and beach towels</li>
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-[var(--theme-color)] transition-colors">
+            <Bath size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <h3 
+              className="font-bold text-sm tracking-wider uppercase mb-5"
+              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+            >
+              BATH & SPA SUITE
+            </h3>
+            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Oversized premium bath towels</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Hand towels & washcloths</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Plush spa and bath robes</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Heavy-duty pool and beach towels</span>
+              </li>
             </ul>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-deep-teal transition-colors">
-            <Shirt size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">FACILITY & STAFF ESSENTIALS</h3>
-            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
-              <li>• Front desk and management uniforms</li>
-              <li>• Housekeeping scrubs and aprons</li>
-              <li>• Fine dining and banquet linens</li>
-              <li>• Maintenance workwear</li>
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-[var(--theme-color)] transition-colors">
+            <Shirt size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <h3 
+              className="font-bold text-sm tracking-wider uppercase mb-5"
+              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+            >
+              FACILITY & STAFF ESSENTIALS
+            </h3>
+            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Front desk and management uniforms</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Housekeeping scrubs and aprons</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Fine dining and banquet linens</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Maintenance workwear</span>
+              </li>
             </ul>
           </div>
 
         </div>
 
-        <div className="mt-16 bg-deep-teal/5 border border-deep-teal/20 rounded-2xl p-10 text-center max-w-4xl mx-auto">
-          <Target size={32} className="text-deep-teal mx-auto mb-4" />
+        <div className="mt-16 border rounded-2xl p-10 text-center max-w-4xl mx-auto bg-[var(--theme-color)]/5 border-[var(--theme-color)]/20">
+          <Target size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
           <h2 className="text-3xl font-bold uppercase tracking-wider mb-4 text-slate">CUSTOM PRIVATE LABELING</h2>
           <p className="text-lg opacity-80 mb-8 max-w-2xl mx-auto text-slate">
             Elevate your property's brand with custom embroidery on robes, towels, and staff uniforms. Consistent visual identity across all guest touchpoints.
           </p>
           <div className="px-4 sm:px-0">
-            <Link to="/contact" className="inline-block w-full sm:w-auto bg-deep-teal text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-md">
+            <Link to="/contact" className="inline-block w-full sm:w-auto text-white px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
               REQUEST HOSPITALITY QUOTE
             </Link>
           </div>
