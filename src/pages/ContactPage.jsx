@@ -1,9 +1,52 @@
-import React from 'react';
-import { Send, Phone, Mail, MapPin, CalendarDays } from 'lucide-react';
+import React, { useState } from 'react';
+import { Send, Phone, Mail, MapPin, CalendarDays, CheckCircle2 } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
 
 export default function ContactPage() {
   const region = useRegion();
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    company: '',
+    inquiryType: 'Request a Quote',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    const subject = `[${formData.inquiryType.toUpperCase()}] - ${formData.company}`;
+    
+    const payload = {
+      name: formData.fullName,
+      email: formData.email,
+      company: formData.company,
+      message: formData.message,
+      subject,
+      to: 'customerservice@trendsettertextiles.com'
+    };
+    
+    console.log('Form Payload:', payload);
+    // TODO: Insert Web3Forms/EmailJS POST request here.
+
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      setFormData({ fullName: '', email: '', company: '', inquiryType: 'Request a Quote', message: '' });
+      setTimeout(() => setIsSuccess(false), 5000);
+    }, 1500);
+  };
   return (
     <div className="bg-neutral-bg text-slate min-h-screen font-sans" style={{ '--theme-color': region.theme.primaryBg }}>
       <section className="relative py-20 md:py-32 text-neutral-bg border-b-8" style={{ borderBottomColor: region.theme.primaryBg, backgroundColor: region.theme.primaryBg }}>
@@ -75,48 +118,61 @@ export default function ContactPage() {
             <div className="bg-white p-8 md:p-10 rounded-2xl shadow-md border border-slate/10">
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-6">INQUIRY FORM</h3>
               
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              {isSuccess && (
+                <div className={`mb-6 p-4 rounded-md flex items-start gap-3 ${region.phone.includes('+63') ? 'bg-yellow-50 text-yellow-800' : 'bg-green-50 text-green-800'}`}>
+                  <CheckCircle2 size={24} className="mt-0.5 shrink-0" />
+                  <div>
+                    <h4 className="font-bold">Thank you.</h4>
+                    <p>Your inquiry has been received by our team.</p>
+                  </div>
+                </div>
+              )}
+
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Full Name</label>
-                    <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Jane Doe" />
+                    <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Jane Doe" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Email</label>
-                    <input type="email" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="jane@facility.com" />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="jane@facility.com" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Company</label>
-                    <input type="text" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Hospital or Hotel Name" />
+                    <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Hospital or Hotel Name" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Inquiry Type</label>
-                    <select className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]">
-                      <option>Request a Quote</option>
-                      <option>Schedule Product Presentation</option>
-                      <option>Request Physical Samples</option>
-                      <option>General Inquiry</option>
+                    <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]">
+                      <option value="Request a Quote">Request a Quote</option>
+                      <option value="Schedule Product Presentation">Schedule Product Presentation</option>
+                      <option value="Request Physical Samples">Request Physical Samples</option>
+                      <option value="General Inquiry">General Inquiry</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Message</label>
-                  <textarea rows="5" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
+                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
                 </div>
                 
                 <button 
                   type="submit" 
+                  disabled={isSubmitting}
                   className={`w-full flex justify-center items-center gap-3 font-bold uppercase tracking-wider py-5 rounded-md text-lg shadow-md transition-all duration-300 ease-in-out border-2 ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  } ${
                     region.phone.includes('+63') 
                       ? 'bg-yellow-600 text-white border-transparent hover:bg-transparent hover:border-yellow-600 hover:text-yellow-600' 
                       : 'bg-green-900 text-white border-transparent hover:bg-transparent hover:border-green-900 hover:text-green-900'
                   }`}
                 >
-                  <Send size={20} /> SUBMIT REQUEST
+                  <Send size={20} className={isSubmitting ? 'animate-pulse' : ''} /> {isSubmitting ? 'SENDING...' : 'SUBMIT REQUEST'}
                 </button>
               </form>
             </div>
