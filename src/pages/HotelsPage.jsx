@@ -2,6 +2,7 @@ import React from 'react';
 import { BedDouble, Bath, Shirt, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
+import IndustryTabs from '../components/IndustryTabs';
 
 export default function HotelsPage() {
   const region = useRegion();
@@ -18,6 +19,8 @@ export default function HotelsPage() {
           </p>
         </div>
       </section>
+
+      <IndustryTabs />
 
       {/* Categories */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Stethoscope, Building } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
+import IndustryTabs from '../components/IndustryTabs';
 
 export default function IndustriesPage() {
   const region = useRegion();
@@ -18,6 +19,8 @@ export default function IndustriesPage() {
           </p>
         </div>
       </section>
+
+      <IndustryTabs />
 
       {/* Industry Cards */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ '--theme-color': region.theme.primaryBg }}>

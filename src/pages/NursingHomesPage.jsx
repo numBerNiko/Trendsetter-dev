@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BedSingle, Bath, Shirt, ShieldCheck, BriefcaseMedical, CheckCircle2, Phone, Mail } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
+import IndustryTabs from '../components/IndustryTabs';
 
 export default function NursingHomesPage() {
   const region = useRegion();
@@ -20,6 +21,8 @@ export default function NursingHomesPage() {
           </p>
         </div>
       </section>
+
+      <IndustryTabs />
 
       {/* Core Product Suites */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
