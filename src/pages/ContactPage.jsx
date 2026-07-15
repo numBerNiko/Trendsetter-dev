@@ -22,30 +22,46 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     const subject = `[${formData.inquiryType.toUpperCase()}] - ${formData.company}`;
     
     const payload = {
+      access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
       name: formData.fullName,
       email: formData.email,
       company: formData.company,
       message: formData.message,
       subject,
-      to: 'customerservice@trendsettertextiles.com'
+      from_name: 'Trendsetter Textiles Portal'
     };
-    
-    console.log('Form Payload:', payload);
-    // TODO: Insert Web3Forms/EmailJS POST request here.
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+      
+      if (response.status === 200) {
+        setIsSuccess(true);
+        setFormData({ fullName: '', email: '', company: '', inquiryType: 'Request a Quote', message: '' });
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        console.error('Web3Forms Error:', result);
+      }
+    } catch (error) {
+      console.error('Network Error:', error);
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ fullName: '', email: '', company: '', inquiryType: 'Request a Quote', message: '' });
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    }
   };
   return (
     <div className="bg-neutral-bg text-slate min-h-screen font-sans" style={{ '--theme-color': region.theme.primaryBg }}>
