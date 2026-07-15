@@ -119,7 +119,7 @@ export default function HotelsPage() {
             Elevate your property's brand with custom embroidery on robes, towels, and staff uniforms. Consistent visual identity across all guest touchpoints.
           </p>
           <div className="px-4 sm:px-0">
-            <Link to="/contact" className="inline-block w-full sm:w-auto text-white px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
+            <Link to="/contact" className="inline-block w-full sm:w-auto px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-md border-2 border-[var(--theme-color)] text-white bg-[var(--theme-color)] hover:bg-transparent hover:text-[var(--theme-color)] transition-all duration-300 ease-in-out text-center">
               REQUEST HOSPITALITY QUOTE
             </Link>
           </div>

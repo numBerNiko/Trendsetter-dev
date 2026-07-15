@@ -284,10 +284,10 @@ export default function NursingHomesPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate transition-colors shadow-lg w-full sm:w-auto text-center" style={{ backgroundColor: region.theme.primaryBg }}>
+            <Link to="/contact" className="inline-block w-full sm:w-auto px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-lg border-2 border-[var(--theme-color)] text-white bg-[var(--theme-color)] hover:bg-transparent hover:text-[var(--theme-color)] transition-all duration-300 ease-in-out text-center">
               REQUEST A QUOTE
             </Link>
-            <Link to="/contact" className="bg-transparent border-2 border-slate text-slate px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg hover:bg-slate hover:text-neutral-bg transition-colors shadow-sm w-full sm:w-auto text-center">
+            <Link to="/contact" className="inline-block w-full sm:w-auto px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-sm border-2 border-[var(--theme-color)] text-[var(--theme-color)] bg-transparent hover:bg-[var(--theme-color)] hover:text-white transition-all duration-300 ease-in-out text-center">
               SCHEDULE A PRODUCT PRESENTATION
             </Link>
           </div>

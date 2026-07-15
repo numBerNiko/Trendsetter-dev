@@ -7,7 +7,7 @@ import IndustryTabs from '../components/IndustryTabs';
 export default function MedicalClinicsPage() {
   const region = useRegion();
   return (
-    <div className="bg-neutral-bg text-slate min-h-screen pb-20">
+    <div className="bg-neutral-bg text-slate min-h-screen pb-20 font-sans" style={{ '--theme-color': region.theme.primaryBg }}>
       
       {/* Hero */}
       <section className="text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
@@ -113,15 +113,15 @@ export default function MedicalClinicsPage() {
         </div>
 
         {/* Optional Upsell Section */}
-        <div className="mt-12 max-w-3xl mx-auto bg-deep-teal/5 border border-deep-teal/20 p-8 rounded-xl text-center">
-          <ShoppingBag size={32} className="text-deep-teal mx-auto mb-4" />
+        <div className="mt-12 max-w-3xl mx-auto border p-8 rounded-xl text-center bg-[var(--theme-color)]/5 border-[var(--theme-color)]/20">
+          <ShoppingBag size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
           <h4 className="text-xl font-bold uppercase tracking-wider mb-2 text-slate">PATIENT DISCHARGE / WELCOME KITS</h4>
           <p className="opacity-80 text-sm mb-4">Optional upsell: Custom branded tote bags for patient belongings or new-patient information packets.</p>
-          <Link to="/custom-programs" className="text-deep-teal font-bold uppercase tracking-wider hover:underline">EXPLORE CUSTOM BRANDING</Link>
+          <Link to="/custom-programs" className="font-bold uppercase tracking-wider hover:underline" style={{ color: region.theme.primaryBg }}>EXPLORE CUSTOM BRANDING</Link>
         </div>
         
         <div className="mt-16 text-center px-4 sm:px-0">
-          <Link to="/contact" className="inline-block w-full sm:w-auto px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-md text-white hover:opacity-80" style={{ backgroundColor: region.theme.primaryBg }}>
+          <Link to="/contact" className="inline-block w-full sm:w-auto px-8 py-4 rounded-md font-bold text-lg shadow-md border-2 border-[var(--theme-color)] text-white bg-[var(--theme-color)] hover:bg-transparent hover:text-[var(--theme-color)] transition-all duration-300 ease-in-out text-center">
             REQUEST QUOTE FOR CLINICS
           </Link>
         </div>
