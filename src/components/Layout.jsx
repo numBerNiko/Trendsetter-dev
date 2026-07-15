@@ -5,6 +5,7 @@ import { useRegion } from '../hooks/useRegion';
 
 export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isChatMenuOpen, setIsChatMenuOpen] = useState(false);
   const region = useRegion();
   const navStyle = ({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {};
   return (
@@ -170,18 +171,48 @@ export default function Layout() {
 
       {/* Floating Action Button for Philippine Site */}
       {region.countryCode === 'ph' && (
-        <a 
-          href="https://wa.me/639178884059"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 transition-transform hover:scale-110 group cursor-pointer"
-        >
-          <MessageCircle size={28} />
-          {/* Tooltip / Badge */}
-          <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate">
-            Chat with Us
-          </span>
-        </a>
+        <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex flex-col items-end">
+          {/* Menu */}
+          <div className={`mb-4 bg-white rounded-lg shadow-2xl border border-slate/10 overflow-hidden transition-all duration-300 origin-bottom-right ${isChatMenuOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}>
+            <a 
+              href="https://api.whatsapp.com/send?phone=639178884059"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 hover:bg-neutral-bg transition-colors border-b border-slate/10"
+              onClick={() => setIsChatMenuOpen(false)}
+            >
+              <div className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white shrink-0">
+                <MessageCircle size={20} />
+              </div>
+              <span className="font-bold text-slate text-sm">Chat on WhatsApp</span>
+            </a>
+            <a 
+              href="viber://chat?number=%2B639178884059"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 hover:bg-neutral-bg transition-colors"
+              onClick={() => setIsChatMenuOpen(false)}
+            >
+              <div className="w-10 h-10 rounded-full bg-[#7360F2] flex items-center justify-center text-white shrink-0">
+                <Phone size={20} />
+              </div>
+              <span className="font-bold text-slate text-sm">Chat on Viber</span>
+            </a>
+          </div>
+
+          <button 
+            onClick={() => setIsChatMenuOpen(!isChatMenuOpen)}
+            className="flex items-center justify-center bg-[var(--theme-color)] hover:opacity-90 text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 group cursor-pointer relative"
+          >
+            {isChatMenuOpen ? <X size={28} /> : <MessageCircle size={28} />}
+            {/* Tooltip / Badge */}
+            {!isChatMenuOpen && (
+              <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate">
+                Chat with Us
+              </span>
+            )}
+          </button>
+        </div>
       )}
     </div>
   );
