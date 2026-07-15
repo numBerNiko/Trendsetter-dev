@@ -1,5 +1,5 @@
 import React from 'react';
-import { BedDouble, Bath, Shirt, Target } from 'lucide-react';
+import { BedDouble, Bath, Shirt, Target, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
 import IndustryTabs from '../components/IndustryTabs';
