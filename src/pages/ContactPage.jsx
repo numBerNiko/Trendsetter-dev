@@ -108,7 +108,14 @@ export default function ContactPage() {
                   <textarea rows="5" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
                 </div>
                 
-                <button type="submit" className="w-full flex justify-center items-center gap-3 text-neutral-bg font-bold uppercase tracking-wider py-5 rounded-md text-lg hover:bg-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
+                <button 
+                  type="submit" 
+                  className={`w-full flex justify-center items-center gap-3 font-bold uppercase tracking-wider py-5 rounded-md text-lg shadow-md transition-all duration-300 ease-in-out border-2 ${
+                    region.phone.includes('+63') 
+                      ? 'bg-yellow-600 text-white border-transparent hover:bg-transparent hover:border-yellow-600 hover:text-yellow-600' 
+                      : 'bg-green-900 text-white border-transparent hover:bg-transparent hover:border-green-900 hover:text-green-900'
+                  }`}
+                >
                   <Send size={20} /> SUBMIT REQUEST
                 </button>
               </form>
