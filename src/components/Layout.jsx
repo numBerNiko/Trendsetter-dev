@@ -187,7 +187,7 @@ export default function Layout() {
               <span className="font-bold text-slate text-sm">Chat on WhatsApp</span>
             </a>
             <a 
-              href="viber://chat?number=%2B639178884059"
+              href="viber://add?number=639178884059"
               className="flex items-center gap-3 px-6 py-4 hover:bg-neutral-bg transition-colors"
               onClick={() => setIsChatMenuOpen(false)}
             >
