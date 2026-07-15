@@ -188,8 +188,6 @@ export default function Layout() {
             </a>
             <a 
               href="viber://chat?number=%2B639178884059"
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex items-center gap-3 px-6 py-4 hover:bg-neutral-bg transition-colors"
               onClick={() => setIsChatMenuOpen(false)}
             >
