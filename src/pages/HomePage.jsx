@@ -26,7 +26,8 @@ import {
   Stethoscope,
   HeartHandshake,
   Activity,
-  Hotel
+  Hotel,
+  UserCircle
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -297,38 +298,35 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             {/* Trust Signals & Testimonials */}
             <div>
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 text-[#F5F5DC] border-[#F5F5DC]/30">INSTITUTIONAL CREDIBILITY</h3>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <BadgeCheck size={28} className="text-[#F5F5DC]" />
-                  <div>
-                    <p className="font-bold text-sm text-[#F5F5DC]">OEKO-TEX® Standard 100</p>
-                    <p className="text-xs opacity-70">Certified Safe Textiles</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
-                  <Award size={28} className="text-[#F5F5DC]" />
-                  <div>
-                    <p className="font-bold text-sm text-[#F5F5DC]">WRAP Certified</p>
-                    <p className="text-xs opacity-70">Ethical Manufacturing</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Expanded testimonials (3 quotes) */}
+              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 text-[#F5F5DC] border-[#F5F5DC]/30">VALUE PROPOSITIONS</h3>
               <div className="space-y-6">
-                <blockquote className="bg-white/5 p-6 rounded-lg border-l-4 border-white/50 italic text-base leading-relaxed opacity-95 text-left">
-                  "Trendsetter’s consistent supply chain allowed us to standardize apparel across all our locations seamlessly. Highly recommended for bulk fulfillment."
-                  <footer className="text-sm font-bold mt-3 opacity-100">— Sarah Jenkins, Director of Procurement, Apex Regional Healthcare</footer>
-                </blockquote>
-                <blockquote className="bg-white/5 p-6 rounded-lg border-l-4 border-white/50 italic text-base leading-relaxed opacity-95 text-left">
-                  "The quality of the sateen bedding and prompt deliveries of bath linen have elevated our guest experience scores by 15%. A true enterprise partner."
-                  <footer className="text-sm font-bold mt-3 opacity-100">— Marcus Vance, VP of Hospitality Operations, Grand Plaza Resorts</footer>
-                </blockquote>
-                <blockquote className="bg-white/5 p-6 rounded-lg border-l-4 border-white/50 italic text-base leading-relaxed opacity-95 text-left">
-                  "Their quick-turn custom embroidery program was exactly what we needed to launch our outpatient clinic network rebranding on schedule."
-                  <footer className="text-sm font-bold mt-3 opacity-100">— Dr. Evelyn Reyes, Chief Operations Officer, CareFirst Clinics</footer>
-                </blockquote>
+                <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
+                  <Truck size={36} className={`shrink-0 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+                  <div>
+                    <h4 className={`font-bold text-lg mb-2 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`}>99% On-Time Freight Delivery</h4>
+                    <p className="text-slate text-sm opacity-90 leading-relaxed">
+                      Reliable, high-volume supply chain logistics ensuring your facility never experiences critical linen shortages.
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
+                  <ShieldCheck size={36} className={`shrink-0 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+                  <div>
+                    <h4 className={`font-bold text-lg mb-2 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`}>Strict OEKO-TEX® Compliance</h4>
+                    <p className="text-slate text-sm opacity-90 leading-relaxed">
+                      Certified safe, skin-friendly textiles manufactured to meet rigorous international healthcare and hospitality standards.
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
+                  <UserCircle size={36} className={`shrink-0 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+                  <div>
+                    <h4 className={`font-bold text-lg mb-2 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`}>Dedicated Account Management</h4>
+                    <p className="text-slate text-sm opacity-90 leading-relaxed">
+                      A single, expert point of contact for handling custom orders, contract pricing, and automated bulk replenishments.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
