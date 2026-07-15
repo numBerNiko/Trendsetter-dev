@@ -42,11 +42,9 @@ export default function Layout() {
             <div className="flex items-center">
               <Link to="/">
                 <img 
-                  src="/Trendsetter-website-photos/Trendsetter-Logo.png" 
+                  src="/Trendsetter-Logo.svg" 
                   alt="Trendsetter Textiles Logo" 
-                  width="2031"
-                  height="738"
-                  className="w-[220px] h-auto object-contain mix-blend-multiply logo-optimize"
+                  className="h-10 sm:h-12 w-auto max-w-[200px] object-contain mix-blend-multiply logo-optimize"
                 />
               </Link>
             </div>
@@ -106,11 +104,9 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div>
               <img 
-                src="/Trendsetter-website-photos/Trendsetter-Logo.png" 
+                src="/Trendsetter-Logo.svg" 
                 alt="Trendsetter Textiles Logo" 
-                width="2031"
-                height="738"
-                className="w-[180px] h-auto object-contain mb-6 logo-optimize"
+                className="h-10 w-auto max-w-[180px] object-contain mb-6 logo-optimize"
                 style={{ filter: 'grayscale(100%) contrast(500%) invert(100%)', mixBlendMode: 'screen' }}
               />
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
