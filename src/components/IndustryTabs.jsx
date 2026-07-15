@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { HeartHandshake, Stethoscope, Hotel } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
 
 export default function IndustryTabs() {
   const region = useRegion();
 
   const tabClass = ({ isActive }) =>
-    `py-4 px-2 text-sm md:text-base font-bold uppercase tracking-wider border-b-4 transition-colors ${
+    `py-4 px-2 text-sm md:text-base font-bold uppercase tracking-wider border-b-4 transition-colors flex items-center gap-2 ${
       isActive
         ? ''
         : 'text-neutral-500 border-transparent hover:text-neutral-800'
@@ -25,13 +26,16 @@ export default function IndustryTabs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center space-x-8 md:space-x-12">
           <NavLink to="/industries/nursing-homes" className={tabClass} style={tabStyle}>
-            Nursing Homes
+            <HeartHandshake size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
+            <span>Nursing Homes</span>
           </NavLink>
           <NavLink to="/industries/medical-clinics" className={tabClass} style={tabStyle}>
-            Medical Clinics
+            <Stethoscope size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
+            <span>Medical Clinics</span>
           </NavLink>
           <NavLink to="/industries/hotels" className={tabClass} style={tabStyle}>
-            Hotels & Resorts
+            <Hotel size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
+            <span>Hotels & Resorts</span>
           </NavLink>
         </div>
       </div>

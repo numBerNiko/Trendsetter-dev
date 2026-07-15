@@ -120,7 +120,7 @@ export default function HomePage() {
             {/* Medical Clinics Card */}
             <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
               <div className="mb-6">
-                <Activity className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+                <Stethoscope className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
                 MEDICAL CLINICS
