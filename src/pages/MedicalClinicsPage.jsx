@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stethoscope, Droplets, Target, ShieldCheck, Activity, Building, ShoppingBag } from 'lucide-react';
+import { Stethoscope, Droplets, Target, ShieldCheck, Activity, Building, ShoppingBag, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
 
@@ -24,35 +24,86 @@ export default function MedicalClinicsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Activity size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">EXAM & TREATMENT ROOMS</h3>
-            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
-              <li>• Exam table covers/drapes</li>
-              <li>• Flat sheets, pillowcases</li>
-              <li>• Lightweight blankets</li>
-              <li>• Pillow protectors, wipe-clean pillows</li>
-              <li>• Privacy curtains</li>
+            <Activity size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <h3 
+              className="font-bold text-sm tracking-wider uppercase mb-5"
+              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+            >
+              EXAM & TREATMENT ROOMS
+            </h3>
+            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Exam table covers/drapes</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Flat sheets, pillowcases</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Lightweight blankets</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Pillow protectors, wipe-clean pillows</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Privacy curtains</span>
+              </li>
             </ul>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Stethoscope size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">STAFF & PATIENT WEAR</h3>
-            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
-              <li>• Patient gowns (maternity, pediatric prints)</li>
-              <li>• Scrubs (custom colors, logo embroidery)</li>
-              <li>• Lab coats (short/long)</li>
-              <li>• Non-slip socks</li>
+            <Stethoscope size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <h3 
+              className="font-bold text-sm tracking-wider uppercase mb-5"
+              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+            >
+              STAFF & PATIENT WEAR
+            </h3>
+            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Patient gowns (maternity, pediatric prints)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Scrubs (custom colors, logo embroidery)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Lab coats (short/long)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Non-slip socks</span>
+              </li>
             </ul>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Building size={36} className="text-deep-teal mb-6" />
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">ANCILLARY SPACES</h3>
-            <ul className="space-y-3 opacity-80 text-sm leading-relaxed">
-              <li>• Waiting-room textiles (washable cushion covers, accent blankets)</li>
-              <li>• Washroom textiles (hand towels, bath mats)</li>
-              <li>• Cleaning & operations (laundry bags, mop-head textiles)</li>
+            <Building size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <h3 
+              className="font-bold text-sm tracking-wider uppercase mb-5"
+              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
+            >
+              ANCILLARY SPACES
+            </h3>
+            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Waiting-room textiles (washable cushion covers, accent blankets)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Washroom textiles (hand towels, bath mats)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <span>Cleaning & operations (laundry bags, mop-head textiles)</span>
+              </li>
             </ul>
           </div>
 
