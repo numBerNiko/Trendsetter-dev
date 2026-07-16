@@ -135,7 +135,7 @@ export default function ContactPage() {
                 Our account managers can bring physical swatch books and sample products directly to your facility for review.
               </p>
               <button 
-                className="w-full font-bold uppercase tracking-wider py-3 rounded transition-colors bg-white text-[var(--theme-color)] hover:bg-slate hover:text-[#F5F5DC]"
+                className="w-full font-bold uppercase tracking-wider py-3 rounded transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md bg-white text-[var(--theme-color)] hover:bg-slate/5 hover:text-[var(--theme-color)]"
               >
                 BOOK A DATE
               </button>
@@ -161,22 +161,22 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Full Name</label>
-                      <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Jane Doe" />
+                      <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Jane Doe" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Email</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="jane@facility.com" />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="jane@facility.com" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Company</label>
-                    <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Hospital or Hotel Name" />
+                    <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Hospital or Hotel Name" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Inquiry Type</label>
-                    <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
+                    <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
                       <option value="Request a Quote">Request a Quote</option>
                       <option value="Schedule Product Presentation">Schedule Product Presentation</option>
                       <option value="Request Physical Samples">Request Physical Samples</option>
@@ -187,13 +187,13 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Message</label>
-                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
+                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out resize-none" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
                 </div>
                 
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className={`w-full flex justify-center items-center gap-3 font-bold uppercase tracking-wider py-5 rounded-md text-lg shadow-md transition-all duration-300 ease-in-out border-2 ${
+                  className={`w-full flex justify-center items-center gap-3 font-bold uppercase tracking-wider py-5 rounded-md text-lg transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md border-2 ${
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                   } ${
                     region.phone.includes('+63') 
