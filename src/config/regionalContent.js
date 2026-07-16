@@ -16,7 +16,7 @@ export const regionalContent = {
     email: "customerservice@trendsettertextiles.com",
     heroTagline: "PHILIPPINES INSTITUTIONAL PROCUREMENT HUB",
     footerDescription: "Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the Philippines.",
-    phoneLabel: "(Available via WhatsApp / Viber)",
+    phoneLabel: "(Available via WhatsApp)",
     theme: {
       primaryBg: "#b57e1d" // Light brown update
     }

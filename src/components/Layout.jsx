@@ -178,8 +178,8 @@ export default function Layout() {
         >
           <MessageCircle size={28} />
           {/* Tooltip / Badge */}
-          <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate">
-            Chat with Us
+          <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate flex items-center">
+            Chat with Us <span className="text-[10px] md:text-xs ml-1.5 opacity-90 font-normal normal-case tracking-normal">(Via WhatsApp)</span>
           </span>
         </a>
       )}
