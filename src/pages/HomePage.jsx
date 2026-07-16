@@ -303,7 +303,7 @@ export default function HomePage() {
                 <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
                   <Truck size={36} className="shrink-0 text-[var(--theme-color)]" />
                   <div>
-                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">99% On-Time Freight Delivery</h4>
+                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">On-Time Freight Delivery</h4>
                     <p className="text-slate text-sm opacity-90 leading-relaxed">
                       Reliable, high-volume supply chain logistics ensuring your facility never experiences critical linen shortages.
                     </p>
