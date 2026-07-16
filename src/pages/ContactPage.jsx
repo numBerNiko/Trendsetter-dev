@@ -135,7 +135,7 @@ export default function ContactPage() {
                 Our account managers can bring physical swatch books and sample products directly to your facility for review.
               </p>
               <button 
-                className="w-full font-bold uppercase tracking-wider py-3 rounded transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md bg-white text-[var(--theme-color)] hover:bg-slate/5 hover:text-[var(--theme-color)]"
+                className="w-full font-bold uppercase tracking-wider py-3 rounded transition-all duration-200 ease-in-out border border-[var(--theme-color)] text-[var(--theme-color)] bg-[#F9F6EE] hover:bg-[var(--theme-color)] hover:text-white hover:scale-[1.02] hover:shadow-md"
               >
                 BOOK A DATE
               </button>
