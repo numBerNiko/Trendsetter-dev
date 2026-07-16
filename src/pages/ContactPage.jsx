@@ -64,7 +64,7 @@ export default function ContactPage() {
     }
   };
   return (
-    <div className="bg-neutral-bg text-slate min-h-screen font-sans" style={{ '--theme-color': region.theme.primaryBg }}>
+    <div className="text-slate min-h-screen font-sans" style={{ backgroundColor: region.theme.pageBg, '--theme-color': region.theme.primaryBg }}>
       <section className="relative py-20 md:py-32 text-neutral-bg border-b-8" style={{ borderBottomColor: region.theme.primaryBg, backgroundColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/procurement_consultation.png" alt="Procurement Consultation" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -144,11 +144,11 @@ export default function ContactPage() {
 
           {/* Lead Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white p-8 md:p-10 rounded-2xl shadow-md border border-slate/10">
+            <div className="p-8 md:p-10 rounded-2xl shadow-md border border-slate/10" style={{ backgroundColor: 'var(--theme-card-bg)' }}>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-6">INQUIRY FORM</h3>
               
               {isSuccess && (
-                <div className={`mb-6 p-4 rounded-md flex items-start gap-3 ${region.phone.includes('+63') ? 'bg-yellow-50 text-yellow-800' : 'bg-green-50 text-green-800'}`}>
+                <div className={`mb-6 p-4 rounded-md flex items-start gap-3 ${region.phone.includes('+63') ? 'bg-teal-50 text-teal-800' : 'bg-green-50 text-green-800'}`}>
                   <CheckCircle2 size={24} className="mt-0.5 shrink-0" />
                   <div>
                     <h4 className="font-bold">Thank you.</h4>
@@ -161,22 +161,22 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Full Name</label>
-                    <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Jane Doe" />
+                      <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Jane Doe" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Email</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="jane@facility.com" />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="jane@facility.com" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Company</label>
-                    <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Hospital or Hotel Name" />
+                    <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Hospital or Hotel Name" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Inquiry Type</label>
-                    <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]">
+                    <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
                       <option value="Request a Quote">Request a Quote</option>
                       <option value="Schedule Product Presentation">Schedule Product Presentation</option>
                       <option value="Request Physical Samples">Request Physical Samples</option>
@@ -187,7 +187,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Message</label>
-                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" className="w-full px-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
+                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Please provide details about your institutional needs, estimated volumes, or presentation availability..."></textarea>
                 </div>
                 
                 <button 
@@ -197,7 +197,7 @@ export default function ContactPage() {
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                   } ${
                     region.phone.includes('+63') 
-                      ? 'bg-yellow-600 text-white border-transparent hover:bg-transparent hover:border-yellow-600 hover:text-yellow-600' 
+                      ? 'bg-[#3A606E] text-white border-transparent hover:bg-[#2F4F5B] hover:border-transparent' 
                       : 'bg-green-900 text-white border-transparent hover:bg-transparent hover:border-green-900 hover:text-green-900'
                   }`}
                 >

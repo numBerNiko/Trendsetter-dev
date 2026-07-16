@@ -8,7 +8,9 @@ export const regionalContent = {
     phoneLabel: "(Toll-Free USA)",
     theme: {
       primaryBg: "#1B4D3E", // Dark green
-      secondaryBg: "#D8D3CC" // Coral / Warm Tan
+      secondaryBg: "#D8D3CC", // Coral / Warm Tan
+      pageBg: "#EAE6DF",
+      cardBg: "#F5F5DC"
     }
   },
   ph: {
@@ -20,7 +22,9 @@ export const regionalContent = {
     phoneLabel: "(Available via WhatsApp)",
     theme: {
       primaryBg: "#3A606E", // Deep slate-teal
-      secondaryBg: "#E8ECEB" // Grayish-mist
+      secondaryBg: "#E8ECEB", // Grayish-mist
+      pageBg: "#F3F5F5",
+      cardBg: "#FFFFFF"
     }
   }
 };

@@ -8,7 +8,7 @@ export default function Layout() {
   const region = useRegion();
   const navStyle = ({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {};
   return (
-    <div className="min-h-screen bg-neutral-bg text-slate font-sans flex flex-col" style={{ '--theme-color': region.theme.primaryBg, '--theme-secondary': region.theme.secondaryBg }}>
+    <div className="min-h-screen text-slate font-sans flex flex-col" style={{ backgroundColor: region.theme.pageBg, '--theme-color': region.theme.primaryBg, '--theme-secondary': region.theme.secondaryBg, '--theme-page-bg': region.theme.pageBg, '--theme-card-bg': region.theme.cardBg }}>
       {/* Top Contact Bar */}
       <div className="text-neutral-bg py-2 sm:py-3" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center lg:justify-between items-center text-sm gap-2">
