@@ -301,27 +301,27 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 text-[#F5F5DC] border-[#F5F5DC]/30">VALUE PROPOSITIONS</h3>
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
-                  <Truck size={36} className={`shrink-0 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+                  <Truck size={36} className="shrink-0 text-[var(--theme-color)]" />
                   <div>
-                    <h4 className={`font-bold text-lg mb-2 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`}>99% On-Time Freight Delivery</h4>
+                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">99% On-Time Freight Delivery</h4>
                     <p className="text-slate text-sm opacity-90 leading-relaxed">
                       Reliable, high-volume supply chain logistics ensuring your facility never experiences critical linen shortages.
                     </p>
                   </div>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
-                  <ShieldCheck size={36} className={`shrink-0 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+                  <ShieldCheck size={36} className="shrink-0 text-[var(--theme-color)]" />
                   <div>
-                    <h4 className={`font-bold text-lg mb-2 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`}>Strict OEKO-TEX® Compliance</h4>
+                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">Strict OEKO-TEX® Compliance</h4>
                     <p className="text-slate text-sm opacity-90 leading-relaxed">
                       Certified safe, skin-friendly textiles manufactured to meet rigorous international healthcare and hospitality standards.
                     </p>
                   </div>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
-                  <UserCircle size={36} className={`shrink-0 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+                  <UserCircle size={36} className="shrink-0 text-[var(--theme-color)]" />
                   <div>
-                    <h4 className={`font-bold text-lg mb-2 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`}>Dedicated Account Management</h4>
+                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">Dedicated Account Management</h4>
                     <p className="text-slate text-sm opacity-90 leading-relaxed">
                       A single, expert point of contact for handling custom orders, contract pricing, and automated bulk replenishments.
                     </p>
