@@ -89,9 +89,22 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <Phone size={24} className="mt-1 text-[var(--theme-color)]" />
                   <div>
-                    <p className="text-sm font-bold uppercase tracking-wider opacity-60">Phone</p>
-                    <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg transition-colors hover:text-[var(--theme-color)]">{region.phone}</a>
-                    <p className="text-xs opacity-75 mt-1">{region.phoneLabel}</p>
+                    <p className="text-sm font-bold uppercase tracking-wider opacity-60 mb-2">Phone</p>
+                    {region.countryCode === 'ph' ? (
+                      <a 
+                        href="https://wa.me/639178884059" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-lg font-bold"
+                      >
+                        {region.phone}
+                      </a>
+                    ) : (
+                      <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg transition-colors hover:text-[var(--theme-color)]">
+                        {region.phone}
+                      </a>
+                    )}
+                    <p className="text-xs opacity-75 mt-2">{region.phoneLabel}</p>
                   </div>
                 </div>
                 
