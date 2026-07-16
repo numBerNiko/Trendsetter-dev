@@ -106,8 +106,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Nursing Homes Card */}
             <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="mb-6">
-                <HeartHandshake className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+              <div className={`mb-6 p-4 rounded-full inline-block self-start ${region.phone.includes('+63') ? 'bg-[#3A606E]/10 text-[#3A606E]' : 'bg-[#1B4D3E]/10 text-[#1B4D3E]'}`}>
+                <HeartHandshake className="w-10 h-10" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
                 NURSING HOMES
@@ -119,8 +119,8 @@ export default function HomePage() {
             </Link>
             {/* Medical Clinics Card */}
             <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="mb-6">
-                <Stethoscope className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+              <div className={`mb-6 p-4 rounded-full inline-block self-start ${region.phone.includes('+63') ? 'bg-[#3A606E]/10 text-[#3A606E]' : 'bg-[#1B4D3E]/10 text-[#1B4D3E]'}`}>
+                <Stethoscope className="w-10 h-10" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
                 MEDICAL CLINICS
@@ -132,8 +132,8 @@ export default function HomePage() {
             </Link>
             {/* Hotels Card */}
             <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
-              <div className="mb-6">
-                <Hotel className={`w-12 h-12 ${region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'}`} />
+              <div className={`mb-6 p-4 rounded-full inline-block self-start ${region.phone.includes('+63') ? 'bg-[#3A606E]/10 text-[#3A606E]' : 'bg-[#1B4D3E]/10 text-[#1B4D3E]'}`}>
+                <Hotel className="w-10 h-10" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
                 HOTELS & RESORTS
