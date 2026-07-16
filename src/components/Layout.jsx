@@ -26,14 +26,6 @@ export default function Layout() {
           </div>
           <div className="hidden lg:flex items-center gap-6 mt-3 lg:mt-0">
             <span className="opacity-80 text-xs tracking-wider uppercase font-medium">{region.heroTagline}</span>
-            {region.countryCode !== 'ph' && (
-              <>
-                <span className="opacity-30">|</span>
-                <Link to="/portal" className="text-xs font-bold tracking-wider uppercase hover:opacity-80 transition-opacity">
-                  Client Portal
-                </Link>
-              </>
-            )}
           </div>
         </div>
       </div>
