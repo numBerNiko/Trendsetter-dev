@@ -137,7 +137,6 @@ export default function Layout() {
                 <li><Link to="/about" className="transition-colors text-white hover:opacity-80">About Us</Link></li>
                 <li><Link to="/custom-programs" className="transition-colors text-white hover:opacity-80">Custom Programs</Link></li>
                 <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Contact</Link></li>
-                <li><Link to="/portal" className="transition-colors text-white hover:opacity-80">B2B Client Portal</Link></li>
               </ul>
             </div>
 
