@@ -60,10 +60,10 @@ export default function HomePage() {
                   Request Quote
                 </Link>
                 <Link 
-                  to="/portal" 
+                  to="/products" 
                   className="px-8 py-4 rounded-md font-bold text-lg uppercase tracking-wider shadow-md border-2 border-[var(--theme-color)] text-[var(--theme-color)] bg-transparent hover:bg-[var(--theme-color)] hover:text-white transition-all duration-300 ease-in-out text-center min-w-[200px]"
                 >
-                  Client Portal
+                  Explore Products
                 </Link>
               </div>
 

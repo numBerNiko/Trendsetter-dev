@@ -144,9 +144,9 @@ export default function Layout() {
             <div>
               <h4 className="font-bold text-lg mb-4 text-white">Procurement</h4>
               <ul className="space-y-2 text-sm opacity-90">
-                <li><Link to="/request-samples" className="transition-colors text-white hover:opacity-80">Request Physical Samples</Link></li>
-                <li><Link to="/case-studies" className="transition-colors text-white hover:opacity-80">Institutional Case Studies</Link></li>
-                <li><Link to="/resources" className="transition-colors text-white hover:opacity-80">B2B Resources & Hub</Link></li>
+                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Request Physical Samples</Link></li>
+                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Institutional Case Studies</Link></li>
+                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">B2B Resources & Hub</Link></li>
                 <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Schedule a Presentation</Link></li>
               </ul>
             </div>
