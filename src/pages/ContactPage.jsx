@@ -198,7 +198,7 @@ export default function ContactPage() {
                   } ${
                     region.phone.includes('+63') 
                       ? 'bg-[#3A606E] text-white border-transparent hover:bg-[#2F4F5B] hover:border-transparent' 
-                      : 'bg-green-900 text-white border-transparent hover:bg-transparent hover:border-green-900 hover:text-green-900'
+                      : 'bg-[var(--theme-color)] text-white border-transparent hover:bg-[var(--theme-color)] hover:opacity-90 hover:border-transparent'
                   }`}
                 >
                   <Send size={20} className={isSubmitting ? 'animate-pulse' : ''} /> {isSubmitting ? 'SENDING...' : 'SUBMIT REQUEST'}
