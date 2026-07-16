@@ -63,7 +63,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-coral text-slate border-t border-slate/10" style={{ '--theme-color': region.theme.primaryBg }}>
+      <section className="py-24 bg-[var(--theme-secondary)] text-slate border-t border-slate/10" style={{ '--theme-color': region.theme.primaryBg }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider text-[var(--theme-color)]">Ready to Get Started?</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">

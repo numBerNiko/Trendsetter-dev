@@ -368,8 +368,8 @@ export default function HomePage() {
       </section>
 
       {/* Section 6: Final CTA / Contact */}
-      <section id="contact-section" className="py-24 bg-coral text-slate border-t border-slate/10 relative overflow-hidden" style={{ backgroundImage: "radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0)", backgroundSize: "24px 24px" }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="contact-section" className="py-24 bg-[var(--theme-secondary)] text-slate border-t border-slate/10 relative overflow-hidden" style={{ backgroundImage: "radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0)", backgroundSize: "24px 24px" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             

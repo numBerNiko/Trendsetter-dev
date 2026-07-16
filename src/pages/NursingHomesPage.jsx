@@ -275,7 +275,7 @@ export default function NursingHomesPage() {
       </section>
 
       {/* Optimize Your Supply Chain Today */}
-      <section className="py-24 bg-coral text-slate border-t border-slate/10">
+      <section className="py-24 bg-[var(--theme-secondary)] text-slate border-t border-slate/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 text-slate">OPTIMIZE YOUR SUPPLY CHAIN TODAY</h2>
           <p className="text-lg opacity-80 mb-12 leading-relaxed">
