@@ -90,44 +90,47 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <Phone size={24} className="mt-1 text-[var(--theme-color)]" />
-                  <div>
-                    <p className="text-sm font-bold uppercase tracking-wider opacity-60 mb-2">Phone</p>
-                    {region.countryCode === 'ph' ? (
-                      <div className="flex flex-col gap-3 mt-1">
+                  <div className="w-full">
+                    <p className="text-sm font-bold uppercase tracking-wider opacity-60 mb-4">Phone</p>
+                    
+                    <div className="flex flex-col gap-6 w-full">
+                      {/* Corporate Channels */}
+                      <div>
+                        <p className="text-[11px] font-bold uppercase tracking-wider opacity-50 mb-3 border-b border-slate/10 pb-1">Corporate Channels</p>
                         <a 
-                          href="https://api.whatsapp.com/send?phone=639524684603" 
+                          href={region.countryCode === 'ph' ? "https://api.whatsapp.com/send?phone=639524684603" : `https://api.whatsapp.com/send?phone=${region.phone.replace(/[^0-9]/g, '')}`} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border-2 border-[#25D366] bg-[#25D366]/5 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-sm font-bold w-max shadow-sm"
+                          className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border-2 border-[#25D366] bg-[#25D366]/5 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-sm font-bold w-max shadow-sm mb-2"
                         >
                           Contact Via WhatsApp
                         </a>
-                        <div className="border-l-2 border-[#3A606E]/20 pl-4 mt-2">
-                          <p className="text-[10px] font-bold uppercase tracking-wider opacity-60 mb-1">Institutional Rep</p>
-                          <p className="text-sm font-bold text-[#3A606E]">Osama</p>
-                          <a href="tel:+639178884059" className="text-sm font-medium transition-colors text-slate/80 hover:text-[#3A606E]">+63 917 888 4059</a>
+                        <p className="text-xs opacity-60 font-medium">Main Corporate WhatsApp Line</p>
+                      </div>
+
+                      {/* Institutional Representatives */}
+                      <div>
+                        <p className="text-[11px] font-bold uppercase tracking-wider opacity-50 mb-3 border-b border-slate/10 pb-1">Institutional Representatives</p>
+                        <div className="border-l-2 border-[var(--theme-color)]/20 pl-4">
+                          {region.countryCode === 'ph' ? (
+                            <>
+                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Osama <span className="opacity-70 font-normal">(Institutional Representative)</span></p>
+                              <a href="tel:+639178884059" className="text-base font-medium transition-colors hover:text-[var(--theme-color)] block">+63 917 888 4059</a>
+                            </>
+                          ) : (
+                            <>
+                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Elaine <span className="opacity-70 font-normal">(Institutional Representative)</span></p>
+                              <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-base font-medium transition-colors hover:text-[var(--theme-color)] block mb-1">
+                                {region.phone}
+                              </a>
+                              <a href={`https://api.whatsapp.com/send?phone=${region.phone.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#25D366] hover:underline inline-flex items-center gap-1 opacity-80 hover:opacity-100">
+                                Message via WhatsApp &rarr;
+                              </a>
+                            </>
+                          )}
                         </div>
                       </div>
-                    ) : (
-                      <div className="flex flex-col gap-3 mt-1">
-                        <div className="border-l-2 border-[var(--theme-color)]/20 pl-4 mb-1">
-                          <p className="text-[10px] font-bold uppercase tracking-wider opacity-60 mb-1">Institutional Rep</p>
-                          <p className="text-sm font-bold text-[var(--theme-color)]">Elaine</p>
-                          <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg font-medium transition-colors hover:text-[var(--theme-color)]">
-                            {region.phone}
-                          </a>
-                        </div>
-                        <a 
-                          href={`https://api.whatsapp.com/send?phone=${region.phone.replace(/[^0-9]/g, '')}`}
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border-2 border-[#25D366] bg-[#25D366]/5 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-sm font-bold w-max shadow-sm"
-                        >
-                          Message via WhatsApp
-                        </a>
-                      </div>
-                    )}
-                    <p className="text-xs opacity-75 mt-2">{region.phoneLabel}</p>
+                    </div>
                   </div>
                 </div>
                 
