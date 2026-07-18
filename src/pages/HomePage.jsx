@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
 import { 
@@ -32,6 +32,50 @@ import {
 
 export default function HomePage() {
   const region = useRegion();
+  
+  const [formData, setFormData] = useState({ fullName: '', company: '', email: '', phone: '', orderVolume: 'Medium Volume (100–500 units)', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Submitting form with key:", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+    setIsSubmitting(true);
+    
+    const payload = {
+      access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+      subject: `New Quick Inquiry from ${formData.fullName} - ${formData.company}`,
+      from_name: formData.fullName,
+      ...formData
+    };
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+      if (result.success) {
+        setIsSuccess(true);
+        setFormData({ fullName: '', company: '', email: '', phone: '', orderVolume: 'Medium Volume (100–500 units)', message: '' });
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        console.error("Web3Forms Error:", result);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="flex flex-col w-full text-slate bg-neutral-bg font-sans" style={{ '--theme-color': region.theme.primaryBg }}>
       
@@ -69,13 +113,24 @@ export default function HomePage() {
 
               {/* Trust Badges */}
               <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate/10">
-                <div className="flex items-center gap-2">
-                  <BadgeCheck size={20} style={{ color: region.theme.primaryBg }} />
-                  <span className="text-sm font-bold opacity-80">OEKO-TEX® Standard 100</span>
+                <div className="group cursor-default opacity-60 hover:opacity-100 text-slate hover:text-[var(--theme-color)] transition-all duration-300">
+                  <svg width="150" height="44" viewBox="0 0 150 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="148" height="42" rx="4" fill="transparent" stroke="currentColor" strokeWidth="1.5"/>
+                    <text x="12" y="18" fill="currentColor" fontSize="11" fontWeight="bold" fontFamily="sans-serif">OEKO-TEX®</text>
+                    <text x="12" y="32" fill="currentColor" fontSize="9" fontFamily="sans-serif" letterSpacing="0.5">STANDARD 100</text>
+                    <circle cx="125" cy="22" r="12" stroke="currentColor" strokeWidth="1" fill="none" strokeDasharray="2 2" />
+                    <path d="M120 22L124 26L130 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Award size={20} style={{ color: region.theme.primaryBg }} />
-                  <span className="text-sm font-bold opacity-80">WRAP Certified</span>
+                <div className="group cursor-default opacity-60 hover:opacity-100 text-slate hover:text-[var(--theme-color)] transition-all duration-300">
+                  <svg width="150" height="44" viewBox="0 0 150 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="148" height="42" rx="4" fill="transparent" stroke="currentColor" strokeWidth="1.5"/>
+                    <circle cx="24" cy="22" r="10" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                    <path d="M16 22c0-4.4 3.6-8 8-8m8 8c0 4.4-3.6 8-8 8" stroke="currentColor" strokeWidth="1"/>
+                    <path d="M24 12v20m-10-10h20" stroke="currentColor" strokeWidth="0.5" opacity="0.5"/>
+                    <text x="44" y="26" fill="currentColor" fontSize="13" fontWeight="bold" fontFamily="sans-serif" letterSpacing="1.5">WRAP</text>
+                    <text x="96" y="25" fill="currentColor" fontSize="9" fontFamily="sans-serif">CERTIFIED</text>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -217,8 +272,12 @@ export default function HomePage() {
                 <img src="/Trendsetter-website-photos/cotton_bedsheets.png" alt="Premium Sheets" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-8 text-left">
-                <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">Institutional Bedding</h3>
-                <p className="opacity-80 text-sm mb-6 leading-relaxed text-slate">High-Tensile T180/T250 Bedding woven from Single-Ply, Long-Staple Ring-Spun Cotton. Engineered to withstand 150+ commercial wash-cycles without pilling, warping, or premature thinning.</p>
+                <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">INSTITUTIONAL BEDDING (T-180 & T-250)</h3>
+                <ul className="opacity-80 text-sm mb-6 leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
+                  <li><span className="font-bold">Weave:</span> Single-ply, long-staple ring-spun cotton</li>
+                  <li><span className="font-bold">Lifespan:</span> Engineered for 150+ high-temperature commercial wash cycles</li>
+                  <li><span className="font-bold">Safety:</span> Meets strict NFPA 701 and California Technical Bulletin 117 standards</li>
+                </ul>
                 <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Bedding Suite &rarr;</Link>
               </div>
             </div>
@@ -227,8 +286,12 @@ export default function HomePage() {
                 <img src="/Trendsetter-website-photos/Bath_Mats_&_Pool_Towels.png" alt="Bath Terry" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-8 text-left">
-                <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">Hygiene & Bath Terry</h3>
-                <p className="opacity-80 text-sm mb-6 leading-relaxed text-slate">Premium 500-650 GSM cotton towels and safety-tread bath mats built for high absorbency and durability.</p>
+                <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">HYGIENE & BATH TERRY (500-650 GSM)</h3>
+                <ul className="opacity-80 text-sm mb-6 leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
+                  <li><span className="font-bold">Weight:</span> Rated at 500–650 GSM for maximum absorbency and loft</li>
+                  <li><span className="font-bold">Build:</span> 100% ring-spun cotton with lock-stitched hems to prevent fraying</li>
+                  <li><span className="font-bold">Laundering:</span> Highly resistant to chlorine bleach and commercial sanitation</li>
+                </ul>
                 <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Bath Terry &rarr;</Link>
               </div>
             </div>
@@ -237,8 +300,12 @@ export default function HomePage() {
                 <img src="/Trendsetter-website-photos/professional_medical_scrubs.png" alt="Staff Wear" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-8 text-left">
-                <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">Staff Uniforms & Scrubs</h3>
-                <p className="opacity-80 text-sm mb-6 leading-relaxed text-slate">High-Performance Staff Wear featuring durable Interlock Knit structures and Reactive Dyeing. Colors stay vibrant and garments hold their shape with zero edge-curling, even under high-temp clinical sanitization.</p>
+                <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">STAFF UNIFORMS & CLINICAL SCRUBS</h3>
+                <ul className="opacity-80 text-sm mb-6 leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
+                  <li><span className="font-bold">Fabric:</span> Durable interlock knit structure with double-needle stitching</li>
+                  <li><span className="font-bold">Finish:</span> Treated with soil-release and fluid-resistant protective finishes</li>
+                  <li><span className="font-bold">Colorfast:</span> Reactive dyeing technology prevents fading under high-temp autoclaving</li>
+                </ul>
                 <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Uniforms Suite &rarr;</Link>
               </div>
             </div>
@@ -413,37 +480,64 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-6 flex items-center gap-2" style={{ color: region.theme.primaryBg }}>
                 <Send size={24} /> Send a Message
               </h3>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                {isSuccess && (
+                  <div className="p-4 bg-teal-50 text-teal-800 rounded-md flex items-start gap-3">
+                    <CheckCircle2 size={24} className="mt-0.5 shrink-0" />
+                    <div>
+                      <h4 className="font-bold">Thank you!</h4>
+                      <p className="text-sm">Your message has been sent successfully. Our team will contact you shortly.</p>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Full Name</label>
                   <div className="relative">
                     <UserPlus size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
-                    <input type="text" className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Your Name" />
+                    <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Your Name" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Company</label>
                   <div className="relative">
                     <Building2 size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
-                    <input type="text" className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Facility or Organization" />
+                    <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Facility or Organization" />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-bold mb-2 opacity-80">Phone Number</label>
+                  <div className="relative">
+                    <Phone size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="+1 (555) 000-0000" />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-bold mb-2 opacity-80">Estimated Order Volume</label>
+                  <div className="relative">
+                    <Package size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <select name="orderVolume" value={formData.orderVolume} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] appearance-none">
+                      <option value="Low Volume (Under 100 units)">Low Volume (Under 100 units)</option>
+                      <option value="Medium Volume (100–500 units)">Medium Volume (100–500 units)</option>
+                      <option value="Enterprise/Bulk (500+ units / Recurring Contract)">Enterprise/Bulk (500+ units / Recurring Contract)</option>
+                    </select>
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Email Address</label>
                   <div className="relative">
                     <Mail size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
-                    <input type="email" className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="you@company.com" />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="you@company.com" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Message</label>
                   <div className="relative">
                     <FileSignature size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
-                    <textarea rows="4" className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="How can we help?"></textarea>
+                    <textarea name="message" value={formData.message} onChange={handleChange} required rows="4" className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="How can we help?"></textarea>
                   </div>
                 </div>
-                <button type="submit" className="w-full flex justify-center items-center gap-3 text-white font-bold uppercase tracking-wider py-4 rounded-md text-lg hover:opacity-90 border-2 border-[var(--theme-color)] bg-[var(--theme-color)] hover:bg-transparent hover:text-[var(--theme-color)] transition-all duration-300 ease-in-out shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
-                  Submit Quick Request
+                <button type="submit" disabled={isSubmitting} className={`w-full flex justify-center items-center gap-3 text-white font-bold uppercase tracking-wider py-4 rounded-md text-lg border-2 border-transparent transition-all duration-300 ease-in-out shadow-md bg-[var(--theme-color)] ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:scale-[1.01] hover:opacity-90'}`}>
+                  {isSubmitting ? 'SENDING...' : 'Submit Quick Request'}
                 </button>
               </form>
             </div>

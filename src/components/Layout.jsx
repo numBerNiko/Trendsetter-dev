@@ -166,7 +166,7 @@ export default function Layout() {
       {/* Floating Action Button for Philippine Site */}
       {region.countryCode === 'ph' && (
         <a 
-          href="https://api.whatsapp.com/send?phone=639178884059"
+          href="https://api.whatsapp.com/send?phone=639524684603"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 transition-transform hover:scale-110 group cursor-pointer"

@@ -9,7 +9,9 @@ export default function ContactPage() {
     fullName: '',
     email: '',
     company: '',
+    phone: '',
     inquiryType: 'Request a Quote',
+    orderVolume: 'Medium Volume (100–500 units)',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,7 +54,7 @@ export default function ContactPage() {
       
       if (response.status === 200) {
         setIsSuccess(true);
-        setFormData({ fullName: '', email: '', company: '', inquiryType: 'Request a Quote', message: '' });
+        setFormData({ fullName: '', email: '', company: '', phone: '', inquiryType: 'Request a Quote', orderVolume: 'Medium Volume (100–500 units)', message: '' });
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
         console.error('Web3Forms Error:', result);
@@ -92,7 +94,7 @@ export default function ContactPage() {
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60 mb-2">Phone</p>
                     {region.countryCode === 'ph' ? (
                       <a 
-                        href="https://wa.me/639178884059" 
+                        href="https://wa.me/639524684603" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-lg font-bold"
@@ -151,8 +153,8 @@ export default function ContactPage() {
                 <div className={`mb-6 p-4 rounded-md flex items-start gap-3 ${region.phone.includes('+63') ? 'bg-teal-50 text-teal-800' : 'bg-green-50 text-green-800'}`}>
                   <CheckCircle2 size={24} className="mt-0.5 shrink-0" />
                   <div>
-                    <h4 className="font-bold">Thank you.</h4>
-                    <p>Your inquiry has been received by our team.</p>
+                    <h4 className="font-bold">Thank you!</h4>
+                    <p>Your message has been sent successfully. Our team will contact you shortly.</p>
                   </div>
                 </div>
               )}
@@ -175,12 +177,27 @@ export default function ContactPage() {
                     <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="Hospital or Hotel Name" />
                   </div>
                   <div>
+                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Phone Number</label>
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="+1 (555) 000-0000" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Inquiry Type</label>
                     <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
                       <option value="Request a Quote">Request a Quote</option>
                       <option value="Schedule Product Presentation">Schedule Product Presentation</option>
                       <option value="Request Physical Samples">Request Physical Samples</option>
                       <option value="General Inquiry">General Inquiry</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Estimated Order Volume</label>
+                    <select name="orderVolume" value={formData.orderVolume} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
+                      <option value="Low Volume (Under 100 units)">Low Volume (Under 100 units)</option>
+                      <option value="Medium Volume (100–500 units)">Medium Volume (100–500 units)</option>
+                      <option value="Enterprise/Bulk (500+ units / Recurring Contract)">Enterprise/Bulk (500+ units / Recurring Contract)</option>
                     </select>
                   </div>
                 </div>

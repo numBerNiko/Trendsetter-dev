@@ -15,7 +15,7 @@ export const regionalContent = {
   },
   ph: {
     countryCode: "ph",
-    phone: "+63 917 888 4059",
+    phone: "+63 952 468 4603",
     email: "customerservice@trendsettertextiles.com",
     heroTagline: "PHILIPPINES INSTITUTIONAL PROCUREMENT HUB",
     footerDescription: "Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the Philippines.",

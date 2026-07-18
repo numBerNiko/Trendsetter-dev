@@ -10,9 +10,13 @@ export default function AboutPage() {
       <section className="relative py-20 md:py-32 text-neutral-bg border-b-8 overflow-hidden" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
         <img src="/Trendsetter-website-photos/procurement_warehouse.png" alt="Warehouse Operations" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Our Story: Supplying Reliable Textiles Across the {region.countryCode === 'ph' ? 'Philippines' : 'USA'}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+            Our story: Supplying reliable textiles across the {region.countryCode === 'ph' ? 'Philippines' : 'United States'}
+          </h1>
           <p className="text-lg md:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
-            Trendsetter Textiles is a premier institutional sourcing partner, bridging the gap between manufacturing excellence and facility-grade demands.
+            {region.countryCode === 'ph' 
+              ? 'Trendsetter Textiles is a premier local sourcing partner, bridging the gap between direct manufacturing excellence and nationwide facility demands.' 
+              : 'Trendsetter Textiles is an enterprise-grade sourcing partner, securing domestic healthcare and hospitality supply chains with robust inventory reserves.'}
           </p>
         </div>
       </section>
