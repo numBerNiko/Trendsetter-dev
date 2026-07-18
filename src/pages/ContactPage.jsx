@@ -93,14 +93,21 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60 mb-2">Phone</p>
                     {region.countryCode === 'ph' ? (
-                      <a 
-                        href="https://wa.me/639524684603" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-lg font-bold"
-                      >
-                        {region.phone}
-                      </a>
+                      <div className="flex flex-col gap-3 mt-1">
+                        <a 
+                          href="https://api.whatsapp.com/send?phone=639524684603" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border-2 border-[#25D366] bg-[#25D366]/5 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-sm font-bold w-max shadow-sm"
+                        >
+                          Contact Via WhatsApp
+                        </a>
+                        <div className="border-l-2 border-[#3A606E]/20 pl-4 mt-2">
+                          <p className="text-[10px] font-bold uppercase tracking-wider opacity-60 mb-1">Institutional Rep</p>
+                          <p className="text-sm font-bold text-[#3A606E]">Osama</p>
+                          <a href="tel:+639178884059" className="text-sm font-medium transition-colors text-slate/80 hover:text-[#3A606E]">+63 917 888 4059</a>
+                        </div>
+                      </div>
                     ) : (
                       <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg transition-colors hover:text-[var(--theme-color)]">
                         {region.phone}
