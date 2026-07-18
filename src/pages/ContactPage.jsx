@@ -109,9 +109,23 @@ export default function ContactPage() {
                         </div>
                       </div>
                     ) : (
-                      <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg transition-colors hover:text-[var(--theme-color)]">
-                        {region.phone}
-                      </a>
+                      <div className="flex flex-col gap-3 mt-1">
+                        <div className="border-l-2 border-[var(--theme-color)]/20 pl-4 mb-1">
+                          <p className="text-[10px] font-bold uppercase tracking-wider opacity-60 mb-1">Institutional Rep</p>
+                          <p className="text-sm font-bold text-[var(--theme-color)]">Elaine</p>
+                          <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-lg font-medium transition-colors hover:text-[var(--theme-color)]">
+                            {region.phone}
+                          </a>
+                        </div>
+                        <a 
+                          href={`https://api.whatsapp.com/send?phone=${region.phone.replace(/[^0-9]/g, '')}`}
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border-2 border-[#25D366] bg-[#25D366]/5 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 text-sm font-bold w-max shadow-sm"
+                        >
+                          Message via WhatsApp
+                        </a>
+                      </div>
                     )}
                     <p className="text-xs opacity-75 mt-2">{region.phoneLabel}</p>
                   </div>
