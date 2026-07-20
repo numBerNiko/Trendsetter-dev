@@ -51,7 +51,7 @@ export default function PortalPage() {
           </div>
           <div className="mt-6 md:mt-0">
             <button onClick={() => setIsLoggedIn(false)} className="flex items-center gap-2 text-sm font-bold text-slate/60 hover:text-slate transition-colors">
-              <LogOut size={16} /> Sign Out
+              <LogOut strokeWidth={1.5} size={16} /> Sign Out
             </button>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function PortalPage() {
             {/* Active Orders Tracker */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate/10">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold flex items-center gap-2"><Package className="text-[var(--theme-color)]" /> Active Orders</h2>
+                <h2 className="text-2xl font-bold flex items-center gap-2"><Package strokeWidth={1.5} className="text-[var(--theme-color)]" /> Active Orders</h2>
                 <a href="#" className="text-sm font-bold text-[var(--theme-color)] hover:underline">View All History</a>
               </div>
               
@@ -75,7 +75,7 @@ export default function PortalPage() {
                     <p className="text-xs opacity-70">Placed: Oct 12, 2026</p>
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 bg-neutral-bg text-slate">
-                    <Clock size={12} className="text-[var(--theme-color)]" /> In Transit
+                    <Clock strokeWidth={1.5} size={12} className="text-[var(--theme-color)]" /> In Transit
                   </span>
                 </div>
                 <div className="p-6">
@@ -104,7 +104,7 @@ export default function PortalPage() {
             {/* 1-Click Reordering */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate/10">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold flex items-center gap-2"><RotateCw className="text-[var(--theme-color)]" /> Quick Reorder Hub</h2>
+                <h2 className="text-2xl font-bold flex items-center gap-2"><RotateCw strokeWidth={1.5} className="text-[var(--theme-color)]" /> Quick Reorder Hub</h2>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -139,11 +139,11 @@ export default function PortalPage() {
             
             {/* Negotiated Pricing Contracts */}
             <div className="text-white p-8 rounded-2xl shadow-xl bg-slate" style={{ borderTop: `8px solid ${region.theme.primaryBg}` }}>
-              <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-white"><FileText size={20} style={{ color: region.theme.primaryBg }} /> Contract Details</h2>
+              <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-white"><FileText strokeWidth={1.5} size={20} style={{ color: region.theme.primaryBg }} /> Contract Details</h2>
               <div className="space-y-4">
                 <div className="bg-white/5 p-4 rounded-lg">
                   <p className="text-xs uppercase tracking-wider opacity-60 mb-1">Contract Status</p>
-                  <p className="font-bold flex items-center gap-2" style={{ color: region.theme.primaryBg }}><CheckCircle2 size={16} /> Active (Tier 1 Volume)</p>
+                  <p className="font-bold flex items-center gap-2" style={{ color: region.theme.primaryBg }}><CheckCircle2 strokeWidth={1.5} size={16} /> Active (Tier 1 Volume)</p>
                 </div>
                 <div className="bg-white/5 p-4 rounded-lg">
                   <p className="text-xs uppercase tracking-wider opacity-60 mb-1">Current SLA</p>

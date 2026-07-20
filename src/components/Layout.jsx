@@ -15,7 +15,7 @@ export default function Layout() {
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center">
             <div className="flex items-center">
               <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center hover:opacity-80 transition-opacity font-medium whitespace-nowrap">
-                <Phone size={14} className="mr-1.5 shrink-0" />
+                <Phone strokeWidth={1.5} size={14} className="mr-1.5 shrink-0" />
                 {region.phone}
               </a>
               <span className="ml-2 text-xs opacity-75 hidden sm:inline">{region.phoneLabel}</span>
@@ -51,7 +51,7 @@ export default function Layout() {
               
               <div className="relative group py-8">
                 <NavLink to="/industries" className={({isActive}) => `flex items-center gap-1 uppercase font-bold text-base px-4 py-2 rounded-full transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'hover:text-[var(--theme-color)]'}`} style={navStyle}>
-                  INDUSTRIES <ChevronDown size={16} />
+                  INDUSTRIES <ChevronDown strokeWidth={1.5} size={16} />
                 </NavLink>
                 <div className="absolute top-full left-0 w-56 bg-white border border-slate/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
                   <div className="py-2">
@@ -71,7 +71,7 @@ export default function Layout() {
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-[var(--theme-color)] p-2 focus:outline-none">
-                {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                {isMobileMenuOpen ? <X strokeWidth={1.5} size={28} /> : <Menu strokeWidth={1.5} size={28} />}
               </button>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function Layout() {
               </p>
               <div className="space-y-2">
                 <a href={`mailto:${region.email}`} className="flex items-center text-sm transition-colors text-white hover:opacity-80">
-                  <Mail size={14} className="mr-2" />
+                  <Mail strokeWidth={1.5} size={14} className="mr-2" />
                   {region.email}
                 </a>
               </div>
@@ -141,7 +141,7 @@ export default function Layout() {
               <ul className="space-y-2 text-sm opacity-90">
                 <li>
                   <a href="/Trendsetter_Textiles_Catalog.pdf" download className="inline-flex items-center gap-1.5 font-bold transition-colors text-[#25D366] hover:text-white">
-                    <Download size={14} /> Download Catalog (PDF)
+                    <Download strokeWidth={1.5} size={14} /> Download Catalog (PDF)
                   </a>
                 </li>
                 <li><Link to="/contact?inquiry=samples" className="transition-colors text-white hover:opacity-80">Request Physical Samples</Link></li>
@@ -161,7 +161,7 @@ export default function Layout() {
           <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center border-white/30 text-white opacity-80 gap-4 text-xs">
             <p>&copy; {new Date().getFullYear()} Trendsetter Textiles Inc. All rights reserved. Servicing the {region.phone.includes('+63') ? 'Philippines' : 'United States'}.</p>
             <div className="flex items-center gap-2">
-              <Mail size={14} />
+              <Mail strokeWidth={1.5} size={14} />
               <a href={`mailto:${region.email}`} className="hover:underline">{region.email}</a>
             </div>
             <div className="flex gap-4">
@@ -182,7 +182,7 @@ export default function Layout() {
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 transition-transform hover:scale-110 group cursor-pointer"
         >
-          <MessageCircle size={28} />
+          <MessageCircle strokeWidth={1.5} size={28} />
           {/* Tooltip / Badge */}
           <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate flex items-center">
             Chat with Us <span className="text-[10px] md:text-xs ml-1.5 opacity-90 font-normal normal-case tracking-normal">(Via WhatsApp)</span>

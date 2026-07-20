@@ -10,7 +10,7 @@ export default function PrivacyPage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 overflow-hidden" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <Shield size={48} className="mx-auto mb-6 text-white opacity-90" />
+          <Shield strokeWidth={1.5} size={48} className="mx-auto mb-6 text-white opacity-90" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight">Privacy Policy</h1>
           <p className="text-lg md:text-xl text-white opacity-90 max-w-2xl mx-auto">
             How we collect, use, and protect your institutional data.

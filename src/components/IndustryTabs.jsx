@@ -26,15 +26,15 @@ export default function IndustryTabs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center space-x-8 md:space-x-12">
           <NavLink to="/industries/nursing-homes" className={tabClass} style={tabStyle}>
-            <HeartHandshake size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
+            <HeartHandshake strokeWidth={1.5} size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
             <span>Nursing Homes</span>
           </NavLink>
           <NavLink to="/industries/medical-clinics" className={tabClass} style={tabStyle}>
-            <Stethoscope size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
+            <Stethoscope strokeWidth={1.5} size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
             <span>Medical Clinics</span>
           </NavLink>
           <NavLink to="/industries/hotels" className={tabClass} style={tabStyle}>
-            <Hotel size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
+            <Hotel strokeWidth={1.5} size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
             <span>Hotels & Resorts</span>
           </NavLink>
         </div>

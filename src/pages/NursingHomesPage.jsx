@@ -37,7 +37,7 @@ export default function NursingHomesPage() {
           <div className="bg-white rounded-2xl shadow-md border border-slate/10 p-8 md:p-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-slate/5 p-4 rounded-full text-[var(--theme-color)]">
-                <BedSingle size={32} />
+                <BedSingle strokeWidth={1.5} size={32} />
               </div>
               <div>
                 <h3 
@@ -51,27 +51,27 @@ export default function NursingHomesPage() {
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Flat Sheets:</strong> Heavy-duty, high-tensile twin/hospital sizes designed to resist tearing and fraying.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Fitted Sheets:</strong> Standard and deep-pocket options with reinforced elastic tracking for secure mattress gripping.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Pillowcases:</strong> Durable, high-density standard sizes providing an elevated, comfortable hand-feel that withstands rigorous commercial laundering.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Performance Blankets:</strong> Snag-free cellular, thermal, and heavy-weight knits optimized for temperature regulation.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Duvet Covers & Bedspreads:</strong> Easy-care bedspreads and utility covers featuring subtle, color-coded piping for rapid sorting in high-volume laundry facilities.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Mattress Protectors:</strong> Quilted, fluid-resistant, waterproof barriers engineered for full mattress longevity and optimal fluid management.</p>
               </li>
             </ul>
@@ -79,7 +79,7 @@ export default function NursingHomesPage() {
             {/* Procurement Spec Box */}
             <div className="mt-8 border-t pt-8 flex flex-col md:flex-row items-center gap-6 text-left border-slate/10">
               <div className="bg-slate/5 p-3 rounded-xl shrink-0" style={{ color: region.theme.primaryBg }}>
-                <ShieldCheck size={28} />
+                <ShieldCheck strokeWidth={1.5} size={28} />
               </div>
               <div>
                 <h4 
@@ -99,7 +99,7 @@ export default function NursingHomesPage() {
           <div className="bg-white rounded-2xl shadow-md border border-slate/10 p-8 md:p-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-slate/5 p-4 rounded-full text-[var(--theme-color)]">
-                <Bath size={32} />
+                <Bath strokeWidth={1.5} size={32} />
               </div>
               <div>
                 <h3 
@@ -113,23 +113,23 @@ export default function NursingHomesPage() {
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Bath Towels:</strong> High-GSM absorbency with double-stitched hems to prevent unraveling under industrial stress.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Hand Towels & Washcloths:</strong> Soft, non-abrasive cotton blends designed for sensitive skin care.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Safety Bath Mats:</strong> High-traction, densely woven textures engineered for resident bathroom safety and slip resistance.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Shower Curtains:</strong> Heavy-gauge, antimicrobial, and flame-retardant commercial curtains engineered for advanced moisture resistance and easy sanitation.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Washable Underpads:</strong> Highly absorbent, multi-layer bed pads engineered to protect linens and withstand repeated commercial laundering cycles.</p>
               </li>
             </ul>
@@ -139,7 +139,7 @@ export default function NursingHomesPage() {
           <div className="bg-white rounded-2xl shadow-md border border-slate/10 p-8 md:p-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-slate/5 p-4 rounded-full text-[var(--theme-color)]">
-                <Shirt size={32} />
+                <Shirt strokeWidth={1.5} size={32} />
               </div>
               <div>
                 <h3 
@@ -153,19 +153,19 @@ export default function NursingHomesPage() {
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Patient Gowns:</strong> Clinical-grade gowns featuring secure closure options (ties, snaps) and integrated telemetry access to support diverse care requirements.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Adaptive Clothing Basics:</strong> Durable, easy-wear garments featuring reinforced closures designed to streamline assisted dressing protocols.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Fall Management Socks:</strong> Double-tread safety socks engineered to provide reliable traction and support facility fall-reduction initiatives.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Lightweight Robes & Cardigans:</strong> Breathable layers for lounge comfort and climate control.</p>
               </li>
             </ul>
@@ -175,7 +175,7 @@ export default function NursingHomesPage() {
           <div className="bg-white rounded-2xl shadow-md border border-slate/10 p-8 md:p-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-slate/5 p-4 rounded-full text-[var(--theme-color)]">
-                <ShieldCheck size={32} />
+                <ShieldCheck strokeWidth={1.5} size={32} />
               </div>
               <div>
                 <h3 
@@ -189,15 +189,15 @@ export default function NursingHomesPage() {
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Flame-Retardant Bedding Sets:</strong> Certified flame-resistant (FR) fabrics meeting stringent federal and state life safety codes.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Wipe-Clean Pillows:</strong> Fluid-resistant, antimicrobial, and FR waterproof pillows designed for rapid surface sanitization between patient transitions.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Ergonomic Transfer Sheets:</strong> Reusable slide and transfer sheets engineered to reduce caregiver strain and friction during patient repositioning.</p>
               </li>
             </ul>
@@ -207,7 +207,7 @@ export default function NursingHomesPage() {
           <div className="bg-white rounded-2xl shadow-md border border-slate/10 p-8 md:p-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-slate/5 p-4 rounded-full text-[var(--theme-color)]">
-                <BriefcaseMedical size={32} />
+                <BriefcaseMedical strokeWidth={1.5} size={32} />
               </div>
               <div>
                 <h3 
@@ -221,19 +221,19 @@ export default function NursingHomesPage() {
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Performance Scrubs & Lab Coats:</strong> Breathable, stain-release technical fabrics built for flexibility and long shifts.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Industrial Laundry Bags:</strong> Heavy-duty mesh and solid bags equipped with industrial drawstrings or lock closures.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Privacy Curtains:</strong> Antimicrobial, flame-retardant cubicle curtains featuring code-compliant mesh headers for fire safety.</p>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
+                <CheckCircle2 strokeWidth={1.5} size={20} className="text-[var(--theme-color)] shrink-0 mr-3 mt-1" />
                 <p><strong className="text-neutral-800">Dining Linens:</strong> High-durability tablecloths, napkins, and tray-liners featuring commercial-grade stain-blocking treatments.</p>
               </li>
             </ul>
@@ -284,7 +284,7 @@ export default function NursingHomesPage() {
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
             <div className="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-slate/10 w-full md:w-auto">
-              <Phone size={28} className="text-[var(--theme-color)]" />
+              <Phone strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
               <div className="text-left">
                 <p className="text-sm font-bold uppercase tracking-wider opacity-60">Call Us Directly</p>
                 <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-xl font-bold hover:text-[var(--theme-color)] transition-colors text-slate">{region.phone}</a>
@@ -293,7 +293,7 @@ export default function NursingHomesPage() {
             </div>
             
             <div className="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-slate/10 w-full md:w-auto">
-              <Mail size={28} className="text-[var(--theme-color)]" />
+              <Mail strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
               <div className="text-left">
                 <p className="text-sm font-bold uppercase tracking-wider opacity-60">Email Central Routing</p>
                 <a href="mailto:customerservice@trendsettertextiles.com" className="text-xl font-bold hover:text-[var(--theme-color)] transition-colors text-slate break-all">customerservice@trendsettertextiles.com</a>

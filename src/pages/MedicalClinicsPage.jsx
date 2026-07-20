@@ -27,7 +27,7 @@ export default function MedicalClinicsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Activity size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <Activity strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
             <h3 
               className="font-bold text-sm tracking-wider uppercase mb-5"
               style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
@@ -36,30 +36,30 @@ export default function MedicalClinicsPage() {
             </h3>
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Exam table covers/drapes</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Institutional-grade linens (T130/T180)</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Lightweight thermal blankets</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Medical-grade barrier pillows & fluid-resistant protectors</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Antimicrobial privacy/cubicle curtains</span>
               </li>
             </ul>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Stethoscope size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <Stethoscope strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
             <h3 
               className="font-bold text-sm tracking-wider uppercase mb-5"
               style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
@@ -68,26 +68,26 @@ export default function MedicalClinicsPage() {
             </h3>
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>High-turnover patient gowns (telemetry, maternity, pediatric)</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Industrial-wash scrubs (custom colors, logo embroidery)</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Clinical lab coats (short/long)</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Fall-prevention treaded footwear</span>
               </li>
             </ul>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Building size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <Building strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
             <h3 
               className="font-bold text-sm tracking-wider uppercase mb-5"
               style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
@@ -96,15 +96,15 @@ export default function MedicalClinicsPage() {
             </h3>
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Commercial-grade lobby textiles (heavy-duty upholstery covers)</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Washroom textiles (bulk hand towels, bath mats)</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>EVS supplies (isolation laundry bags, industrial microfiber systems)</span>
               </li>
             </ul>
@@ -114,7 +114,7 @@ export default function MedicalClinicsPage() {
 
         {/* Optional Upsell Section */}
         <div className="mt-12 max-w-3xl mx-auto border p-8 rounded-xl text-center bg-[var(--theme-color)]/5 border-[var(--theme-color)]/20">
-          <ShoppingBag size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
+          <ShoppingBag strokeWidth={1.5} size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
           <h4 className="text-xl font-bold uppercase tracking-wider mb-2 text-slate">PATIENT DISCHARGE / WELCOME KITS</h4>
           <p className="opacity-80 text-sm mb-4">Optional upsell: Custom branded tote bags for patient belongings or new-patient information packets.</p>
           <Link to="/custom-programs" className="font-bold uppercase tracking-wider hover:underline" style={{ color: region.theme.primaryBg }}>EXPLORE CUSTOM BRANDING</Link>

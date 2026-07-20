@@ -38,7 +38,7 @@ export default function ResourcesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <div id="care-guides" className="bg-white border border-slate/10 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all scroll-mt-32">
-            <AlertTriangle size={32} className="mb-6" style={{ color: region.theme.primaryBg }} />
+            <AlertTriangle strokeWidth={1.5} size={32} className="mb-6" style={{ color: region.theme.primaryBg }} />
             <h3 className="text-2xl font-bold mb-3 text-slate">Commercial Care Guides</h3>
             <p className="opacity-80 mb-6 text-sm leading-relaxed text-slate">
               Prevent premature degradation. Learn the optimal wash temperatures, chemical balances, and extraction settings for T250 percales vs. Terry towels.
@@ -47,7 +47,7 @@ export default function ResourcesPage() {
           </div>
 
           <div id="procurement-tips" className="bg-white border border-slate/10 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all scroll-mt-32">
-            <BookOpen size={32} className="mb-6" style={{ color: region.theme.primaryBg }} />
+            <BookOpen strokeWidth={1.5} size={32} className="mb-6" style={{ color: region.theme.primaryBg }} />
             <h3 className="text-2xl font-bold mb-3 text-slate">Procurement Best Practices</h3>
             <p className="opacity-80 mb-6 text-sm leading-relaxed text-slate">
               How to calculate PAR levels correctly for a 200-bed hospital vs. a 500-room luxury resort to avoid stockouts and over-expenditure.
@@ -56,7 +56,7 @@ export default function ResourcesPage() {
           </div>
 
           <div id="innovations" className="bg-white border border-slate/10 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all scroll-mt-32">
-            <Lightbulb size={32} className="mb-6" style={{ color: region.theme.primaryBg }} />
+            <Lightbulb strokeWidth={1.5} size={32} className="mb-6" style={{ color: region.theme.primaryBg }} />
             <h3 className="text-2xl font-bold mb-3 text-slate">Textile Innovations</h3>
             <p className="opacity-80 mb-6 text-sm leading-relaxed text-slate">
               Understanding the ROI of adopting quick-dry micro-cotton blends and fluid-resistant barrier fabrics in high-turnover clinical environments.

@@ -27,7 +27,7 @@ export default function HotelsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-[var(--theme-color)] transition-colors">
-            <BedDouble size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <BedDouble strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
             <h3 
               className="font-bold text-sm tracking-wider uppercase mb-5"
               style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
@@ -36,26 +36,26 @@ export default function HotelsPage() {
             </h3>
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>High thread-count flat & fitted sheets</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Premium duvet covers and inserts</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Luxury pillows (down & hypoallergenic alternatives)</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Waterproof mattress protectors</span>
               </li>
             </ul>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-[var(--theme-color)] transition-colors">
-            <Bath size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <Bath strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
             <h3 
               className="font-bold text-sm tracking-wider uppercase mb-5"
               style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
@@ -64,26 +64,26 @@ export default function HotelsPage() {
             </h3>
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Oversized premium bath towels</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Hand towels & washcloths</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Plush spa and bath robes</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Heavy-duty pool and beach towels</span>
               </li>
             </ul>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10 hover:border-[var(--theme-color)] transition-colors">
-            <Shirt size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
+            <Shirt strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
             <h3 
               className="font-bold text-sm tracking-wider uppercase mb-5"
               style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
@@ -92,19 +92,19 @@ export default function HotelsPage() {
             </h3>
             <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Front desk and management uniforms</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Housekeeping scrubs and aprons</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Fine dining and banquet linens</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle2 size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
+                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
                 <span>Maintenance workwear</span>
               </li>
             </ul>
@@ -115,7 +115,7 @@ export default function HotelsPage() {
         {/* Procurement Spec Box */}
         <div className="mt-16 bg-white border border-slate/10 rounded-2xl p-8 shadow-sm flex flex-col md:flex-row items-center gap-8 text-left">
           <div className="bg-slate/5 p-4 rounded-xl shrink-0" style={{ color: region.theme.primaryBg }}>
-            <BedDouble size={40} />
+            <BedDouble strokeWidth={1.5} size={40} />
           </div>
           <div>
             <h4 
@@ -131,7 +131,7 @@ export default function HotelsPage() {
         </div>
 
         <div className="mt-16 border rounded-2xl p-10 text-center max-w-4xl mx-auto bg-[var(--theme-color)]/5 border-[var(--theme-color)]/20">
-          <Target size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
+          <Target strokeWidth={1.5} size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
           <h2 className="text-3xl font-bold uppercase tracking-wider mb-4 text-slate">CUSTOM PRIVATE LABELING</h2>
           <p className="text-lg opacity-80 mb-8 max-w-2xl mx-auto text-slate">
             Elevate your property's brand with custom embroidery on robes, towels, and staff uniforms. Consistent visual identity across all guest touchpoints.

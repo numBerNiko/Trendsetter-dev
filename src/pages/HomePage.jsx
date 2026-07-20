@@ -152,7 +152,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 2: Industries We Serve */}
-      <section className="py-24 bg-neutral-bg relative overflow-hidden" style={{ backgroundImage: "radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0)", backgroundSize: "24px 24px" }}>
+      <section className="py-20 bg-neutral-bg relative overflow-hidden" style={{ backgroundImage: "radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0)", backgroundSize: "24px 24px" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Industries We Serve</h2>
@@ -162,7 +162,7 @@ export default function HomePage() {
             {/* Nursing Homes Card */}
             <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
               <div className={`mb-6 p-4 rounded-full inline-block self-start ${region.phone.includes('+63') ? 'bg-[#3A606E]/10 text-[#3A606E]' : 'bg-[#1B4D3E]/10 text-[#1B4D3E]'}`}>
-                <HeartHandshake className="w-10 h-10" />
+                <HeartHandshake strokeWidth={1.5} className="w-10 h-10" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
                 NURSING HOMES
@@ -175,7 +175,7 @@ export default function HomePage() {
             {/* Medical Clinics Card */}
             <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
               <div className={`mb-6 p-4 rounded-full inline-block self-start ${region.phone.includes('+63') ? 'bg-[#3A606E]/10 text-[#3A606E]' : 'bg-[#1B4D3E]/10 text-[#1B4D3E]'}`}>
-                <Stethoscope className="w-10 h-10" />
+                <Stethoscope strokeWidth={1.5} className="w-10 h-10" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
                 MEDICAL CLINICS
@@ -188,7 +188,7 @@ export default function HomePage() {
             {/* Hotels Card */}
             <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:border-[var(--theme-color)] hover:shadow-xl transition-all flex flex-col h-full text-left">
               <div className={`mb-6 p-4 rounded-full inline-block self-start ${region.phone.includes('+63') ? 'bg-[#3A606E]/10 text-[#3A606E]' : 'bg-[#1B4D3E]/10 text-[#1B4D3E]'}`}>
-                <Hotel className="w-10 h-10" />
+                <Hotel strokeWidth={1.5} className="w-10 h-10" />
               </div>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 text-slate">
                 HOTELS & RESORTS
@@ -203,7 +203,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 3: Explore Our Textile Suites */}
-      <section className="py-24 bg-white border-b border-slate/10">
+      <section className="py-20 bg-white border-b border-slate/10">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Explore Our Textile Suites</h2>
@@ -260,14 +260,14 @@ export default function HomePage() {
       </section>
 
       {/* Product Showcase Section (Actual Photos) */}
-      <section className="py-24 bg-neutral-bg/30 border-b border-slate/10">
+      <section className="py-20 bg-neutral-bg/30 border-b border-slate/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate">Product Showcase</h2>
             <p className="text-lg opacity-85 max-w-2xl mx-auto font-medium">High-definition details of our heavy-duty commercial weaving inventory.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <div className="h-64 overflow-hidden relative">
                 <img src="/Trendsetter-website-photos/cotton_bedsheets.png" alt="Premium Sheets" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -280,7 +280,7 @@ export default function HomePage() {
                 </ul>
               </div>
             </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <div className="h-64 overflow-hidden relative">
                 <img src="/Trendsetter-website-photos/Bath_Mats_&_Pool_Towels.png" alt="Bath Terry" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -293,7 +293,7 @@ export default function HomePage() {
                 </ul>
               </div>
             </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <div className="h-64 overflow-hidden relative">
                 <img src="/Trendsetter-website-photos/professional_medical_scrubs.png" alt="Staff Wear" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -311,7 +311,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 4: Custom Apparel & Merch Breakout (Mockups Visual Grid) */}
-      <section className="relative py-32 bg-slate overflow-hidden">
+      <section className="relative py-20 bg-slate overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/Trendsetter-website-photos/Bespoke_Embroidery_&_Monogramming.png" 
@@ -353,7 +353,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 5: Why Buyers Choose Us */}
-      <section className={`py-24 border-t border-slate/10 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-neutral-bg'}`} style={{ backgroundColor: region.theme.primaryBg }}>
+      <section className={`py-20 border-t border-slate/10 ${region.phone.includes('+63') ? 'text-[#F5F5DC]' : 'text-neutral-bg'}`} style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">WHY BUYERS CHOOSE US</h2>
@@ -365,27 +365,27 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 text-[#F5F5DC] border-[#F5F5DC]/30">VALUE PROPOSITIONS</h3>
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
-                  <Truck size={36} className="shrink-0 text-[var(--theme-color)]" />
+                  <Truck strokeWidth={1.5} size={36} className="shrink-0 text-[var(--theme-color)]" />
                   <div>
-                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">On-Time Freight Delivery</h4>
+                    <h4 className="font-bold text-lg mb-2 text-slate">On-Time Freight Delivery</h4>
                     <p className="text-slate text-sm opacity-90 leading-relaxed">
                       Reliable, high-volume supply chain logistics ensuring your facility never experiences critical linen shortages.
                     </p>
                   </div>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
-                  <ShieldCheck size={36} className="shrink-0 text-[var(--theme-color)]" />
+                  <ShieldCheck strokeWidth={1.5} size={36} className="shrink-0 text-[var(--theme-color)]" />
                   <div>
-                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">Strict OEKO-TEX® Compliance</h4>
+                    <h4 className="font-bold text-lg mb-2 text-slate">Strict OEKO-TEX® Compliance</h4>
                     <p className="text-slate text-sm opacity-90 leading-relaxed">
                       Certified safe, skin-friendly textiles manufactured to meet rigorous international healthcare and hospitality standards.
                     </p>
                   </div>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-md border border-slate/10 text-left flex gap-4 items-start">
-                  <UserCircle size={36} className="shrink-0 text-[var(--theme-color)]" />
+                  <UserCircle strokeWidth={1.5} size={36} className="shrink-0 text-[var(--theme-color)]" />
                   <div>
-                    <h4 className="font-bold text-lg mb-2 text-[var(--theme-color)]">Dedicated Account Management</h4>
+                    <h4 className="font-bold text-lg mb-2 text-slate">Dedicated Account Management</h4>
                     <p className="text-slate text-sm opacity-90 leading-relaxed">
                       A single, expert point of contact for handling custom orders, contract pricing, and automated bulk replenishments.
                     </p>
@@ -399,21 +399,21 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-8 border-b pb-4 text-[#F5F5DC] border-[#F5F5DC]/30">CORE PROCUREMENT BENEFITS</h3>
               <ul className="space-y-6 text-left">
                 <li className="flex items-start">
-                  <ShieldCheck size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
+                  <ShieldCheck strokeWidth={1.5} size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Durable for frequent laundering</h4>
                     <p className="opacity-80">Engineered to withstand rigorous commercial wash protocols.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Truck size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
+                  <Truck strokeWidth={1.5} size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Consistent supply and bulk fulfillment</h4>
                     <p className="opacity-80">Robust logistics ensuring your facility never faces a stockout.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Scissors size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
+                  <Scissors strokeWidth={1.5} size={28} className="mr-4 shrink-0 text-[#F5F5DC]" />
                   <div>
                     <h4 className="text-xl font-bold mb-1">Custom branding options</h4>
                     <p className="opacity-80">Bespoke embroidery, tags, and packaging tailored to your brand.</p>
@@ -432,7 +432,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 6: Final CTA / Contact */}
-      <section id="contact-section" className="py-24 bg-[var(--theme-secondary)] text-slate border-t border-slate/10 relative overflow-hidden" style={{ backgroundImage: "radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0)", backgroundSize: "24px 24px" }}>
+      <section id="contact-section" className="py-20 bg-[var(--theme-secondary)] text-slate border-t border-slate/10 relative overflow-hidden" style={{ backgroundImage: "radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0)", backgroundSize: "24px 24px" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -446,7 +446,7 @@ export default function HomePage() {
               
               <div className="space-y-6 mb-10">
                 <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-slate/10">
-                  <Phone size={24} className="text-[var(--theme-color)]" />
+                  <Phone strokeWidth={1.5} size={24} className="text-[var(--theme-color)]" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Call Us Directly</p>
                     <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-xl font-bold hover:text-[var(--theme-color)] transition-colors">{region.phone}</a>
@@ -454,7 +454,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-slate/10">
-                  <Mail size={24} className="text-[var(--theme-color)]" />
+                  <Mail strokeWidth={1.5} size={24} className="text-[var(--theme-color)]" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Email Us</p>
                     <a href={`mailto:${region.email}`} className="text-xl font-bold hover:text-[var(--theme-color)] transition-colors break-all">{region.email}</a>
@@ -475,12 +475,12 @@ export default function HomePage() {
             {/* Short Lead Form */}
             <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-slate/10 text-slate relative overflow-hidden" style={{ borderTop: `6px solid ${region.theme.primaryBg}` }}>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-6 flex items-center gap-2" style={{ color: region.theme.primaryBg }}>
-                <Send size={24} /> Send a Message
+                <Send strokeWidth={1.5} size={24} /> Send a Message
               </h3>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 {isSuccess && (
                   <div className="p-4 bg-teal-50 text-teal-800 rounded-md flex items-start gap-3">
-                    <CheckCircle2 size={24} className="mt-0.5 shrink-0" />
+                    <CheckCircle2 strokeWidth={1.5} size={24} className="mt-0.5 shrink-0" />
                     <div>
                       <h4 className="font-bold">Thank you!</h4>
                       <p className="text-sm">Your message has been sent successfully. Our team will contact you shortly.</p>
@@ -490,28 +490,28 @@ export default function HomePage() {
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Full Name</label>
                   <div className="relative">
-                    <UserPlus size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <UserPlus strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
                     <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Your Name" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Company</label>
                   <div className="relative">
-                    <Building2 size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <Building2 strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
                     <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="Facility or Organization" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Phone Number</label>
                   <div className="relative">
-                    <Phone size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <Phone strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
                     <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="+1 (555) 000-0000" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Estimated Order Volume</label>
                   <div className="relative">
-                    <Package size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <Package strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
                     <select name="orderVolume" value={formData.orderVolume} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] appearance-none">
                       <option value="Low Volume (Under 100 units)">Low Volume (Under 100 units)</option>
                       <option value="Medium Volume (100–500 units)">Medium Volume (100–500 units)</option>
@@ -522,14 +522,14 @@ export default function HomePage() {
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Email Address</label>
                   <div className="relative">
-                    <Mail size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <Mail strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
                     <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="you@company.com" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Message</label>
                   <div className="relative">
-                    <FileSignature size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <FileSignature strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
                     <textarea name="message" value={formData.message} onChange={handleChange} required rows="4" className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] resize-none" placeholder="How can we help?"></textarea>
                   </div>
                 </div>

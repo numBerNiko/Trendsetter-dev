@@ -28,7 +28,7 @@ export default function IndustriesPage() {
           
           <Link to="/industries/nursing-homes" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
-              <ShieldCheck size={32} className="text-[var(--theme-color)]" />
+              <ShieldCheck strokeWidth={1.5} size={32} className="text-[var(--theme-color)]" />
             </div>
             <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">NURSING HOMES & HOSPITALS</h2>
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
@@ -39,7 +39,7 @@ export default function IndustriesPage() {
 
           <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
-              <Stethoscope size={32} className="text-[var(--theme-color)]" />
+              <Stethoscope strokeWidth={1.5} size={32} className="text-[var(--theme-color)]" />
             </div>
             <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">MEDICAL CLINICS</h2>
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
@@ -50,7 +50,7 @@ export default function IndustriesPage() {
 
           <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
-              <Building size={32} className="text-[var(--theme-color)]" />
+              <Building strokeWidth={1.5} size={32} className="text-[var(--theme-color)]" />
             </div>
             <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">HOTELS & RESORTS</h2>
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
@@ -75,7 +75,7 @@ export default function IndustriesPage() {
               download
               className="px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-sm w-full sm:w-auto text-center transition-all bg-white border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-neutral-bg flex items-center justify-center gap-2"
             >
-              <Download size={20} /> PDF CATALOG
+              <Download strokeWidth={1.5} size={20} /> PDF CATALOG
             </a>
             <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-lg w-full sm:w-auto text-center transition-colors hover:opacity-80" style={{ backgroundColor: region.theme.primaryBg }}>
               REQUEST A QUOTE

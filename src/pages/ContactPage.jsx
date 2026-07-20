@@ -89,7 +89,7 @@ export default function ContactPage() {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <Phone size={24} className="mt-1 text-[var(--theme-color)]" />
+                  <Phone strokeWidth={1.5} size={24} className="mt-1 text-[var(--theme-color)]" />
                   <div className="w-full">
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60 mb-4">Phone</p>
                     
@@ -135,7 +135,7 @@ export default function ContactPage() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <Mail size={24} className="mt-1 text-[var(--theme-color)]" />
+                  <Mail strokeWidth={1.5} size={24} className="mt-1 text-[var(--theme-color)]" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Email</p>
                     <a href="mailto:customerservice@trendsettertextiles.com" className="text-lg transition-colors break-all hover:text-[var(--theme-color)]">customerservice@trendsettertextiles.com</a>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <MapPin size={24} className="mt-1 text-[var(--theme-color)]" />
+                  <MapPin strokeWidth={1.5} size={24} className="mt-1 text-[var(--theme-color)]" />
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wider opacity-60">Headquarters</p>
                     <p className="text-lg">{region.countryCode === 'ph' ? 'Metro Manila, Philippines' : 'Los Angeles, CA, USA'}</p>
@@ -155,7 +155,7 @@ export default function ContactPage() {
             <div 
               className="p-8 rounded-2xl shadow-lg bg-[var(--theme-color)] text-neutral-bg"
             >
-              <CalendarDays size={32} className="mb-4 text-neutral-bg/80" />
+              <CalendarDays strokeWidth={1.5} size={32} className="mb-4 text-neutral-bg/80" />
               <h3 className="text-xl font-bold uppercase tracking-wider mb-2">SCHEDULE A PRESENTATION</h3>
               <p className="text-sm opacity-90 mb-6">
                 Our account managers can bring physical swatch books and sample products directly to your facility for review.
@@ -175,7 +175,7 @@ export default function ContactPage() {
               
               {isSuccess && (
                 <div className={`mb-6 p-4 rounded-md flex items-start gap-3 ${region.phone.includes('+63') ? 'bg-teal-50 text-teal-800' : 'bg-green-50 text-green-800'}`}>
-                  <CheckCircle2 size={24} className="mt-0.5 shrink-0" />
+                  <CheckCircle2 strokeWidth={1.5} size={24} className="mt-0.5 shrink-0" />
                   <div>
                     <h4 className="font-bold">Thank you!</h4>
                     <p>Your message has been sent successfully. Our team will contact you shortly.</p>
@@ -242,7 +242,7 @@ export default function ContactPage() {
                       : 'bg-[var(--theme-color)] text-white border-transparent hover:bg-[var(--theme-color)] hover:opacity-90 hover:border-transparent'
                   }`}
                 >
-                  <Send size={20} className={isSubmitting ? 'animate-pulse' : ''} /> {isSubmitting ? 'SENDING...' : 'SUBMIT REQUEST'}
+                  <Send strokeWidth={1.5} size={20} className={isSubmitting ? 'animate-pulse' : ''} /> {isSubmitting ? 'SENDING...' : 'SUBMIT REQUEST'}
                 </button>
               </form>
             </div>

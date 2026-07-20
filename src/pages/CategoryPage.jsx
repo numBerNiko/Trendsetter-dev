@@ -112,7 +112,7 @@ export default function CategoryPage() {
               className="w-full flex items-center justify-center gap-2 bg-white border-2 py-4 rounded-lg font-bold hover:bg-slate hover:text-white transition-colors"
               style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg }}
             >
-              <Download size={20} />
+              <Download strokeWidth={1.5} size={20} />
               Download Spec Sheet (PDF)
             </button>
           </div>
@@ -125,7 +125,7 @@ export default function CategoryPage() {
             {/* Technical Specs Grid */}
             <div className="mb-10">
               <h3 className="text-xl font-bold mb-4 flex items-center gap-2 border-b border-slate/10 pb-2 text-slate">
-                <FileText size={20} style={{ color: region.theme.primaryBg }} /> Technical Specifications
+                <FileText strokeWidth={1.5} size={20} style={{ color: region.theme.primaryBg }} /> Technical Specifications
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg border border-slate/10">
@@ -149,7 +149,7 @@ export default function CategoryPage() {
               <div className="flex flex-wrap gap-3">
                 {data.specs.certifications.map((cert, idx) => (
                   <span key={idx} className="bg-white text-slate border border-slate/10 px-4 py-2 rounded-full text-sm font-bold flex items-center gap-1.5">
-                    <CheckCircle2 size={16} style={{ color: region.theme.primaryBg }} /> {cert}
+                    <CheckCircle2 strokeWidth={1.5} size={16} style={{ color: region.theme.primaryBg }} /> {cert}
                   </span>
                 ))}
               </div>

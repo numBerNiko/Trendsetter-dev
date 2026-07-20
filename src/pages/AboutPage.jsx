@@ -33,19 +33,19 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className={`p-8 rounded-xl text-center ${region.phone.includes('+63') ? 'text-neutral-800 shadow-lg' : 'bg-slate text-neutral-bg'}`} style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}>
-            <Target size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-[var(--theme-color)]'}`} />
+            <Target strokeWidth={1.5} size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-[var(--theme-color)]'}`} />
             <h3 className="text-xl font-bold mb-2">B2B Specialization</h3>
             <p className={`text-sm ${region.phone.includes('+63') ? 'opacity-100 font-medium' : 'opacity-80'}`}>Dedicated explicitly to institutional buyers, understanding the unique rigors of commercial laundering and strict PAR level maintenance.</p>
           </div>
           
           <div className={`p-8 rounded-xl text-center ${region.phone.includes('+63') ? 'text-neutral-800 shadow-lg' : 'bg-slate text-neutral-bg'}`} style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}>
-            <ShieldCheck size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-[var(--theme-color)]'}`} />
+            <ShieldCheck strokeWidth={1.5} size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-[var(--theme-color)]'}`} />
             <h3 className="text-xl font-bold mb-2">Uncompromising Quality</h3>
             <p className={`text-sm ${region.phone.includes('+63') ? 'opacity-100 font-medium' : 'opacity-80'}`}>From 600TC hotel percales to {region.phone.includes('+63') ? 'FDA-certified (PH) / ISO-compliant' : 'FDA-compliant'} medical barrier fabrics, our textiles meet rigorous international standards.</p>
           </div>
           
           <div className={`p-8 rounded-xl text-center ${region.phone.includes('+63') ? 'text-neutral-800 shadow-lg' : 'bg-slate text-neutral-bg'}`} style={region.phone.includes('+63') ? { backgroundColor: region.theme.primaryBg } : {}}>
-            <Factory size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-[var(--theme-color)]'}`} />
+            <Factory strokeWidth={1.5} size={40} className={`mx-auto mb-4 ${region.phone.includes('+63') ? 'text-neutral-800' : 'text-[var(--theme-color)]'}`} />
             <h3 className="text-xl font-bold mb-2">Sourcing Reliability</h3>
             <p className={`text-sm ${region.phone.includes('+63') ? 'opacity-100 font-medium' : 'opacity-80'}`}>Deep inventory reserves and SLA-backed delivery guarantees mean your facility will never face a stockout.</p>
           </div>

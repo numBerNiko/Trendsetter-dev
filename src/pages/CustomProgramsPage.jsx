@@ -21,7 +21,7 @@ export default function CustomProgramsPage() {
             <img src="/Trendsetter-website-photos/Private_Labeling.png" alt="Private Labeling" className="w-full h-48 object-cover" />
             <div className="p-8 flex-grow">
               <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Tag size={28} className="text-[var(--theme-color)]" />
+                <Tag strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
               </div>
               <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Private Labeling</h2>
               <p className="leading-relaxed text-sm text-neutral-800">
@@ -34,7 +34,7 @@ export default function CustomProgramsPage() {
             <img src="/Trendsetter-website-photos/Bespoke_Embroidery_&_Monogramming.png" alt="Custom Embroidery" className="w-full h-48 object-cover" />
             <div className="p-8 flex-grow">
               <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Scissors size={28} className="text-[var(--theme-color)]" />
+                <Scissors strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
               </div>
               <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Custom Embroidery</h2>
               <p className="leading-relaxed text-sm text-neutral-800">
@@ -47,7 +47,7 @@ export default function CustomProgramsPage() {
             <img src="/Trendsetter-website-photos/Tailored_Packaging_&_Bundling.png" alt="Specialized Packaging" className="w-full h-48 object-cover" />
             <div className="p-8 flex-grow">
               <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Package size={28} className="text-[var(--theme-color)]" />
+                <Package strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
               </div>
               <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Specialized Packaging</h2>
               <p className="leading-relaxed text-sm text-neutral-800">
@@ -60,7 +60,7 @@ export default function CustomProgramsPage() {
             <img src="/Trendsetter-website-photos/fulfillment_warehouse.png" alt="Bulk Order Fulfillment" className="w-full h-48 object-cover" />
             <div className="p-8 flex-grow">
               <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Box size={28} className="text-[var(--theme-color)]" />
+                <Box strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
               </div>
               <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Bulk Order Fulfillment</h2>
               <p className="leading-relaxed text-sm text-neutral-800">
@@ -73,7 +73,7 @@ export default function CustomProgramsPage() {
             <img src="/Trendsetter-website-photos/Sourcing_&_Weaving_Flexibility.png" alt="Sourcing Flexibility" className="w-full h-48 object-cover" />
             <div className="p-8 flex-grow">
               <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <RefreshCcw size={28} className="text-[var(--theme-color)]" />
+                <RefreshCcw strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
               </div>
               <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Sourcing Flexibility</h2>
               <p className="leading-relaxed text-sm text-neutral-800">
@@ -123,7 +123,7 @@ export default function CustomProgramsPage() {
               download
               className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-sm border-2 border-white text-white hover:bg-white hover:text-slate"
             >
-              <Download size={20} /> PDF CATALOG
+              <Download strokeWidth={1.5} size={20} /> PDF CATALOG
             </a>
           </div>
         </div>

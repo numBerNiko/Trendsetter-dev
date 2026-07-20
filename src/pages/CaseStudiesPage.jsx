@@ -20,7 +20,7 @@ export default function CaseStudiesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-12 lg:p-16 flex flex-col justify-center">
               <div className="flex items-center gap-2 font-bold tracking-widest uppercase text-sm mb-6" style={{ color: region.theme.primaryBg }}>
-                <Building2 size={20} /> Hospitality Sector
+                <Building2 strokeWidth={1.5} size={20} /> Hospitality Sector
               </div>
               <h2 className="text-4xl font-bold mb-6 text-slate leading-tight">Hilton Manila: Elevating Guest Experience while Reducing Replacement Costs</h2>
               <p className="text-lg opacity-80 mb-10 leading-relaxed">
@@ -30,13 +30,13 @@ export default function CaseStudiesPage() {
               <div className="grid grid-cols-2 gap-8">
                 <div>
                   <div className="flex items-center gap-3 text-2xl font-bold text-slate mb-2">
-                    <TrendingDown style={{ color: region.theme.primaryBg }} /> 18%
+                    <TrendingDown strokeWidth={1.5} style={{ color: region.theme.primaryBg }} /> 18%
                   </div>
                   <p className="text-sm font-medium opacity-70 uppercase tracking-wide">Reduction in Annual Linen Replacement Costs</p>
                 </div>
                 <div>
                   <div className="flex items-center gap-3 text-2xl font-bold text-slate mb-2">
-                    <Users style={{ color: region.theme.primaryBg }} /> 99%
+                    <Users strokeWidth={1.5} style={{ color: region.theme.primaryBg }} /> 99%
                   </div>
                   <p className="text-sm font-medium opacity-70 uppercase tracking-wide">Positive Guest Satisfaction on Sleep Quality</p>
                 </div>
@@ -58,7 +58,7 @@ export default function CaseStudiesPage() {
           
           <div className="bg-white border border-slate/10 rounded-2xl p-10 shadow-lg">
             <div className="flex items-center gap-2 font-bold tracking-widest uppercase text-sm mb-6" style={{ color: region.theme.primaryBg }}>
-              <Building2 size={16} /> Healthcare Sector
+              <Building2 strokeWidth={1.5} size={16} /> Healthcare Sector
             </div>
             <h3 className="text-2xl font-bold mb-4 text-slate">Metro Manila Clinic Network</h3>
             <p className="opacity-80 leading-relaxed mb-8">
@@ -66,7 +66,7 @@ export default function CaseStudiesPage() {
             </p>
             <div className="bg-neutral-bg/30 p-6 rounded-xl border border-slate/5">
               <div className="flex items-center gap-3 text-xl font-bold text-slate mb-1">
-                <Truck style={{ color: region.theme.primaryBg }} /> Next-Day Fulfillment
+                <Truck strokeWidth={1.5} style={{ color: region.theme.primaryBg }} /> Next-Day Fulfillment
               </div>
               <p className="text-sm opacity-80">Achieved 100% SLA compliance for emergency restocks across all locations.</p>
             </div>
