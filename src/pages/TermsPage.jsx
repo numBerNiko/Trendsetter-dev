@@ -31,7 +31,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4 text-slate border-b pb-2">1. Quotation Validity</h2>
                 <p>
-                  All official quotations provided by Trendsetter Textiles are valid for a period of <strong>fifteen (15) days</strong> from the date of issuance, unless otherwise explicitly stated in writing on the quotation document. Prices are subject to change without prior notice should there be any adjustments in the order quantity or specifications after this period.
+                  All official quotations provided by Trendsetter Textiles are valid for a period of <strong>fifteen (15) calendar days</strong> from the date of issuance, unless otherwise explicitly stated in writing on the quotation document. Prices are subject to change without prior notice should there be any adjustments in the order quantity or specifications after this period.
                 </p>
               </div>
 
@@ -46,21 +46,21 @@ export default function TermsPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold mb-4 text-slate border-b pb-2">3. Standard Delivery Timelines</h2>
+                <h2 className="text-2xl font-bold mb-4 text-slate border-b pb-2">3. Delivery Timelines</h2>
                 <p>
                   Estimated delivery for standard bulk orders is <strong>sixty (60) to ninety (90) working days</strong> upon receipt of the confirmed Purchase Order and initial down payment. Delivery timelines are subject to force majeure and other circumstances beyond the reasonable control of the Seller. Delivery charges for locations outside standard metropolitan zones will be quoted separately.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold mb-4 text-slate border-b pb-2">4. Custom Orders & Specifications</h2>
+                <h2 className="text-2xl font-bold mb-4 text-slate border-b pb-2">4. Purchase Order Requirements & Customization</h2>
                 <p className="mb-4">
                   For bespoke manufacturing programs and custom facility dimensions:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Prices are subject to adjustment in the event of requested customized sizes, fabrics, or unique designs.</li>
-                  <li>All terms, product specifications, and required sizes must be clearly stated in the official Purchase Order. Any omission or discrepancy may result in delays or revisions to pricing.</li>
-                  <li>Standard labels and laundry tags are included free of charge; however, custom institutional logo designs may incur additional costs depending on complexity.</li>
+                  <li><strong>Clear Specifications:</strong> All terms, product specifications, and required sizes must be clearly stated in the official Purchase Order. Any omission or discrepancy may result in delays or revisions to pricing.</li>
+                  <li><strong>Price Adjustments:</strong> Prices are subject to adjustment in the event of requested customized sizes, fabrics, or unique designs.</li>
+                  <li><strong>Labels and Tags:</strong> Standard labels and laundry tags are included free of charge; however, custom institutional logo designs may incur additional costs depending on complexity.</li>
                 </ul>
               </div>
             </div>
