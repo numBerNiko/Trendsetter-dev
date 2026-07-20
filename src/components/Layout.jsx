@@ -97,8 +97,8 @@ export default function Layout() {
       {/* Enterprise Footer */}
       <footer className="pt-16 pb-8 mt-auto text-neutral-bg" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
+            <div className="sm:col-span-2 md:col-span-1">
               <img 
                 src="/Trendsetter-Logo.svg" 
                 alt="Trendsetter Textiles Logo" 
@@ -144,10 +144,16 @@ export default function Layout() {
                     <Download size={14} /> Download Catalog (PDF)
                   </a>
                 </li>
-                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Request Physical Samples</Link></li>
-                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Institutional Case Studies</Link></li>
-                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">B2B Resources & Hub</Link></li>
-                <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Schedule a Presentation</Link></li>
+                <li><Link to="/contact?inquiry=samples" className="transition-colors text-white hover:opacity-80">Request Physical Samples</Link></li>
+                <li><Link to="/contact?inquiry=presentation" className="transition-colors text-white hover:opacity-80">Schedule a Presentation</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-lg mb-4 text-white">Legal</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li><Link to="/privacy" className="transition-colors text-white hover:opacity-80">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="transition-colors text-white hover:opacity-80">Terms & Conditions</Link></li>
               </ul>
             </div>
           </div>

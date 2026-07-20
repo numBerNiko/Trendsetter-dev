@@ -11,6 +11,8 @@ import HotelsPage from './pages/HotelsPage';
 import CustomProgramsPage from './pages/CustomProgramsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 import ScrollToTop from './components/ScrollToTop';
 
 // New B2B Pages
@@ -42,6 +44,8 @@ function App() {
           <Route path="custom-programs" element={<CustomProgramsPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="privacy" element={<PrivacyPage />} />
+          <Route path="terms" element={<TermsPage />} />
           <Route path="portal" element={<PortalPage />} />
           <Route path="case-studies" element={<CaseStudiesPage />} />
           <Route path="request-samples" element={<RequestSamplesPage />} />
