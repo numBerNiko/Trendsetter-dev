@@ -273,12 +273,11 @@ export default function HomePage() {
               </div>
               <div className="p-8 text-left">
                 <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">INSTITUTIONAL BEDDING (T-180 & T-250)</h3>
-                <ul className="opacity-80 text-sm mb-6 leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
+                <ul className="opacity-80 text-sm leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
                   <li><span className="font-bold">Weave:</span> Single-ply, long-staple ring-spun cotton</li>
                   <li><span className="font-bold">Lifespan:</span> Engineered for 150+ high-temperature commercial wash cycles</li>
                   <li><span className="font-bold">Safety:</span> Meets strict NFPA 701 and California Technical Bulletin 117 standards</li>
                 </ul>
-                <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Bedding Suite &rarr;</Link>
               </div>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-xl transition-all duration-300">
@@ -287,12 +286,11 @@ export default function HomePage() {
               </div>
               <div className="p-8 text-left">
                 <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">HYGIENE & BATH TERRY (500-650 GSM)</h3>
-                <ul className="opacity-80 text-sm mb-6 leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
+                <ul className="opacity-80 text-sm leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
                   <li><span className="font-bold">Weight:</span> Rated at 500–650 GSM for maximum absorbency and loft</li>
                   <li><span className="font-bold">Build:</span> 100% ring-spun cotton with lock-stitched hems to prevent fraying</li>
                   <li><span className="font-bold">Laundering:</span> Highly resistant to chlorine bleach and commercial sanitation</li>
                 </ul>
-                <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Bath Terry &rarr;</Link>
               </div>
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate/10 group hover:border-[var(--theme-color)] hover:shadow-xl transition-all duration-300">
@@ -301,12 +299,11 @@ export default function HomePage() {
               </div>
               <div className="p-8 text-left">
                 <h3 className="text-xl font-bold uppercase tracking-wider text-slate mb-3">STAFF UNIFORMS & CLINICAL SCRUBS</h3>
-                <ul className="opacity-80 text-sm mb-6 leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
+                <ul className="opacity-80 text-sm leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
                   <li><span className="font-bold">Fabric:</span> Durable interlock knit structure with double-needle stitching</li>
                   <li><span className="font-bold">Finish:</span> Treated with soil-release and fluid-resistant protective finishes</li>
                   <li><span className="font-bold">Colorfast:</span> Reactive dyeing technology prevents fading under high-temp autoclaving</li>
                 </ul>
-                <Link to="/products" className="font-bold text-sm tracking-wider uppercase inline-block hover:underline" style={{ color: region.theme.primaryBg }}>View Uniforms Suite &rarr;</Link>
               </div>
             </div>
           </div>
