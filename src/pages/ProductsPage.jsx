@@ -108,7 +108,7 @@ export default function ProductsPage() {
                 <div className="w-full lg:w-1/2 text-left">
                   <h2 className={`text-3xl font-bold uppercase tracking-wider mb-8 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-slate'}`}>{suite.title}</h2>
                   
-                  <ul className="space-y-4 mb-10">
+                  <ul className="space-y-4">
                     {suite.bullets.map((bullet, i) => (
                       <li key={i} className={`flex items-start text-lg ${region.phone.includes('+63') ? 'opacity-100' : 'opacity-90'}`}>
                         <CheckCircle2 size={24} className={`mr-3 mt-0.5 shrink-0 ${region.phone.includes('+63') ? 'text-[var(--theme-color)]' : 'text-deep-teal'}`} />
@@ -116,10 +116,6 @@ export default function ProductsPage() {
                       </li>
                     ))}
                   </ul>
-
-                  <Link to="/contact" className="inline-block text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider hover:bg-slate transition-colors shadow-md" style={{ backgroundColor: region.theme.primaryBg }}>
-                    VIEW SUITE DETAILS
-                  </Link>
                 </div>
               </div>
             ))}

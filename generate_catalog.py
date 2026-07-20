@@ -11,7 +11,7 @@ def generate_pdf(output_path, logo_path):
         pagesize=letter,
         rightMargin=0.5*inch,
         leftMargin=0.5*inch,
-        topMargin=0.5*inch,
+        topMargin=2.4*inch, # Increased margin for the extra header line
         bottomMargin=0.5*inch
     )
     
@@ -22,35 +22,44 @@ def generate_pdf(output_path, logo_path):
         name='CompanyHeader',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=14,
-        spaceAfter=4,
-        alignment=1 # Center
+        fontSize=18,
+        spaceAfter=12, # Distinct bottom margin for breathing room
+        alignment=2, # Right-aligned to match screenshot
+        textColor=colors.HexColor('#0B2559') # Navy Blue from brand
     ))
     styles.add(ParagraphStyle(
         name='ContactInfo',
         parent=styles['Normal'],
         fontName='Helvetica',
         fontSize=9,
-        spaceAfter=2,
-        alignment=1,
-        textColor=colors.darkgrey
+        spaceAfter=4,
+        leading=14, # Increased line-height for readability
+        alignment=2, # Right-aligned
+        textColor=colors.HexColor('#333333')
     ))
     styles.add(ParagraphStyle(
         name='SectionTitle',
         parent=styles['Heading2'],
         fontName='Helvetica-Bold',
         fontSize=12,
-        spaceBefore=14,
-        spaceAfter=4,
-        textColor=colors.HexColor('#0f172a'),
+        spaceBefore=16,
+        spaceAfter=8,
+        textColor=colors.white,
+        backColor=colors.HexColor('#0B2559'), # Blue banner background
+        borderPadding=6,
+        alignment=1 # Center aligned banner
     ))
     styles.add(ParagraphStyle(
         name='SectionDesc',
         parent=styles['Normal'],
         fontName='Helvetica-Oblique',
         fontSize=9,
-        spaceAfter=8,
-        textColor=colors.HexColor('#334155'),
+        spaceAfter=10,
+        textColor=colors.HexColor('#333333'),
+        backColor=colors.HexColor('#FDFBF7'), # Soft warm background
+        borderColor=colors.HexColor('#8C6D53'), # Taupe border
+        borderWidth=1,
+        borderPadding=6
     ))
     styles.add(ParagraphStyle(
         name='GeneralNotes',
@@ -58,49 +67,94 @@ def generate_pdf(output_path, logo_path):
         fontName='Helvetica',
         fontSize=9,
         spaceAfter=2,
+        textColor=colors.HexColor('#333333'),
+    ))
+    
+    # Custom Info Block for General Notes to give it the panel look
+    styles.add(ParagraphStyle(
+        name='InfoBlock',
+        parent=styles['Normal'],
+        fontName='Helvetica',
+        fontSize=9,
+        spaceAfter=10,
+        leading=14,
+        textColor=colors.HexColor('#333333'),
+        backColor=colors.HexColor('#FDFBF7'),
+        borderColor=colors.HexColor('#8C6D53'),
+        borderWidth=1,
+        borderPadding=8
     ))
     
     # Table Styles
     base_table_style = TableStyle([
-        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#f1f5f9')),
-        ('TEXTCOLOR', (0, 0), (-1, 0), colors.HexColor('#0f172a')),
+        # Table Header Styling (Navy Blue with White Text)
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#0B2559')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
         ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
         ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-        ('FONTSIZE', (0, 0), (-1, 0), 9),
+        ('FONTSIZE', (0, 0), (-1, 0), 10),
         ('BOTTOMPADDING', (0, 0), (-1, 0), 8),
         ('TOPPADDING', (0, 0), (-1, 0), 8),
         
+        # Column alignments
         ('ALIGN', (0, 1), (0, -1), 'CENTER'), # SL column center
         ('ALIGN', (1, 1), (1, -1), 'LEFT'),   # Description left
         ('ALIGN', (2, 1), (-1, -1), 'CENTER'), # Others center
         
-        ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
-        ('FONTSIZE', (0, 1), (-1, -1), 8),
+        # Data Rows Styling
+        ('FONTNAME', (0, 1), (-1, -1), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 1), (-1, -1), 9),
         ('BOTTOMPADDING', (0, 1), (-1, -1), 6),
         ('TOPPADDING', (0, 1), (-1, -1), 6),
         
-        ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor('#cbd5e1')),
-        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8fafc')])
+        # Grid Lines (Taupe/Brown Accent Border)
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor('#8C6D53')),
+        ('BOX', (0, 0), (-1, -1), 1, colors.HexColor('#8C6D53')),
+        
+        # Alternating Rows (Warm Tint)
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#F9F6F0')])
     ])
 
     story = []
 
-    # 1. Logo & Header
-    if os.path.exists(logo_path):
-        img = RLImage(logo_path, width=2.2*inch, height=0.88*inch, kind='proportional')
-        story.append(img)
-        story.append(Spacer(1, 0.1*inch))
+    # 1. Logo & Header Layout using a Table for side-by-side (Moved to repeating header)
+    header_data = [
+        [
+            RLImage(logo_path, width=2.5*inch, height=1.0*inch, kind='proportional') if os.path.exists(logo_path) else "",
+            [
+                Paragraph("TRENDSETTER TEXTILES, INC.", styles['CompanyHeader']),
+                Paragraph("Elite Globus Compound Warehouse 24, Brgy. Maguyam, Silang, Cavite", styles['ContactInfo']),
+                Paragraph("Sales Rep (Osama): +63 917 888 4059", styles['ContactInfo']),
+                Paragraph("Company WhatsApp: +63 952 468 4603 (Via WhatsApp only)", styles['ContactInfo']),
+                Paragraph("Email: customerservice@trendsettertextiles.com | osamaaslam.trendsetter@gmail.com", styles['ContactInfo']),
+                Paragraph("Websites: www.trendsettertextiles.com (US) | ph.trendsettertextiles.com (PH)", styles['ContactInfo'])
+            ]
+        ]
+    ]
+    header_table = Table(header_data, colWidths=[3*inch, 4.5*inch])
+    header_table.setStyle(TableStyle([
+        ('ALIGN', (0,0), (0,0), 'LEFT'),
+        ('ALIGN', (1,0), (1,0), 'RIGHT'),
+        ('VALIGN', (0,0), (-1,-1), 'TOP'),
+        ('LINEBELOW', (0,0), (-1,0), 3, colors.HexColor('#0B2559')), # Thick Navy Blue line under header
+        ('BOTTOMPADDING', (0,0), (-1,0), 16), # Increased padding above divider line
+    ]))
     
-    story.append(Paragraph("Trendsetter Textiles, Inc.", styles['CompanyHeader']))
-    story.append(Paragraph("Elite Globus Compound Warehouse 24, Brgy. Maguyam, Silang, Cavite", styles['ContactInfo']))
-    story.append(Paragraph("Phone: +639178884059 | Email: osamaaslam.trendsetter@gmail.com | Website: www.trendsettertextiles.com", styles['ContactInfo']))
-    story.append(Spacer(1, 0.2*inch))
+    def add_header(canvas, doc):
+        canvas.saveState()
+        header_w, header_h = header_table.wrap(doc.width, doc.topMargin)
+        # Position header at 0.5 inches from the top edge of the page
+        header_table.drawOn(canvas, doc.leftMargin, doc.pagesize[1] - 0.5*inch - header_h)
+        canvas.restoreState()
 
     # 2. General Notes
     story.append(Paragraph("GENERAL NOTES", styles['SectionTitle']))
-    story.append(Paragraph("• All item sizes and dimensions are specified in inches.", styles['GeneralNotes']))
-    story.append(Paragraph("• Prices are subject to adjustment in the event of customized sizes or designs.", styles['GeneralNotes']))
-    story.append(Paragraph("• Labels and laundry tags are included.", styles['GeneralNotes']))
+    notes_html = (
+        "• All item sizes and dimensions are specified in inches.<br/>"
+        "• Prices are subject to adjustment in the event of customized sizes or designs.<br/>"
+        "• Labels and laundry tags are included."
+    )
+    story.append(Paragraph(notes_html, styles['InfoBlock']))
 
     # 3. Bed Linens Table
     story.append(Paragraph("BED LINENS COLLECTION", styles['SectionTitle']))
@@ -194,7 +248,7 @@ def generate_pdf(output_path, logo_path):
     t3.setStyle(base_table_style)
     story.append(t3)
 
-    doc.build(story)
+    doc.build(story, onFirstPage=add_header, onLaterPages=add_header)
     print(f"Structured Grid Catalog successfully generated at {output_path}")
 
 if __name__ == "__main__":
