@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Stethoscope, Building } from 'lucide-react';
+import { ShieldCheck, Stethoscope, Building, Download } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
 import IndustryTabs from '../components/IndustryTabs';
 
@@ -65,13 +65,20 @@ export default function IndustriesPage() {
       {/* Call to Action */}
       <section className="py-24 bg-[var(--theme-secondary)] text-slate border-t border-slate/10" style={{ '--theme-color': region.theme.primaryBg }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-wider text-[var(--theme-color)]">Ready to Get Started?</h2>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wider text-[var(--theme-color)]">Ready to Get Started?</h2>
+          <p className="text-lg opacity-80 mb-10 max-w-2xl mx-auto">
+            Review our complete catalog of institutional textile specifications, or reach out to secure your order.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+            <a 
+              href="/Trendsetter_Textiles_Catalog.pdf" 
+              download
+              className="px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-sm w-full sm:w-auto text-center transition-all bg-white border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-neutral-bg flex items-center justify-center gap-2"
+            >
+              <Download size={20} /> PDF CATALOG
+            </a>
             <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-lg w-full sm:w-auto text-center transition-colors hover:opacity-80" style={{ backgroundColor: region.theme.primaryBg }}>
               REQUEST A QUOTE
-            </Link>
-            <Link to="/contact" className="px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-sm w-full sm:w-auto text-center transition-colors bg-transparent border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-neutral-bg">
-              SCHEDULE A PRODUCT PRESENTATION
             </Link>
           </div>
         </div>

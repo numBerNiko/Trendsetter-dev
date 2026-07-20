@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scissors, Tag, Package, Box, RefreshCcw } from 'lucide-react';
+import { Scissors, Tag, Package, Box, RefreshCcw, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
 
@@ -114,9 +114,18 @@ export default function CustomProgramsPage() {
           <p className="text-lg mb-8 max-w-2xl mx-auto text-white font-medium opacity-100">
             Our procurement engineers are ready to review your tech packs or help develop specifications from scratch. 
           </p>
-          <Link to="/contact" className="inline-block px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-md bg-[#F5F5DC] hover:opacity-80" style={{ color: region.theme.primaryBg }}>
-            START CUSTOM ORDER
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
+            <Link to="/contact" className="inline-block px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-md bg-[#F5F5DC] hover:opacity-80" style={{ color: region.theme.primaryBg }}>
+              START CUSTOM ORDER
+            </Link>
+            <a 
+              href="/Trendsetter_Textiles_Catalog.pdf" 
+              download
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-sm border-2 border-white text-white hover:bg-white hover:text-slate"
+            >
+              <Download size={20} /> PDF CATALOG
+            </a>
+          </div>
         </div>
       </div>
     </section>

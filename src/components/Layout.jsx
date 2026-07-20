@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
-import { Phone, Mail, ChevronDown, Menu, X, MessageCircle } from 'lucide-react';
+import { Phone, Mail, ChevronDown, Menu, X, MessageCircle, Download } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
 
 export default function Layout() {
@@ -139,6 +139,11 @@ export default function Layout() {
             <div>
               <h4 className="font-bold text-lg mb-4 text-white">Procurement</h4>
               <ul className="space-y-2 text-sm opacity-90">
+                <li>
+                  <a href="/Trendsetter_Textiles_Catalog.pdf" download className="inline-flex items-center gap-1.5 font-bold transition-colors text-[#25D366] hover:text-white">
+                    <Download size={14} /> Download Catalog (PDF)
+                  </a>
+                </li>
                 <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Request Physical Samples</Link></li>
                 <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">Institutional Case Studies</Link></li>
                 <li><Link to="/contact" className="transition-colors text-white hover:opacity-80">B2B Resources & Hub</Link></li>

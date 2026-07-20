@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Download } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
 
 export default function ProductsPage() {
@@ -72,9 +72,17 @@ export default function ProductsPage() {
       <section className="text-neutral-bg pt-32 pb-24 text-center border-b border-slate/10" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">Explore Our Textile Suites</h1>
-          <p className="text-xl opacity-90 leading-relaxed font-light">
+          <p className="text-xl opacity-90 leading-relaxed font-light mb-10">
             Examples of durable, reliable textiles designed for healthcare, hospitality, and events.
           </p>
+          <a 
+            href="/Trendsetter_Textiles_Catalog.pdf" 
+            download
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-md bg-white text-slate hover:bg-neutral-bg transition-all duration-300 text-lg font-bold shadow-lg hover:shadow-xl hover:-translate-y-1"
+            style={{ color: region.theme.primaryBg }}
+          >
+            <Download size={24} /> Download PDF Catalog
+          </a>
         </div>
       </section>
 
