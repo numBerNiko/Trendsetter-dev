@@ -124,9 +124,8 @@ def generate_pdf(output_path, logo_path):
             [
                 Paragraph("TRENDSETTER TEXTILES, INC.", styles['CompanyHeader']),
                 Paragraph("Elite Globus Compound Warehouse 24, Brgy. Maguyam, Silang, Cavite", styles['ContactInfo']),
-                Paragraph("Sales Rep (Osama): +63 917 888 4059", styles['ContactInfo']),
                 Paragraph("Company WhatsApp: +63 952 468 4603 (Via WhatsApp only)", styles['ContactInfo']),
-                Paragraph("Email: customerservice@trendsettertextiles.com | osamaaslam.trendsetter@gmail.com", styles['ContactInfo']),
+                Paragraph("Email: customerservice@trendsettertextiles.com", styles['ContactInfo']),
                 Paragraph("Websites: www.trendsettertextiles.com (US) | ph.trendsettertextiles.com (PH)", styles['ContactInfo'])
             ]
         ]
