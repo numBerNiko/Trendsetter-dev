@@ -12,15 +12,18 @@ export default function ContactPage() {
     phone: '',
     inquiryType: 'Request a Quote',
     orderVolume: 'Medium Volume (100–500 units)',
-    message: ''
+    message: '',
+    tin: '',
+    taxExemption: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: type === 'checkbox' ? checked : value
     });
   };
 
@@ -54,7 +57,7 @@ export default function ContactPage() {
       
       if (response.status === 200) {
         setIsSuccess(true);
-        setFormData({ fullName: '', email: '', company: '', phone: '', inquiryType: 'Request a Quote', orderVolume: 'Medium Volume (100–500 units)', message: '' });
+        setFormData({ fullName: '', email: '', company: '', phone: '', inquiryType: 'Request a Quote', orderVolume: 'Medium Volume (100–500 units)', message: '', tin: '', taxExemption: false });
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
         console.error('Web3Forms Error:', result);
@@ -202,7 +205,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Phone Number</label>
-                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="+1 (555) 000-0000" />
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder={region.countryCode === 'ph' ? "+63 9XX XXX XXXX" : "+1 (555) 000-0000"} />
                   </div>
                 </div>
 
@@ -225,6 +228,18 @@ export default function ContactPage() {
                     </select>
                   </div>
                 </div>
+
+                {region.countryCode === 'ph' ? (
+                  <div>
+                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Tax Identification Number (TIN) for Official Receipts <span className="opacity-60 text-xs font-normal">(Optional)</span></label>
+                    <input type="text" name="tin" value={formData.tin} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="000-000-000-000" />
+                  </div>
+                ) : (
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" name="taxExemption" checked={formData.taxExemption} onChange={handleChange} id="taxExemptionContact" className="mt-1 shrink-0 accent-[var(--theme-color)]" />
+                    <label htmlFor="taxExemptionContact" className="text-sm font-medium opacity-90 cursor-pointer text-slate">Require Tax Exemption / Resale Exemption Certificate <span className="opacity-60 text-xs font-normal">(Optional)</span></label>
+                  </div>
+                )}
 
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Message</label>

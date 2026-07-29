@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
 import { Phone, Mail, ChevronDown, Menu, X, MessageCircle, Download } from 'lucide-react';
 import { useRegion } from '../hooks/useRegion';
@@ -7,6 +7,43 @@ export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const region = useRegion();
   const navStyle = ({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {};
+
+  // SEO & Hreflang Logic
+  useEffect(() => {
+    // 1. Title & Meta Description
+    const isPH = region.countryCode === 'ph';
+    document.title = isPH 
+      ? 'Trendsetter Textiles Inc. | Hotel Linens & Hospital Bedding Philippines' 
+      : 'Trendsetter Textiles Inc. | Healthcare & Hospitality Linens USA';
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', isPH 
+        ? 'Leading commercial towels wholesale Manila and bulk institutional linens supplier. Supplying premium bedding to hotels & clinics in Metro Manila.' 
+        : 'Leading supplier of wholesale healthcare and hospitality linens in the USA.'
+      );
+    }
+
+    // 2. Hreflang Links
+    const removeExistingLinks = () => {
+      document.querySelectorAll('link[rel="alternate"]').forEach(el => el.remove());
+    };
+    removeExistingLinks();
+
+    const addLink = (hreflang, href) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = hreflang;
+      link.href = href;
+      document.head.appendChild(link);
+    };
+
+    addLink('en-us', 'https://www.trendsettertextiles.com');
+    addLink('en-ph', 'https://ph.trendsettertextiles.com');
+    addLink('x-default', 'https://www.trendsettertextiles.com');
+
+  }, [region.countryCode]);
+
   return (
     <div className="min-h-screen text-slate font-sans flex flex-col" style={{ backgroundColor: region.theme.pageBg, '--theme-color': region.theme.primaryBg, '--theme-secondary': region.theme.secondaryBg, '--theme-page-bg': region.theme.pageBg, '--theme-card-bg': region.theme.cardBg }}>
       {/* Top Contact Bar */}
@@ -38,7 +75,7 @@ export default function Layout() {
             <div className="flex items-center">
               <Link to="/">
                 <img 
-                  src="/Trendsetter-Logo.svg" 
+                  src="/logo.png" 
                   alt="Trendsetter Textiles Logo" 
                   className="w-48 md:w-64 lg:w-72 h-auto object-contain mix-blend-multiply logo-optimize"
                 />
@@ -100,14 +137,14 @@ export default function Layout() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
             <div className="sm:col-span-2 md:col-span-1">
               <img 
-                src="/Trendsetter-Logo.svg" 
+                src="/logo.png" 
                 alt="Trendsetter Textiles Logo" 
-                className="h-16 md:h-20 w-auto max-w-[250px] object-contain mb-6 logo-optimize"
+                className="h-24 md:h-32 w-auto max-w-[320px] object-contain mb-6 logo-optimize"
                 style={{ filter: 'grayscale(100%) contrast(500%) invert(100%)', mixBlendMode: 'screen' }}
               />
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
-                {region.phone.includes('+63') 
-                  ? 'Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the Philippines.' 
+                {region.countryCode === 'ph'
+                  ? 'Dispatched directly from our Laguna / Biñan warehouse facility for fast local shipping.' 
                   : 'Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the USA.'}
               </p>
               <div className="space-y-2">
@@ -174,20 +211,35 @@ export default function Layout() {
         </div>
       </footer>
 
-      {/* Floating Action Button for Philippine Site */}
+      {/* Floating Action Buttons for Philippine Site */}
       {region.countryCode === 'ph' && (
-        <a 
-          href="https://api.whatsapp.com/send?phone=639524684603"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 transition-transform hover:scale-110 group cursor-pointer"
-        >
-          <MessageCircle strokeWidth={1.5} size={28} />
-          {/* Tooltip / Badge */}
-          <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate flex items-center">
-            Chat with Us <span className="text-[10px] md:text-xs ml-1.5 opacity-90 font-normal normal-case tracking-normal">(Via WhatsApp)</span>
-          </span>
-        </a>
+        <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex flex-col gap-4">
+          {/* Viber Button */}
+          <a 
+            href="viber://chat?number=+639524684603"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center bg-[#7360F2] hover:bg-[#5944D1] text-white p-4 rounded-full shadow-2xl shadow-[#7360F2]/40 transition-transform hover:scale-110 group cursor-pointer"
+          >
+            <MessageCircle strokeWidth={1.5} size={28} />
+            <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate flex items-center">
+              Chat with Us <span className="text-[10px] md:text-xs ml-1.5 opacity-90 font-normal normal-case tracking-normal">(Via Viber)</span>
+            </span>
+          </a>
+          
+          {/* WhatsApp Button */}
+          <a 
+            href="https://api.whatsapp.com/send?phone=639524684603"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 transition-transform hover:scale-110 group cursor-pointer"
+          >
+            <MessageCircle strokeWidth={1.5} size={28} />
+            <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate flex items-center">
+              Chat with Us <span className="text-[10px] md:text-xs ml-1.5 opacity-90 font-normal normal-case tracking-normal">(Via WhatsApp)</span>
+            </span>
+          </a>
+        </div>
       )}
     </div>
   );

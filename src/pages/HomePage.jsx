@@ -33,12 +33,13 @@ import {
 export default function HomePage() {
   const region = useRegion();
   
-  const [formData, setFormData] = useState({ fullName: '', company: '', email: '', phone: '', orderVolume: 'Medium Volume (100–500 units)', message: '' });
+  const [formData, setFormData] = useState({ fullName: '', company: '', email: '', phone: '', orderVolume: 'Medium Volume (100–500 units)', message: '', tin: '', taxExemption: false });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value, type, checked } = e.target;
+    setFormData({ ...formData, [name]: type === 'checkbox' ? checked : value });
   };
 
   const handleSubmit = async (e) => {
@@ -65,7 +66,7 @@ export default function HomePage() {
       const result = await response.json();
       if (result.success) {
         setIsSuccess(true);
-        setFormData({ fullName: '', company: '', email: '', phone: '', orderVolume: 'Medium Volume (100–500 units)', message: '' });
+        setFormData({ fullName: '', company: '', email: '', phone: '', orderVolume: 'Medium Volume (100–500 units)', message: '', tin: '', taxExemption: false });
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
         console.error("Web3Forms Error:", result);
@@ -276,7 +277,11 @@ export default function HomePage() {
                 <ul className="opacity-80 text-sm leading-relaxed text-slate space-y-1.5 list-disc pl-5 marker:text-[var(--theme-color)]">
                   <li><span className="font-bold">Weave:</span> Single-ply, long-staple ring-spun cotton</li>
                   <li><span className="font-bold">Lifespan:</span> Engineered for 150+ high-temperature commercial wash cycles</li>
-                  <li><span className="font-bold">Safety:</span> Meets strict NFPA 701 and California Technical Bulletin 117 standards</li>
+                  {region.countryCode === 'ph' ? (
+                    <li><span className="font-bold">Safety:</span> Engineered for tropical humidity resistance and high-temperature commercial sanitation</li>
+                  ) : (
+                    <li><span className="font-bold">Compliance:</span> Meets strict CPSC 16 CFR, NFPA 701, OEKO-TEX® Standard 100, and WRAP standards</li>
+                  )}
                 </ul>
               </div>
             </div>
@@ -504,8 +509,8 @@ export default function HomePage() {
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Phone Number</label>
                   <div className="relative">
-                    <Phone strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
-                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="+1 (555) 000-0000" />
+                    <Phone size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder={region.countryCode === 'ph' ? "+63 9XX XXX XXXX" : "+1 (555) 000-0000"} />
                   </div>
                 </div>
                 <div>
@@ -522,10 +527,24 @@ export default function HomePage() {
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Email Address</label>
                   <div className="relative">
-                    <Mail strokeWidth={1.5} size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                    <Mail size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
                     <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="you@company.com" />
                   </div>
                 </div>
+                {region.countryCode === 'ph' ? (
+                  <div>
+                    <label className="block text-sm font-bold mb-2 opacity-80">Tax Identification Number (TIN) for Official Receipts <span className="opacity-60 text-xs font-normal">(Optional)</span></label>
+                    <div className="relative">
+                      <FileCheck size={18} className="absolute left-4 top-3.5 opacity-40 text-slate" />
+                      <input type="text" name="tin" value={formData.tin} onChange={handleChange} className="w-full pl-12 pr-4 py-3 bg-neutral-bg border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)]" placeholder="000-000-000-000" />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" name="taxExemption" checked={formData.taxExemption} onChange={handleChange} id="taxExemptionHome" className="mt-1 shrink-0 accent-[var(--theme-color)]" />
+                    <label htmlFor="taxExemptionHome" className="text-sm font-medium opacity-90 cursor-pointer">Require Tax Exemption / Resale Exemption Certificate <span className="opacity-60 text-xs font-normal">(Optional)</span></label>
+                  </div>
+                )}
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80">Message</label>
                   <div className="relative">
