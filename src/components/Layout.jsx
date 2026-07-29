@@ -75,7 +75,7 @@ export default function Layout() {
             <div className="flex items-center">
               <Link to="/">
                 <img 
-                  src="/Trendsetter-Logo.svg" 
+                  src="/logo.png" 
                   alt="Trendsetter Textiles Logo" 
                   className="w-48 md:w-64 lg:w-72 h-auto object-contain logo-optimize"
                 />
@@ -137,7 +137,7 @@ export default function Layout() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
             <div className="sm:col-span-2 md:col-span-1">
               <img 
-                src="/Trendsetter-Logo.svg" 
+                src="/logo.png" 
                 alt="Trendsetter Textiles Logo" 
                 className="h-24 md:h-32 w-auto max-w-[320px] object-contain mb-6 logo-optimize"
                 style={{ filter: 'grayscale(100%) contrast(500%) invert(100%)', mixBlendMode: 'screen' }}
