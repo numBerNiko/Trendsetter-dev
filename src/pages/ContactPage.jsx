@@ -117,12 +117,12 @@ export default function ContactPage() {
                         <div className="border-l-2 border-[var(--theme-color)]/20 pl-4">
                           {region.countryCode === 'ph' ? (
                             <>
-                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Osama <span className="opacity-70 font-normal">(Institutional Representative)</span></p>
+                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Osama</p>
                               <a href="tel:+639178884059" className="text-base font-medium transition-colors hover:text-[var(--theme-color)] block">+63 917 888 4059</a>
                             </>
                           ) : (
                             <>
-                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Elaine <span className="opacity-70 font-normal">(Institutional Representative)</span></p>
+                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Elaine</p>
                               <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-base font-medium transition-colors hover:text-[var(--theme-color)] block mb-1">
                                 {region.phone}
                               </a>
