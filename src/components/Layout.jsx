@@ -140,7 +140,6 @@ export default function Layout() {
                 src="/logo.png" 
                 alt="Trendsetter Textiles Logo" 
                 className="h-24 md:h-32 w-auto max-w-[320px] object-contain mb-6 logo-optimize"
-                style={{ filter: 'grayscale(100%) contrast(500%) invert(100%)', mixBlendMode: 'screen' }}
               />
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
                 {region.countryCode === 'ph'
@@ -214,19 +213,6 @@ export default function Layout() {
       {/* Floating Action Buttons for Philippine Site */}
       {region.countryCode === 'ph' && (
         <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[999] flex flex-col gap-4">
-          {/* Viber Button */}
-          <a 
-            href="viber://chat?number=+639524684603"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center bg-[#7360F2] hover:bg-[#5944D1] text-white p-4 rounded-full shadow-2xl shadow-[#7360F2]/40 transition-transform hover:scale-110 group cursor-pointer"
-          >
-            <MessageCircle strokeWidth={1.5} size={28} />
-            <span className="absolute right-full mr-4 bg-slate text-neutral-bg text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-4 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap pointer-events-none before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-8 before:border-transparent before:border-l-slate flex items-center">
-              Chat with Us <span className="text-[10px] md:text-xs ml-1.5 opacity-90 font-normal normal-case tracking-normal">(Via Viber)</span>
-            </span>
-          </a>
-          
           {/* WhatsApp Button */}
           <a 
             href="https://api.whatsapp.com/send?phone=639524684603"
