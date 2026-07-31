@@ -218,19 +218,18 @@ export default function HomePage() {
                 { title: "RESIDENT BEDDING SUITE", bullets: ["Sheets", "Pillowcases", "Blankets", "Mattress protectors"], link: "/products#resident-bedding", image: "/Trendsetter-website-photos(2)/RESIDENT BEDDING SUITE.png" },
                 { title: "HYGIENE & PERSONAL CARE SUITE", bullets: ["Towels", "Washcloths", "Bath mats", "Shower curtains"], link: "/products#hygiene", image: "/Trendsetter-website-photos(2)/HYGIENE & PERSONAL CARE SUITE.png" }
               ].map((suite, idx) => (
-                <Link to={suite.link} key={idx} className="group relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                <div key={idx} className="group relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                   <img src={suite.image} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-8 w-full">
                     <h3 className="text-2xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
                     <div className="overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                      <ul className="text-white/90 text-sm md:text-base mb-4 space-y-1 text-left list-disc list-inside">
+                      <ul className="text-white/90 text-sm md:text-base space-y-1 text-left list-disc list-inside">
                         {suite.bullets.map((b, i) => <li key={i}>{b}</li>)}
                       </ul>
-                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW SUITE DETAILS</span>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
 
@@ -241,19 +240,18 @@ export default function HomePage() {
                 { title: "CLINICAL COMPLIANCE", bullets: ["Flame-retardant bedding", "Wipe-clean pillows", "Waterproof pillows"], link: "/products#clinical", image: "/Trendsetter-website-photos(2)/CLINICAL COMPLIANCE & SAFETY (HIGHER-SPEC).png" },
                 { title: "FACILITY & STAFF ESSENTIALS", bullets: ["Scrubs", "Lab coats", "Laundry bags", "Dining linens"], link: "/products#facility", image: "/Trendsetter-website-photos(2)/FACILITY & STAFF ESSENTIALS.png" }
               ].map((suite, idx) => (
-                <Link to={suite.link} key={idx} className="group relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                <div key={idx} className="group relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                   <img src={suite.image} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate/90 via-slate/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-6 w-full">
                     <h3 className="text-xl font-bold uppercase tracking-wider text-white mb-2">{suite.title}</h3>
                     <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                      <ul className="text-white/90 text-sm mb-4 space-y-1 text-left list-disc list-inside">
+                      <ul className="text-white/90 text-sm space-y-1 text-left list-disc list-inside">
                         {suite.bullets.map((b, i) => <li key={i}>{b}</li>)}
                       </ul>
-                      <span className="inline-block bg-white text-slate px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">VIEW SUITE DETAILS</span>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
