@@ -466,12 +466,12 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-6 py-4 rounded-md font-bold uppercase tracking-wider shadow-md border-2 border-[var(--theme-color)] text-white bg-[var(--theme-color)] hover:bg-transparent hover:text-[var(--theme-color)] transition-all duration-300 ease-in-out text-center flex-1">
+                <Link to="/contact?inquiry=presentation" className="px-6 py-4 rounded-md font-bold uppercase tracking-wider shadow-md border-2 border-[var(--theme-color)] text-white bg-[var(--theme-color)] hover:bg-transparent hover:text-[var(--theme-color)] transition-all duration-300 ease-in-out text-center flex-1">
                   SCHEDULE PRESENTATION
-                </button>
-                <button className="bg-transparent border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-white px-6 py-4 rounded-md font-bold uppercase tracking-wider flex-1 transition-all duration-300 ease-in-out text-center">
+                </Link>
+                <Link to="/contact" className="bg-transparent border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-white px-6 py-4 rounded-md font-bold uppercase tracking-wider flex-1 transition-all duration-300 ease-in-out text-center">
                   REQUEST A QUOTE
-                </button>
+                </Link>
               </div>
             </div>
 
