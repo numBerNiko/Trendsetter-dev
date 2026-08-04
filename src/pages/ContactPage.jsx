@@ -159,21 +159,22 @@ export default function ContactPage() {
               className="p-8 rounded-2xl shadow-lg bg-[var(--theme-color)] text-neutral-bg"
             >
               <CalendarDays strokeWidth={1.5} size={32} className="mb-4 text-neutral-bg/80" />
-              <h3 className="text-xl font-bold uppercase tracking-wider mb-2">SCHEDULE A PRESENTATION</h3>
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-2">REQUEST PHYSICAL SAMPLES</h3>
               <p className="text-sm opacity-90 mb-6">
-                Our account managers can bring physical swatch books and sample products directly to your facility for review.
+                Our account managers can send physical swatch books and sample products directly to your facility for review.
               </p>
-              <button 
-                className="w-full font-bold uppercase tracking-wider py-3 rounded transition-all duration-200 ease-in-out border border-[var(--theme-color)] text-[var(--theme-color)] bg-[#F9F6EE] hover:bg-[var(--theme-color)] hover:text-white hover:scale-[1.02] hover:shadow-md"
+              <a 
+                href="#inquiry-form"
+                className="block text-center w-full font-bold uppercase tracking-wider py-3 rounded transition-all duration-200 ease-in-out border border-[var(--theme-color)] text-[var(--theme-color)] bg-[#F9F6EE] hover:bg-[var(--theme-color)] hover:text-white hover:scale-[1.02] hover:shadow-md"
               >
-                BOOK A DATE
-              </button>
+                REQUEST SAMPLES
+              </a>
             </div>
           </div>
 
           {/* Lead Form */}
           <div className="lg:col-span-2">
-            <div className="p-8 md:p-10 rounded-2xl shadow-md border border-slate/10" style={{ backgroundColor: 'var(--theme-card-bg)' }}>
+            <div id="inquiry-form" className="p-8 md:p-10 rounded-2xl shadow-md border border-slate/10" style={{ backgroundColor: 'var(--theme-card-bg)' }}>
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-6">INQUIRY FORM</h3>
               
               {isSuccess && (
