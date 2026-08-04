@@ -210,35 +210,20 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Inquiry Type</label>
-                    <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
-                      <option value="Request a Quote">Request a Quote</option>
-                      <option value="Schedule Product Presentation">Schedule Product Presentation</option>
-                      <option value="Request Physical Samples">Request Physical Samples</option>
-                      <option value="General Inquiry">General Inquiry</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Estimated Order Volume</label>
-                    <select name="orderVolume" value={formData.orderVolume} onChange={handleChange} required className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
-                      <option value="Low Volume (Under 100 units)">Low Volume (Under 100 units)</option>
-                      <option value="Medium Volume (100–500 units)">Medium Volume (100–500 units)</option>
-                      <option value="Enterprise/Bulk (500+ units / Recurring Contract)">Enterprise/Bulk (500+ units / Recurring Contract)</option>
-                    </select>
-                  </div>
+                <div>
+                  <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Inquiry Type</label>
+                  <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
+                    <option value="Request a Quote">Request a Quote</option>
+                    <option value="Schedule Product Presentation">Schedule Product Presentation</option>
+                    <option value="Request Physical Samples">Request Physical Samples</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
                 </div>
 
-                {region.countryCode === 'ph' ? (
+                {region.countryCode === 'ph' && (
                   <div>
                     <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Tax Identification Number (TIN) for Official Receipts <span className="opacity-60 text-xs font-normal">(Optional)</span></label>
                     <input type="text" name="tin" value={formData.tin} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="000-000-000-000" />
-                  </div>
-                ) : (
-                  <div className="flex items-start gap-3">
-                    <input type="checkbox" name="taxExemption" checked={formData.taxExemption} onChange={handleChange} id="taxExemptionContact" className="mt-1 shrink-0 accent-[var(--theme-color)]" />
-                    <label htmlFor="taxExemptionContact" className="text-sm font-medium opacity-90 cursor-pointer text-slate">Require Tax Exemption / Resale Exemption Certificate <span className="opacity-60 text-xs font-normal">(Optional)</span></label>
                   </div>
                 )}
 
