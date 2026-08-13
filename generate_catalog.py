@@ -202,24 +202,24 @@ def generate_pdf(output_path, logo_path):
     
     amenity_data = [
         ['Item', 'Available Options'],
-        ['Toothbrush', 'Standard, Eco-Friendly'],
-        ['Toothpaste', 'Standard, Eco-Friendly'],
-        ['Mouthwash', 'Standard, Eco-Friendly'],
-        ['Lip Balm', 'Standard, Eco-Friendly'],
-        ['Facial Moisturizer', 'Standard, Eco-Friendly'],
-        ['Hand Cream', 'Standard, Eco-Friendly'],
-        ['Cleansing Wipes', 'Standard, Eco-Friendly'],
-        ['Eye Mask', 'Standard, Eco-Friendly'],
-        ['Earplugs', 'Standard, Eco-Friendly'],
-        ['Compression Socks', 'Standard, Eco-Friendly'],
-        ['Slippers', 'Standard, Eco-Friendly'],
-        ['Comb or Hairbrush', 'Standard, Eco-Friendly'],
-        ['Deodorant', 'Standard, Eco-Friendly'],
-        ['Tissues', 'Standard, Eco-Friendly'],
-        ['Perfume or Cologne', 'Standard, Eco-Friendly'],
-        ['Lint Roller', 'Standard, Eco-Friendly'],
-        ['Breath Mints', 'Standard, Eco-Friendly'],
-        ['Microfiber Cleaning Cloth', 'Standard, Eco-Friendly']
+        ['Toothbrush', 'Standard | Eco-Friendly'],
+        ['Toothpaste', 'Standard | Eco-Friendly'],
+        ['Mouthwash', 'Standard | Eco-Friendly'],
+        ['Lip Balm', 'Standard | Eco-Friendly'],
+        ['Facial Moisturizer', 'Standard | Eco-Friendly'],
+        ['Hand Cream', 'Standard | Eco-Friendly'],
+        ['Cleansing Wipes', 'Standard | Eco-Friendly'],
+        ['Eye Mask', 'Standard | Eco-Friendly'],
+        ['Earplugs', 'Standard | Eco-Friendly'],
+        ['Compression Socks', 'Standard | Eco-Friendly'],
+        ['Slippers', 'Standard | Eco-Friendly'],
+        ['Comb or Hairbrush', 'Standard | Eco-Friendly'],
+        ['Deodorant', 'Standard | Eco-Friendly'],
+        ['Tissues', 'Standard | Eco-Friendly'],
+        ['Perfume or Cologne', 'Standard | Eco-Friendly'],
+        ['Lint Roller', 'Standard | Eco-Friendly'],
+        ['Breath Mints', 'Standard | Eco-Friendly'],
+        ['Microfiber Cleaning Cloth', 'Standard | Eco-Friendly']
     ]
     t4 = Table(amenity_data, colWidths=[4.0*inch, 3.5*inch])
     t4.setStyle(base_table_style)
