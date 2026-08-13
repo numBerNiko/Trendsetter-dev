@@ -10,11 +10,7 @@ export default function ContactPage() {
     email: '',
     company: '',
     phone: '',
-    inquiryType: 'Request a Quote',
-    orderVolume: 'Medium Volume (100–500 units)',
-    message: '',
-    tin: '',
-    taxExemption: false
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -31,7 +27,7 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const subject = `[${formData.inquiryType.toUpperCase()}] - ${formData.company}`;
+    const subject = `[INQUIRY] - ${formData.company}`;
     
     const payload = {
       access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
@@ -57,7 +53,7 @@ export default function ContactPage() {
       
       if (response.status === 200) {
         setIsSuccess(true);
-        setFormData({ fullName: '', email: '', company: '', phone: '', inquiryType: 'Request a Quote', orderVolume: 'Medium Volume (100–500 units)', message: '', tin: '', taxExemption: false });
+        setFormData({ fullName: '', email: '', company: '', phone: '', message: '' });
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
         console.error('Web3Forms Error:', result);
@@ -210,22 +206,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Inquiry Type</label>
-                  <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }}>
-                    <option value="Request a Quote">Request a Quote</option>
-                    <option value="Schedule Product Presentation">Schedule Product Presentation</option>
-                    <option value="Request Physical Samples">Request Physical Samples</option>
-                    <option value="General Inquiry">General Inquiry</option>
-                  </select>
-                </div>
-
-                {region.countryCode === 'ph' && (
-                  <div>
-                    <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Tax Identification Number (TIN) for Official Receipts <span className="opacity-60 text-xs font-normal">(Optional)</span></label>
-                    <input type="text" name="tin" value={formData.tin} onChange={handleChange} className="w-full px-4 py-3 border border-slate/20 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--theme-color)] transition-all duration-200 ease-in-out" style={{ backgroundColor: 'var(--theme-page-bg)' }} placeholder="000-000-000-000" />
-                  </div>
-                )}
 
                 <div>
                   <label className="block text-sm font-bold mb-2 opacity-80 text-slate">Message</label>
