@@ -233,7 +233,7 @@ def generate_pdf(output_path, logo_path):
         ['Table Napkins', 'Custom Sizing Available'],
         ['Tablecloths', 'Custom Sizing Available'],
         ['IBM Tablecloths', 'Custom Sizing Available'],
-        ['Spandex Chair Covers', 'Custom Sizing Available'],
+        ['Chair Covers', 'Custom Sizing Available'],
         ['Table Runners', 'Custom Sizing Available'],
         ['Placemats', 'Standard & Custom'],
         ['Table Skirting', 'Custom Sizing Available'],
