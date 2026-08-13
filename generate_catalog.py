@@ -205,21 +205,21 @@ def generate_pdf(output_path, logo_path):
         ['Toothbrush', 'Standard'],
         ['Toothpaste', 'Standard'],
         ['Mouthwash', 'Standard'],
-        ['Lip balm', 'Standard'],
-        ['Facial moisturizer', 'Standard'],
-        ['Hand cream', 'Standard'],
-        ['Cleansing wipes', 'Standard'],
-        ['Eye mask', 'One Size'],
+        ['Lip Balm', 'Standard'],
+        ['Facial Moisturizer', 'Standard'],
+        ['Hand Cream', 'Standard'],
+        ['Cleansing Wipes', 'Standard'],
+        ['Eye Mask', 'One Size'],
         ['Earplugs', 'Standard'],
-        ['Compression socks', 'One Size'],
+        ['Compression Socks', 'One Size'],
         ['Slippers', 'One Size'],
-        ['Comb or hairbrush', 'Standard'],
+        ['Comb or Hairbrush', 'Standard'],
         ['Deodorant', 'Standard'],
         ['Tissues', 'Standard'],
-        ['Perfume or cologne', 'Standard'],
-        ['Lint roller', 'Standard'],
-        ['Breath mints', 'Standard'],
-        ['Microfiber cleaning cloth', 'Standard']
+        ['Perfume or Cologne', 'Standard'],
+        ['Lint Roller', 'Standard'],
+        ['Breath Mints', 'Standard'],
+        ['Microfiber Cleaning Cloth', 'Standard']
     ]
     t4 = Table(amenity_data, colWidths=[4.0*inch, 3.5*inch])
     t4.setStyle(base_table_style)
