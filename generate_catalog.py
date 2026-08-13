@@ -233,7 +233,13 @@ def generate_pdf(output_path, logo_path):
         ['Table Napkins', 'Custom Sizing Available'],
         ['Tablecloths', 'Custom Sizing Available'],
         ['IBM Tablecloths', 'Custom Sizing Available'],
-        ['Spandex Chair Covers', 'Custom Sizing Available']
+        ['Spandex Chair Covers', 'Custom Sizing Available'],
+        ['Table Runners', 'Custom Sizing Available'],
+        ['Placemats', 'Standard & Custom'],
+        ['Table Skirting', 'Custom Sizing Available'],
+        ['Chair Sashes or Bands', 'Standard'],
+        ['Staff Aprons (Waist, Bib, Bistro)', 'Free Size'],
+        ['Kitchen & Polishing Towels', 'Standard']
     ]
     t5 = Table(dining_data, colWidths=[4.0*inch, 3.5*inch])
     t5.setStyle(base_table_style)
@@ -245,11 +251,19 @@ def generate_pdf(output_path, logo_path):
     curtain_data = [
         ['Item', 'Size'],
         ['Blackout Curtains', 'Custom Sizing Available'],
-        ['Sheer Curtains', 'Custom Sizing Available']
+        ['Sheer Curtains', 'Custom Sizing Available'],
+        ['Dim-Out Curtains', 'Custom Sizing Available'],
+        ['Thermal or Acoustic Curtains', 'Custom Sizing Available'],
+        ['Valances and Cornices', 'Custom Sizing Available'],
+        ['Hardware Systems (Tracks, Rods)', 'Custom Lengths'],
+        ['Tiebacks and Holdbacks', 'Standard']
     ]
     t6 = Table(curtain_data, colWidths=[4.0*inch, 3.5*inch])
     t6.setStyle(base_table_style)
     story.append(t6)
+
+    story.append(Spacer(1, 10))
+    story.append(Paragraph("<i>Available Curtain Header Styles: Pinch Pleat, Wave Fold / S-Fold, Grommet / Eyelet, and Rod Pocket.</i>", styles['DocSubtitle']))
 
     doc.build(story, onFirstPage=add_header, onLaterPages=add_header)
     print(f"Structured 1:1 Catalog successfully generated at {output_path}")
