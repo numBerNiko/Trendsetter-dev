@@ -225,6 +225,32 @@ def generate_pdf(output_path, logo_path):
     t4.setStyle(base_table_style)
     story.append(t4)
 
+    story.append(Spacer(1, 20))
+    story.append(Paragraph("Dining & Banquet Linens", styles['SectionTitle']))
+    
+    dining_data = [
+        ['Item', 'Size'],
+        ['Table Napkins', 'Custom Sizing Available'],
+        ['Tablecloths', 'Custom Sizing Available'],
+        ['IBM Tablecloths', 'Custom Sizing Available'],
+        ['Spandex Chair Covers', 'Custom Sizing Available']
+    ]
+    t5 = Table(dining_data, colWidths=[4.0*inch, 3.5*inch])
+    t5.setStyle(base_table_style)
+    story.append(t5)
+
+    story.append(Spacer(1, 20))
+    story.append(Paragraph("Curtains & Window Treatments", styles['SectionTitle']))
+    
+    curtain_data = [
+        ['Item', 'Size'],
+        ['Blackout Curtains', 'Custom Sizing Available'],
+        ['Sheer Curtains', 'Custom Sizing Available']
+    ]
+    t6 = Table(curtain_data, colWidths=[4.0*inch, 3.5*inch])
+    t6.setStyle(base_table_style)
+    story.append(t6)
+
     doc.build(story, onFirstPage=add_header, onLaterPages=add_header)
     print(f"Structured 1:1 Catalog successfully generated at {output_path}")
 
