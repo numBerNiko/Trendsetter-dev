@@ -201,27 +201,27 @@ def generate_pdf(output_path, logo_path):
     story.append(Paragraph("Amenity & Personal Care Items", styles['SectionTitle']))
     
     amenity_data = [
-        ['Item', 'Size'],
-        ['Toothbrush', 'Standard'],
-        ['Toothpaste', 'Standard'],
-        ['Mouthwash', 'Standard'],
-        ['Lip Balm', 'Standard'],
-        ['Facial Moisturizer', 'Standard'],
-        ['Hand Cream', 'Standard'],
-        ['Cleansing Wipes', 'Standard'],
-        ['Eye Mask', 'One Size'],
-        ['Earplugs', 'Standard'],
-        ['Compression Socks', 'One Size'],
-        ['Slippers', 'One Size'],
-        ['Comb or Hairbrush', 'Standard'],
-        ['Deodorant', 'Standard'],
-        ['Tissues', 'Standard'],
-        ['Perfume or Cologne', 'Standard'],
-        ['Lint Roller', 'Standard'],
-        ['Breath Mints', 'Standard'],
-        ['Microfiber Cleaning Cloth', 'Standard']
+        ['Item', 'Size', 'Available Options'],
+        ['Toothbrush', 'Standard', 'Standard, Eco-Friendly'],
+        ['Toothpaste', 'Standard', 'Standard, Eco-Friendly'],
+        ['Mouthwash', 'Standard', 'Standard, Eco-Friendly'],
+        ['Lip Balm', 'Standard', 'Standard, Eco-Friendly'],
+        ['Facial Moisturizer', 'Standard', 'Standard, Eco-Friendly'],
+        ['Hand Cream', 'Standard', 'Standard, Eco-Friendly'],
+        ['Cleansing Wipes', 'Standard', 'Standard, Eco-Friendly'],
+        ['Eye Mask', 'One Size', 'Standard, Eco-Friendly'],
+        ['Earplugs', 'Standard', 'Standard, Eco-Friendly'],
+        ['Compression Socks', 'One Size', 'Standard, Eco-Friendly'],
+        ['Slippers', 'One Size', 'Standard, Eco-Friendly'],
+        ['Comb or Hairbrush', 'Standard', 'Standard, Eco-Friendly'],
+        ['Deodorant', 'Standard', 'Standard, Eco-Friendly'],
+        ['Tissues', 'Standard', 'Standard, Eco-Friendly'],
+        ['Perfume or Cologne', 'Standard', 'Standard, Eco-Friendly'],
+        ['Lint Roller', 'Standard', 'Standard, Eco-Friendly'],
+        ['Breath Mints', 'Standard', 'Standard, Eco-Friendly'],
+        ['Microfiber Cleaning Cloth', 'Standard', 'Standard, Eco-Friendly']
     ]
-    t4 = Table(amenity_data, colWidths=[4.0*inch, 3.5*inch])
+    t4 = Table(amenity_data, colWidths=[2.5*inch, 1.5*inch, 3.5*inch])
     t4.setStyle(base_table_style)
     story.append(t4)
 
