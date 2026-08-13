@@ -201,27 +201,27 @@ def generate_pdf(output_path, logo_path):
     story.append(Paragraph("Amenity & Personal Care Items", styles['SectionTitle']))
     
     amenity_data = [
-        ['Item', 'Standard', 'Eco-Friendly'],
-        ['Toothbrush', 'Yes', 'Yes'],
-        ['Toothpaste', 'Yes', 'Yes'],
-        ['Mouthwash', 'Yes', 'Yes'],
-        ['Lip Balm', 'Yes', 'Yes'],
-        ['Facial Moisturizer', 'Yes', 'Yes'],
-        ['Hand Cream', 'Yes', 'Yes'],
-        ['Cleansing Wipes', 'Yes', 'Yes'],
-        ['Eye Mask', 'Yes', 'Yes'],
-        ['Earplugs', 'Yes', 'Yes'],
-        ['Compression Socks', 'Yes', 'Yes'],
-        ['Slippers', 'Yes', 'Yes'],
-        ['Comb or Hairbrush', 'Yes', 'Yes'],
-        ['Deodorant', 'Yes', 'Yes'],
-        ['Tissues', 'Yes', 'Yes'],
-        ['Perfume or Cologne', 'Yes', 'Yes'],
-        ['Lint Roller', 'Yes', 'Yes'],
-        ['Breath Mints', 'Yes', 'Yes'],
-        ['Microfiber Cleaning Cloth', 'Yes', 'Yes']
+        ['Item', 'Available Options'],
+        ['Toothbrush', 'Standard, Eco-Friendly'],
+        ['Toothpaste', 'Standard, Eco-Friendly'],
+        ['Mouthwash', 'Standard, Eco-Friendly'],
+        ['Lip Balm', 'Standard, Eco-Friendly'],
+        ['Facial Moisturizer', 'Standard, Eco-Friendly'],
+        ['Hand Cream', 'Standard, Eco-Friendly'],
+        ['Cleansing Wipes', 'Standard, Eco-Friendly'],
+        ['Eye Mask', 'Standard, Eco-Friendly'],
+        ['Earplugs', 'Standard, Eco-Friendly'],
+        ['Compression Socks', 'Standard, Eco-Friendly'],
+        ['Slippers', 'Standard, Eco-Friendly'],
+        ['Comb or Hairbrush', 'Standard, Eco-Friendly'],
+        ['Deodorant', 'Standard, Eco-Friendly'],
+        ['Tissues', 'Standard, Eco-Friendly'],
+        ['Perfume or Cologne', 'Standard, Eco-Friendly'],
+        ['Lint Roller', 'Standard, Eco-Friendly'],
+        ['Breath Mints', 'Standard, Eco-Friendly'],
+        ['Microfiber Cleaning Cloth', 'Standard, Eco-Friendly']
     ]
-    t4 = Table(amenity_data, colWidths=[3.5*inch, 2.0*inch, 2.0*inch])
+    t4 = Table(amenity_data, colWidths=[4.0*inch, 3.5*inch])
     t4.setStyle(base_table_style)
     story.append(t4)
 
