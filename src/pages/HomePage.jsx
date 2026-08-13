@@ -233,12 +233,13 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Bottom Row: 3 Square Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Bottom Row: 4 Square Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { title: "RESIDENT APPAREL & SAFETY", bullets: ["Gowns", "Adaptive clothing", "Non-slip socks", "Robes"], link: "/products#apparel", image: "/Trendsetter-website-photos(2)/RESIDENT APPAREL & SAFETY.png" },
                 { title: "CLINICAL COMPLIANCE", bullets: ["Flame-retardant bedding", "Wipe-clean pillows", "Waterproof pillows"], link: "/products#clinical", image: "/Trendsetter-website-photos(2)/CLINICAL COMPLIANCE & SAFETY (HIGHER-SPEC).png" },
-                { title: "FACILITY & STAFF ESSENTIALS", bullets: ["Scrubs", "Lab coats", "Laundry bags", "Dining linens"], link: "/products#facility", image: "/Trendsetter-website-photos(2)/FACILITY & STAFF ESSENTIALS.png" }
+                { title: "FACILITY & STAFF ESSENTIALS", bullets: ["Scrubs", "Lab coats", "Laundry bags", "Dining linens"], link: "/products#facility", image: "/Trendsetter-website-photos(2)/FACILITY & STAFF ESSENTIALS.png" },
+                { title: "AMENITY KIT ESSENTIALS", bullets: ["Toothbrush", "Toothpaste", "Mouthwash", "Lip balm", "Facial moisturizer", "Hand cream", "Cleansing wipes", "Eye mask", "Earplugs", "Compression socks", "Slippers", "Comb or hairbrush", "Deodorant", "Tissues", "Perfume or cologne", "Lint roller", "Breath mints", "Microfiber cleaning cloth"], link: "/products#amenity", image: "/Trendsetter-website-photos(2)/HYGIENE & PERSONAL CARE SUITE.png" }
               ].map((suite, idx) => (
                 <div key={idx} className="group relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                   <img src={suite.image} alt={suite.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />

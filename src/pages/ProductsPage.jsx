@@ -62,6 +62,31 @@ export default function ProductsPage() {
         "Dining linens"
       ],
       image: "/Trendsetter-website-photos(2)/FACILITY & STAFF ESSENTIALS.png"
+    },
+    {
+      id: "amenity",
+      title: "AMENITY KIT ESSENTIALS",
+      bullets: [
+        "Toothbrush",
+        "Toothpaste",
+        "Mouthwash",
+        "Lip balm",
+        "Facial moisturizer",
+        "Hand cream",
+        "Cleansing wipes",
+        "Eye mask",
+        "Earplugs",
+        "Compression socks",
+        "Slippers",
+        "Comb or hairbrush",
+        "Deodorant",
+        "Tissues",
+        "Perfume or cologne",
+        "Lint roller",
+        "Breath mints",
+        "Microfiber cleaning cloth"
+      ],
+      image: "/Trendsetter-website-photos(2)/HYGIENE & PERSONAL CARE SUITE.png"
     }
   ];
 

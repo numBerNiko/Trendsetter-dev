@@ -197,6 +197,34 @@ def generate_pdf(output_path, logo_path):
     t3.setStyle(base_table_style)
     story.append(t3)
 
+    story.append(Spacer(1, 20))
+    story.append(Paragraph("Amenity & Personal Care Items", styles['SectionTitle']))
+    
+    amenity_data = [
+        ['Item', 'Size'],
+        ['Toothbrush', 'Standard'],
+        ['Toothpaste', 'Standard'],
+        ['Mouthwash', 'Standard'],
+        ['Lip balm', 'Standard'],
+        ['Facial moisturizer', 'Standard'],
+        ['Hand cream', 'Standard'],
+        ['Cleansing wipes', 'Standard'],
+        ['Eye mask', 'One Size'],
+        ['Earplugs', 'Standard'],
+        ['Compression socks', 'One Size'],
+        ['Slippers', 'One Size'],
+        ['Comb or hairbrush', 'Standard'],
+        ['Deodorant', 'Standard'],
+        ['Tissues', 'Standard'],
+        ['Perfume or cologne', 'Standard'],
+        ['Lint roller', 'Standard'],
+        ['Breath mints', 'Standard'],
+        ['Microfiber cleaning cloth', 'Standard']
+    ]
+    t4 = Table(amenity_data, colWidths=[4.0*inch, 3.5*inch])
+    t4.setStyle(base_table_style)
+    story.append(t4)
+
     doc.build(story, onFirstPage=add_header, onLaterPages=add_header)
     print(f"Structured 1:1 Catalog successfully generated at {output_path}")
 
