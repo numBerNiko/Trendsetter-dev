@@ -82,7 +82,7 @@ export default function Layout() {
                 onClick={() => switchRegion('us')} 
                 className={`text-[10px] font-bold px-2 py-1 rounded transition-colors ${!region.isPH ? 'bg-white text-[var(--theme-color)]' : 'text-white hover:bg-white/10'}`}
               >
-                US / Global
+                USA
               </button>
               <button 
                 onClick={() => switchRegion('ph')} 
@@ -98,14 +98,14 @@ export default function Layout() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate/10 shadow-sm">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4 md:py-6 min-h-[5rem]">
+          <div className="flex justify-between items-center py-2 md:py-3 min-h-[5rem]">
             {/* Logo */}
             <div className="flex items-center">
               <Link to="/">
                 <img 
                   src="/Official_logo.svg" 
                   alt="Trendsetter Textiles" 
-                  className="h-16 md:h-20 w-auto object-contain block"
+                  className="h-20 md:h-24 w-auto object-contain block transition-transform duration-200 hover:scale-105"
                 />
               </Link>
             </div>
@@ -151,7 +151,7 @@ export default function Layout() {
                   onClick={() => { setIsMobileMenuOpen(false); switchRegion('us'); }} 
                   className={`text-xs font-bold px-4 py-2 rounded transition-colors ${!region.isPH ? 'bg-[var(--theme-color)] text-white' : 'text-slate hover:bg-slate/10'}`}
                 >
-                  US / Global
+                  USA
                 </button>
                 <button 
                   onClick={() => { setIsMobileMenuOpen(false); switchRegion('ph'); }} 
@@ -184,7 +184,7 @@ export default function Layout() {
                 <img 
                   src="/Official_logo_light.svg" 
                   alt="Trendsetter Textiles" 
-                  className="h-16 md:h-20 w-auto object-contain block mb-4"
+                  className="h-24 md:h-28 w-auto object-contain block mb-6"
                 />
               </Link>
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
@@ -251,7 +251,7 @@ export default function Layout() {
                 onClick={() => switchRegion('us')} 
                 className={`px-2 py-1 rounded transition-colors ${!region.isPH ? 'bg-white text-[var(--theme-color)] font-bold' : 'hover:bg-white/10'}`}
               >
-                US / Global
+                USA
               </button>
               <button 
                 onClick={() => switchRegion('ph')} 
