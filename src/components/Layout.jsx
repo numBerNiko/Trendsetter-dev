@@ -8,6 +8,20 @@ export default function Layout() {
   const region = useRegion();
   const navStyle = ({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {};
 
+  const switchRegion = (targetRegion) => {
+    const currentPath = window.location.pathname;
+    const isCurrentlyPH = currentPath === '/ph' || currentPath.startsWith('/ph/');
+    
+    let pathWithoutRegion = isCurrentlyPH ? currentPath.replace(/^\/ph/, '') : currentPath;
+    if (pathWithoutRegion === '') pathWithoutRegion = '/';
+
+    const newPath = targetRegion === 'ph' ? `/ph${pathWithoutRegion === '/' ? '' : pathWithoutRegion}` : pathWithoutRegion;
+    
+    if (currentPath !== newPath) {
+      window.location.href = newPath;
+    }
+  };
+
   // SEO & Hreflang Logic
   useEffect(() => {
     // 1. Title & Meta Description
@@ -63,6 +77,20 @@ export default function Layout() {
           </div>
           <div className="hidden lg:flex items-center gap-6 mt-3 lg:mt-0">
             <span className="opacity-80 text-xs tracking-wider uppercase font-medium">{region.heroTagline}</span>
+            <div className="flex items-center gap-1 border border-white/20 rounded p-0.5">
+              <button 
+                onClick={() => switchRegion('us')} 
+                className={`text-[10px] font-bold px-2 py-1 rounded transition-colors ${!region.isPH ? 'bg-white text-[var(--theme-color)]' : 'text-white hover:bg-white/10'}`}
+              >
+                US / Global
+              </button>
+              <button 
+                onClick={() => switchRegion('ph')} 
+                className={`text-[10px] font-bold px-2 py-1 rounded transition-colors ${region.isPH ? 'bg-white text-[var(--theme-color)]' : 'text-white hover:bg-white/10'}`}
+              >
+                Philippines
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -75,9 +103,9 @@ export default function Layout() {
             <div className="flex items-center">
               <Link to="/">
                 <img 
-                  src="/logo.png" 
-                  alt="Trendsetter Textiles Logo" 
-                  className="w-48 md:w-64 lg:w-72 h-auto object-contain logo-optimize"
+                  src="/Official_logo.svg" 
+                  alt="Trendsetter Textiles" 
+                  className="h-16 md:h-20 w-auto object-contain block"
                 />
               </Link>
             </div>
@@ -117,6 +145,22 @@ export default function Layout() {
         {/* Mobile Navigation Overlay */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-20 left-0 w-full h-[calc(100vh-80px)] bg-white overflow-y-auto border-b border-slate/10 shadow-2xl py-6 px-4 flex flex-col space-y-2 z-40">
+            <div className="flex justify-center mb-6">
+              <div className="flex items-center gap-1 border border-slate/20 bg-slate/5 rounded p-1">
+                <button 
+                  onClick={() => { setIsMobileMenuOpen(false); switchRegion('us'); }} 
+                  className={`text-xs font-bold px-4 py-2 rounded transition-colors ${!region.isPH ? 'bg-[var(--theme-color)] text-white' : 'text-slate hover:bg-slate/10'}`}
+                >
+                  US / Global
+                </button>
+                <button 
+                  onClick={() => { setIsMobileMenuOpen(false); switchRegion('ph'); }} 
+                  className={`text-xs font-bold px-4 py-2 rounded transition-colors ${region.isPH ? 'bg-[var(--theme-color)] text-white' : 'text-slate hover:bg-slate/10'}`}
+                >
+                  Philippines
+                </button>
+              </div>
+            </div>
             <NavLink to="/home" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>HOME</NavLink>
             <NavLink to="/industries" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>INDUSTRIES</NavLink>
             <NavLink to="/products" onClick={() => setIsMobileMenuOpen(false)} className={({isActive}) => `uppercase font-bold text-lg px-6 py-4 rounded-xl transition-colors duration-200 ${isActive ? 'text-neutral-bg' : 'text-slate hover:bg-neutral-bg'}`} style={({isActive}) => isActive ? { backgroundColor: region.theme.primaryBg } : {}}>PRODUCTS</NavLink>
@@ -134,13 +178,15 @@ export default function Layout() {
       {/* Enterprise Footer */}
       <footer className="pt-16 pb-8 mt-auto text-neutral-bg" style={{ backgroundColor: region.theme.primaryBg }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
-            <div className="sm:col-span-2 md:col-span-1">
-              <img 
-                src="/logo.png" 
-                alt="Trendsetter Textiles Logo" 
-                className="h-24 md:h-32 w-auto max-w-[320px] object-contain mb-6 logo-optimize"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12 mb-12">
+            <div className="md:col-span-2 lg:col-span-2">
+              <Link to="/">
+                <img 
+                  src="/Official_logo_light.svg" 
+                  alt="Trendsetter Textiles" 
+                  className="h-16 md:h-20 w-auto object-contain block mb-4"
+                />
+              </Link>
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
                 {region.countryCode === 'ph'
                   ? 'Dispatched directly from our Laguna / Biñan warehouse facility for fast local shipping.' 
@@ -195,10 +241,24 @@ export default function Layout() {
           </div>
           
           <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center border-white/30 text-white opacity-80 gap-4 text-xs">
-            <p>&copy; {new Date().getFullYear()} Trendsetter Textiles Inc. All rights reserved. Servicing the {region.phone.includes('+63') ? 'Philippines' : 'United States'}.</p>
+            <p>&copy; {new Date().getFullYear()} Trendsetter Textiles Inc. All rights reserved. Servicing the {region.isPH ? 'Philippines' : 'United States'}.</p>
             <div className="flex items-center gap-2">
               <Mail strokeWidth={1.5} size={14} />
               <a href={`mailto:${region.email}`} className="hover:underline">{region.email}</a>
+            </div>
+            <div className="flex items-center gap-1 border border-white/30 rounded p-0.5">
+              <button 
+                onClick={() => switchRegion('us')} 
+                className={`px-2 py-1 rounded transition-colors ${!region.isPH ? 'bg-white text-[var(--theme-color)] font-bold' : 'hover:bg-white/10'}`}
+              >
+                US / Global
+              </button>
+              <button 
+                onClick={() => switchRegion('ph')} 
+                className={`px-2 py-1 rounded transition-colors ${region.isPH ? 'bg-white text-[var(--theme-color)] font-bold' : 'hover:bg-white/10'}`}
+              >
+                Philippines
+              </button>
             </div>
             <div className="flex gap-4">
               <Link to="/home" className="hover:underline">Home</Link>

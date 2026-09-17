@@ -118,7 +118,7 @@ export default function ContactPage() {
                             </>
                           ) : (
                             <>
-                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Elaine</p>
+                              <p className="text-sm font-bold text-[var(--theme-color)] mb-1">Eileen</p>
                               <a href={`tel:${region.phone.replace(/[^0-9+]/g, '')}`} className="text-base font-medium transition-colors hover:text-[var(--theme-color)] block mb-1">
                                 {region.phone}
                               </a>

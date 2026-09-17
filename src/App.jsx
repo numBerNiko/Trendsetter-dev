@@ -23,8 +23,12 @@ import ResourcesPage from './pages/ResourcesPage';
 import CategoryPage from './pages/CategoryPage';
 
 function App() {
+  const path = window.location.pathname;
+  const isPH = path === '/ph' || path.startsWith('/ph/');
+  const basename = isPH ? '/ph' : '/';
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>

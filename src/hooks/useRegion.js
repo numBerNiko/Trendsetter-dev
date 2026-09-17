@@ -1,18 +1,16 @@
-import { useState, useEffect } from 'react';
 import { regionalContent } from '../config/regionalContent';
 
 export function useRegion() {
-  const [regionData, setRegionData] = useState(regionalContent.us);
-
-  useEffect(() => {
-    // Basic hostname and port check to determine region
-    const hostname = window.location.hostname;
-    if (hostname.includes('ph.trendsettertextiles.com') || (hostname === 'localhost' && window.location.port === '5174')) {
-      setRegionData(regionalContent.ph);
-    } else {
-      setRegionData(regionalContent.us);
-    }
-  }, []);
-
-  return regionData;
+  // Determine region purely from the initial pathname
+  // since changing regions will trigger a full page reload.
+  const path = window.location.pathname;
+  const isPH = path === '/ph' || path.startsWith('/ph/');
+  
+  const regionData = isPH ? regionalContent.ph : regionalContent.us;
+  
+  return {
+    ...regionData,
+    prefix: isPH ? '/ph' : '',
+    isPH
+  };
 }

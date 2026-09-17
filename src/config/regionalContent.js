@@ -1,7 +1,7 @@
 export const regionalContent = {
   us: {
     countryCode: "us",
-    phone: "+1 (310) 424-0765",
+    phone: "+1 (213) 537-3713",
     email: "customerservice@trendsettertextiles.com",
     heroTagline: "USA INSTITUTIONAL PROCUREMENT HUB",
     footerDescription: "Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the USA.",
