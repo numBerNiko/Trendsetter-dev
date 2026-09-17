@@ -103,9 +103,10 @@ export default function Layout() {
             <div className="flex items-center">
               <Link to="/">
                 <img 
-                  src="/Official_logo.svg" 
+                  src="/Official_logo.svg?v=2" 
                   alt="Trendsetter Textiles" 
-                  className="h-20 md:h-24 w-auto object-contain block transition-transform duration-200 hover:scale-105"
+                  className="h-[75px] md:h-[90px] w-auto object-contain block transition-transform duration-200 hover:scale-105"
+                  style={{ height: '80px', width: 'auto', maxHeight: '90px' }}
                 />
               </Link>
             </div>
@@ -182,9 +183,10 @@ export default function Layout() {
             <div className="md:col-span-2 lg:col-span-2">
               <Link to="/">
                 <img 
-                  src="/Official_logo_light.svg" 
+                  src="/Official_logo_light.svg?v=2" 
                   alt="Trendsetter Textiles" 
-                  className="h-24 md:h-28 w-auto object-contain block mb-6"
+                  className="h-[80px] md:h-[95px] w-auto object-contain block mb-6"
+                  style={{ height: '85px', width: 'auto', maxHeight: '100px' }}
                 />
               </Link>
               <p className="text-sm leading-relaxed mb-6 font-medium opacity-90 text-white">
