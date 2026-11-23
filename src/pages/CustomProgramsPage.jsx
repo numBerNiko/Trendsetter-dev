@@ -119,7 +119,7 @@ export default function CustomProgramsPage() {
               START CUSTOM ORDER
             </Link>
             <a 
-              href="/Trendsetter_Textiles_Catalog.pdf" 
+              href="/assets/TrendsetterTextilesCatalogueUS.pdf" 
               download
               className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-sm border-2 border-white text-white hover:bg-white hover:text-slate"
             >

@@ -224,7 +224,7 @@ export default function Layout() {
               <h4 className="font-bold text-lg mb-4 text-white">Procurement</h4>
               <ul className="space-y-2 text-sm opacity-90">
                 <li>
-                  <a href="/Trendsetter_Textiles_Catalog.pdf" download className="inline-flex items-center gap-1.5 font-bold transition-colors text-[#25D366] hover:text-white">
+                  <a href="/assets/TrendsetterTextilesCatalogueUS.pdf" download className="inline-flex items-center gap-1.5 font-bold transition-colors text-[#25D366] hover:text-white">
                     <Download strokeWidth={1.5} size={14} /> Download Catalog (PDF)
                   </a>
                 </li>

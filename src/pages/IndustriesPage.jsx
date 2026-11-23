@@ -71,7 +71,7 @@ export default function IndustriesPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
             <a 
-              href="/Trendsetter_Textiles_Catalog.pdf" 
+              href="/assets/TrendsetterTextilesCatalogueUS.pdf" 
               download
               className="px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-sm w-full sm:w-auto text-center transition-all bg-white border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-neutral-bg flex items-center justify-center gap-2"
             >
