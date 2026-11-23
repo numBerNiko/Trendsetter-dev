@@ -34,7 +34,7 @@ export default function IndustriesPage() {
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
               Specialized textiles for Harbor Post Acute Care and long-term facilities. Focus on resident comfort, wipe-clean surfaces, and wash-stability.
             </p>
-            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOG &rarr;</span>
+            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOGUE &rarr;</span>
           </Link>
 
           <Link to="/industries/medical-clinics" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
@@ -45,7 +45,7 @@ export default function IndustriesPage() {
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
               Apparel and linens for Outpatient, Urgent Care, and Specialty clinics. Focus on staff scrubs, exam table covers, and patient gowns.
             </p>
-            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOG &rarr;</span>
+            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOGUE &rarr;</span>
           </Link>
 
           <Link to="/industries/hotels" className="group bg-white p-10 rounded-2xl shadow-md border border-slate/10 hover:shadow-xl transition-all flex flex-col h-full hover:border-[var(--theme-color)]">
@@ -56,7 +56,7 @@ export default function IndustriesPage() {
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
               Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
             </p>
-            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOG &rarr;</span>
+            <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOGUE &rarr;</span>
           </Link>
 
         </div>
@@ -67,7 +67,7 @@ export default function IndustriesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wider text-[var(--theme-color)]">Ready to Get Started?</h2>
           <p className="text-lg opacity-80 mb-10 max-w-2xl mx-auto">
-            Review our complete catalog of institutional textile specifications, or reach out to secure your order.
+            Review our complete catalogue of institutional textile specifications, or reach out to secure your order.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
             <a 
@@ -75,7 +75,7 @@ export default function IndustriesPage() {
               download
               className="px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-sm w-full sm:w-auto text-center transition-all bg-white border-2 border-[var(--theme-color)] text-[var(--theme-color)] hover:bg-[var(--theme-color)] hover:text-neutral-bg flex items-center justify-center gap-2"
             >
-              <Download strokeWidth={1.5} size={20} /> PDF CATALOG
+              <Download strokeWidth={1.5} size={20} /> PDF CATALOGUE
             </a>
             <Link to="/contact" className="text-neutral-bg px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg shadow-lg w-full sm:w-auto text-center transition-colors hover:opacity-80" style={{ backgroundColor: region.theme.primaryBg }}>
               REQUEST A QUOTE

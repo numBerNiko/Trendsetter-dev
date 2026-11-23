@@ -123,7 +123,7 @@ export default function CustomProgramsPage() {
               download
               className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-sm border-2 border-white text-white hover:bg-white hover:text-slate"
             >
-              <Download strokeWidth={1.5} size={20} /> PDF CATALOG
+              <Download strokeWidth={1.5} size={20} /> PDF CATALOGUE
             </a>
           </div>
         </div>

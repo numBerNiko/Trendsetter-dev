@@ -83,7 +83,7 @@ export default function CategoryPage() {
     return (
       <div className="py-32 text-center text-slate">
         <h2 className="text-3xl font-bold mb-4 text-slate">Category Not Found</h2>
-        <Link to="/products" className="hover:underline" style={{ color: region.theme.primaryBg }}>Return to Product Catalog</Link>
+        <Link to="/products" className="hover:underline" style={{ color: region.theme.primaryBg }}>Return to Product Catalogue</Link>
       </div>
     );
   }
@@ -94,7 +94,7 @@ export default function CategoryPage() {
         
         {/* Breadcrumb */}
         <div className="text-sm opacity-70 mb-8 font-medium">
-          <Link to="/products" className="hover:text-slate">Catalog</Link> &gt; <span className="capitalize">{category}</span>
+          <Link to="/products" className="hover:text-slate">Catalogue</Link> &gt; <span className="capitalize">{category}</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

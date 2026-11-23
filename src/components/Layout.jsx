@@ -225,7 +225,7 @@ export default function Layout() {
               <ul className="space-y-2 text-sm opacity-90">
                 <li>
                   <a href="/assets/TrendsetterTextilesCatalogueUS.pdf" download className="inline-flex items-center gap-1.5 font-bold transition-colors text-[#25D366] hover:text-white">
-                    <Download strokeWidth={1.5} size={14} /> Download Catalog (PDF)
+                    <Download strokeWidth={1.5} size={14} /> Download Catalogue (PDF)
                   </a>
                 </li>
                 <li><Link to="/contact?inquiry=samples" className="transition-colors text-white hover:opacity-80">Request Physical Samples</Link></li>
