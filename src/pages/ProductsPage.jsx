@@ -101,7 +101,7 @@ export default function ProductsPage() {
             Examples of durable, reliable textiles designed for healthcare, hospitality, and events.
           </p>
           <a 
-            href="/assets/TrendsetterTextilesCatalogueUS.pdf" 
+            href={region.catalogueUrl} 
             download
             className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-md bg-white text-slate hover:bg-neutral-bg transition-all duration-300 text-lg font-bold shadow-lg hover:shadow-xl hover:-translate-y-1"
             style={{ color: region.theme.primaryBg }}
@@ -114,7 +114,7 @@ export default function ProductsPage() {
       {/* Sticky Catalog Banner */}
       <div className="sticky top-20 z-40 bg-white border-b border-slate/10 shadow-sm py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center transition-all duration-300">
         <span className="font-bold text-slate hidden sm:inline uppercase tracking-wider">Trendsetter Institutional Textiles Catalogue</span>
-        <a href="/assets/TrendsetterTextilesCatalogueUS.pdf" download className="bg-[var(--theme-color)] text-white px-5 py-2 rounded-md font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity ml-auto sm:ml-0">
+        <a href={region.catalogueUrl} download className="bg-[var(--theme-color)] text-white px-5 py-2 rounded-md font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity ml-auto sm:ml-0">
           Download PDF
         </a>
       </div>
