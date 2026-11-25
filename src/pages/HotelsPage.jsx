@@ -1,5 +1,5 @@
 import React from 'react';
-import { BedDouble, Bath, Shirt, Target, CheckCircle2 } from 'lucide-react';
+import { BedDouble, Bath, Shirt, Target, CheckCircle2, UtensilsCrossed, Download, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
 import IndustryTabs from '../components/IndustryTabs';
@@ -110,6 +110,65 @@ export default function HotelsPage() {
             </ul>
           </div>
 
+        </div>
+
+        {/* F&B / Restaurant & Banquet Collection */}
+        <div className="mt-16 bg-white border border-slate/10 rounded-2xl p-8 md:p-10 shadow-sm text-left">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 border-b border-slate/10">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full text-white mb-3" style={{ backgroundColor: region.theme.primaryBg }}>
+                <UtensilsCrossed size={14} /> F&amp;B / Restaurant Collection ({region.measurementSystem})
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider text-slate">
+                Restaurant, Banquet &amp; Culinary Textiles
+              </h2>
+              <p className="text-sm md:text-base text-neutral-700 mt-2 max-w-3xl">
+                {region.fbCollection.subtitle}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <Link
+                to="/products/fb-restaurant"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md font-bold uppercase tracking-wider text-xs text-white hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: region.theme.primaryBg }}
+              >
+                Full F&amp;B Category <ArrowRight size={14} />
+              </Link>
+              <a
+                href={region.catalogueUrl}
+                download
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md font-bold uppercase tracking-wider text-xs border-2 hover:opacity-90 transition-opacity"
+                style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg }}
+              >
+                <Download size={14} /> PDF Catalogue
+              </a>
+            </div>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-slate/10 bg-neutral-bg/40 text-xs font-bold uppercase tracking-wider text-slate/70">
+                  <th className="py-3 px-4">SKU #</th>
+                  <th className="py-3 px-4">Product</th>
+                  <th className="py-3 px-4">Material</th>
+                  <th className="py-3 px-4">Size / Fit</th>
+                  <th className="py-3 px-4">{region.fbCollection.unitLabel}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate/10 text-sm">
+                {region.fbCollection.items.map((item) => (
+                  <tr key={item.sku} className="hover:bg-neutral-bg/30 transition-colors">
+                    <td className="py-3 px-4 font-mono font-bold whitespace-nowrap" style={{ color: region.theme.primaryBg }}>{item.sku}</td>
+                    <td className="py-3 px-4 font-semibold text-slate">{item.name}</td>
+                    <td className="py-3 px-4 text-neutral-700">{item.material}</td>
+                    <td className="py-3 px-4 text-neutral-700 whitespace-nowrap">{item.sizeLabel}</td>
+                    <td className="py-3 px-4 font-medium text-slate whitespace-nowrap">{item.dimensions}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Procurement Spec Box */}

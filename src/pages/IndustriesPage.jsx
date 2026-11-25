@@ -52,9 +52,9 @@ export default function IndustriesPage() {
             <div className="bg-slate/5 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors">
               <Building strokeWidth={1.5} size={32} className="text-[var(--theme-color)]" />
             </div>
-            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">HOTELS & RESORTS</h2>
+            <h2 className="text-2xl font-bold uppercase tracking-wider mb-4 text-[var(--theme-color)]">HOTELS, RESORTS &amp; F&amp;B</h2>
             <p className="leading-relaxed flex-grow text-lg text-neutral-800">
-              Premium linens, towels, and staff uniforms for hotels and resorts. Focus on high durability, guest comfort, and brand alignment.
+              Premium guest linens, towels, staff uniforms, and F&amp;B restaurant &amp; banquet textiles—including table runners, overlays, banquet skirting, chair covers, bar towels, and chef coats.
             </p>
             <span className="font-bold mt-6 inline-block uppercase tracking-wider group-hover:underline text-[var(--theme-color)]">VIEW CATALOGUE &rarr;</span>
           </Link>

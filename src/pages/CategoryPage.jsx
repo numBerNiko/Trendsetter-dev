@@ -58,7 +58,7 @@ const categoryData = {
   pillows: {
     title: "Institutional Pillows",
     description: "Shape-retaining, hypoallergenic pillows with optional fluid-resistant shells.",
-    image: "stacked_pillows.png",
+    image: "/Trendsetter-website-photos/stacked_pillows.png",
     specs: {
       threadCount: "T233 Shell",
       gsm: "800g Fill Weight",
@@ -71,12 +71,31 @@ const categoryData = {
       { qty: "500+ pcs", price: "Custom Quote" }
     ],
     moq: "50 pcs"
+  },
+  "fb-restaurant": {
+    title: "F&B / Restaurant & Banquet Linens",
+    description: "Commercial table linens, banquet skirting, chair covers, kitchen & bar towels, and chef coats engineered for hospitality and dining operations.",
+    image: "/Trendsetter-website-photos(2)/FACILITY & STAFF ESSENTIALS.png",
+    isFbCollection: true,
+    specs: {
+      threadCount: "Damask / Twill / Satin",
+      gsm: "Custom Weight by Spec",
+      blend: "100% Cotton Damask, Polycotton Twill, Poly / Spandex",
+      certifications: ["OEKO-TEX® Standard 100", "Commercial Laundering Grade"]
+    },
+    pricingTiers: [
+      { qty: "50–199 pcs", price: "By Specification Quote" },
+      { qty: "200–499 pcs", price: "Volume Tier Pricing" },
+      { qty: "500+ pcs", price: "Custom Program Quote" }
+    ],
+    moq: "50 pcs (or custom program)"
   }
 };
 
 export default function CategoryPage() {
   const { category } = useParams();
-  const data = categoryData[category];
+  const normalizedCategory = category === 'restaurant' || category === 'fb' ? 'fb-restaurant' : category;
+  const data = categoryData[normalizedCategory];
   const region = useRegion();
 
   if (!data) {
@@ -88,13 +107,15 @@ export default function CategoryPage() {
     );
   }
 
+  const imageSrc = data.image.startsWith('/') ? data.image : `/Trendsetter-website-photos/${data.image}`;
+
   return (
     <section className="py-16 bg-neutral-bg/30 min-h-screen text-slate" style={{ '--theme-color': region.theme.primaryBg }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb */}
         <div className="text-sm opacity-70 mb-8 font-medium">
-          <Link to="/products" className="hover:text-slate">Catalogue</Link> &gt; <span className="capitalize">{category}</span>
+          <Link to="/products" className="hover:text-slate">Catalogue</Link> &gt; <span className="capitalize">{data.title}</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -103,18 +124,20 @@ export default function CategoryPage() {
           <div>
             <div className="bg-white border border-slate/10 rounded-2xl overflow-hidden shadow-lg h-[400px] mb-6">
               <img 
-                src={`/Trendsetter-website-photos/${data.image}`} 
+                src={imageSrc} 
                 alt={`${data.title} bulk wholesale`} 
                 className="w-full h-full object-cover"
               />
             </div>
-            <button 
+            <a 
+              href={region.catalogueUrl}
+              download
               className="w-full flex items-center justify-center gap-2 bg-white border-2 py-4 rounded-lg font-bold hover:bg-slate hover:text-white transition-colors"
               style={{ borderColor: region.theme.primaryBg, color: region.theme.primaryBg }}
             >
               <Download strokeWidth={1.5} size={20} />
-              Download Spec Sheet (PDF)
-            </button>
+              Download Full Catalogue (PDF)
+            </a>
           </div>
 
           {/* Product Details */}
@@ -182,6 +205,78 @@ export default function CategoryPage() {
 
           </div>
         </div>
+
+        {/* Regional F&B / Restaurant SKUs & Standardized Measurements Table */}
+        {data.isFbCollection && (
+          <div className="mt-16 space-y-8">
+            <div className="bg-white rounded-2xl shadow-md border border-slate/10 overflow-hidden">
+              <div className="px-6 py-4 border-b border-slate/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2" style={{ backgroundColor: `${region.theme.primaryBg}10` }}>
+                <h2 className="text-lg font-bold uppercase tracking-wider text-slate">
+                  F&amp;B / Restaurant &amp; Banquet SKUs — {region.measurementSystem}
+                </h2>
+                <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white border border-slate/15 text-slate self-start sm:self-auto">
+                  {region.fbCollection.unitLabel}
+                </span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-slate/10 bg-neutral-bg/40 text-xs font-bold uppercase tracking-wider text-slate/70">
+                      <th className="py-3.5 px-5">SKU #</th>
+                      <th className="py-3.5 px-5">Product</th>
+                      <th className="py-3.5 px-5">Material</th>
+                      <th className="py-3.5 px-5">Shape / Size Label</th>
+                      <th className="py-3.5 px-5">{region.fbCollection.unitLabel}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate/10 text-sm md:text-base">
+                    {region.fbCollection.items.map((item) => (
+                      <tr key={item.sku} className="hover:bg-neutral-bg/30 transition-colors">
+                        <td className="py-3.5 px-5 font-mono font-bold whitespace-nowrap" style={{ color: region.theme.primaryBg }}>{item.sku}</td>
+                        <td className="py-3.5 px-5 font-semibold text-slate">{item.name}</td>
+                        <td className="py-3.5 px-5 text-slate/80">{item.material}</td>
+                        <td className="py-3.5 px-5 text-slate/80 whitespace-nowrap">{item.sizeLabel}</td>
+                        <td className="py-3.5 px-5 font-medium text-slate whitespace-nowrap">{item.dimensions}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-sm border border-slate/10 overflow-hidden">
+              <div className="px-6 py-4 border-b border-slate/10 bg-neutral-bg/40">
+                <h3 className="text-base font-bold uppercase tracking-wider text-slate">
+                  Classic 100% Cotton Damask Table &amp; Seating Linens
+                </h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-slate/10 bg-neutral-bg/20 text-xs font-bold uppercase tracking-wider text-slate/70">
+                      <th className="py-3 px-5">SKU #</th>
+                      <th className="py-3 px-5">Product</th>
+                      <th className="py-3 px-5">Material</th>
+                      <th className="py-3 px-5">Shape / Size Label</th>
+                      <th className="py-3 px-5">{region.fbCollection.unitLabel}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate/10 text-sm md:text-base">
+                    {region.fbCollection.classicItems.map((item) => (
+                      <tr key={item.sku} className="hover:bg-neutral-bg/30 transition-colors">
+                        <td className="py-3 px-5 font-mono font-bold whitespace-nowrap" style={{ color: region.theme.primaryBg }}>{item.sku}</td>
+                        <td className="py-3 px-5 font-semibold text-slate">{item.name}</td>
+                        <td className="py-3 px-5 text-slate/80">{item.material}</td>
+                        <td className="py-3 px-5 text-slate/80 whitespace-nowrap">{item.sizeLabel}</td>
+                        <td className="py-3 px-5 font-medium text-slate whitespace-nowrap">{item.dimensions}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
