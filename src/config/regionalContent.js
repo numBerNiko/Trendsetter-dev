@@ -1,11 +1,25 @@
 export const regionalContent = {
   us: {
     countryCode: "us",
+    regionName: "United States",
+    shortLabel: "USA",
     phone: "+1 (213) 537-3713",
     email: "customerservice@trendsettertextiles.com",
-    heroTagline: "USA INSTITUTIONAL PROCUREMENT HUB",
-    footerDescription: "Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the USA.",
-    phoneLabel: "(Toll-Free USA)",
+    heroTagline: "USA Institutional Procurement Hub",
+    footerDescription: "Dependable institutional bedding, hygiene textiles, and apparel for post-acute care, medical clinics, and hospitality properties across the USA.",
+    phoneLabel: "Toll-Free USA",
+    whatsappNumber: "12135373713",
+    whatsappUrl: "https://api.whatsapp.com/send?phone=12135373713",
+    representative: {
+      name: "Eileen",
+      role: "US Institutional Representative",
+      phone: "+1 (213) 537-3713",
+      tel: "+12135373713",
+      whatsappUrl: "https://api.whatsapp.com/send?phone=12135373713"
+    },
+    headquarters: "Los Angeles, CA, USA",
+    warehouseSummary: "Domestic US inventory reserves coordinated from Los Angeles for dependable healthcare and hospitality fulfillment nationwide.",
+    complianceHighlight: "CPSC 16 CFR, NFPA 701, OEKO-TEX® Standard 100 & WRAP",
     catalogueUrl: "/assets/TrendsetterTextilesCatalogueUS.pdf",
     measurementSystem: "Imperial (inches)",
     fbCollection: {
@@ -34,19 +48,36 @@ export const regionalContent = {
       ]
     },
     theme: {
-      primaryBg: "#1B4D3E", // Dark green
-      secondaryBg: "#D8D3CC", // Coral / Warm Tan
-      pageBg: "#EAE6DF",
-      cardBg: "#F5F5DC"
+      primaryBg: "#1B4D3E",
+      primaryHover: "#143D31",
+      primaryDark: "#0F2D24",
+      secondaryBg: "#F1EFEA",
+      pageBg: "#F8F7F4",
+      cardBg: "#FFFFFF",
+      accentGold: "#C49A45"
     }
   },
   ph: {
     countryCode: "ph",
+    regionName: "Philippines",
+    shortLabel: "Philippines",
     phone: "+63 952 468 4603",
     email: "customerservice@trendsettertextiles.com",
-    heroTagline: "PHILIPPINES INSTITUTIONAL PROCUREMENT HUB",
-    footerDescription: "Dependable institutional bedding, hygiene textiles, and apparel for post-acute and long-term care facilities across the Philippines.",
-    phoneLabel: "(Available via WhatsApp)",
+    heroTagline: "Philippines Institutional Procurement Hub",
+    footerDescription: "Dispatched directly from our Laguna / Biñan warehouse facility for fast local shipping to hospitals, clinics, and hotels across the Philippines.",
+    phoneLabel: "Available via WhatsApp",
+    whatsappNumber: "639524684603",
+    whatsappUrl: "https://api.whatsapp.com/send?phone=639524684603",
+    representative: {
+      name: "Osama",
+      role: "Philippines Institutional Representative",
+      phone: "+63 917 888 4059",
+      tel: "+639178884059",
+      whatsappUrl: null
+    },
+    headquarters: "Metro Manila, Philippines",
+    warehouseSummary: "Dispatched directly from our Laguna / Biñan warehouse facility for rapid replenishment across Metro Manila and nationwide.",
+    complianceHighlight: "OEKO-TEX® Standard 100, WRAP & Tropical Commercial Sanitation Grade",
     catalogueUrl: "/assets/TrendsetterTextilesCataloguePH.pdf",
     measurementSystem: "Metric (cm)",
     fbCollection: {
@@ -75,10 +106,13 @@ export const regionalContent = {
       ]
     },
     theme: {
-      primaryBg: "#3A606E", // Deep slate-teal
-      secondaryBg: "#E8ECEB", // Grayish-mist
-      pageBg: "#F3F5F5",
-      cardBg: "#FFFFFF"
+      primaryBg: "#3A606E",
+      primaryHover: "#2D4C57",
+      primaryDark: "#1B323B",
+      secondaryBg: "#EEF2F3",
+      pageBg: "#F6F8F8",
+      cardBg: "#FFFFFF",
+      accentGold: "#C49A45"
     }
   }
 };

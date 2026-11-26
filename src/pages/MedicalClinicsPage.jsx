@@ -1,21 +1,52 @@
 import React from 'react';
-import { Stethoscope, Droplets, Target, ShieldCheck, Activity, Building, ShoppingBag, CheckCircle2 } from 'lucide-react';
+import {
+  Stethoscope,
+  Activity,
+  Building,
+  ShoppingBag,
+  CheckCircle2,
+  ArrowRight,
+  PackageCheck
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
 import IndustryTabs from '../components/IndustryTabs';
 
 export default function MedicalClinicsPage() {
   const region = useRegion();
+
   return (
-    <div className="bg-neutral-bg text-slate min-h-screen pb-20 font-sans" style={{ '--theme-color': region.theme.primaryBg }}>
-      
-      {/* Hero */}
-      <section className="text-neutral-bg py-20 md:py-32 text-center relative overflow-hidden border-b-8" style={{ backgroundColor: region.theme.primaryBg, borderBottomColor: region.theme.primaryBg }}>
-        <img src="/Trendsetter-website-photos/professional_medical_scrubs.png" className="absolute inset-0 w-full h-full object-cover opacity-30" alt="Medical Clinics Textiles" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Textile Solutions for Outpatient and Specialty Clinics</h1>
-          <p className="text-lg md:text-xl opacity-90 leading-relaxed">
-            Specialized textiles for Outpatient, Urgent Care, and Specialty Clinics. Focus on workflow fit, compliance, and patient comfort.
+    <div
+      className="text-ink min-h-screen font-sans"
+      style={{ backgroundColor: region.theme.pageBg }}
+    >
+      {/* Editorial Dark Hero */}
+      <section
+        className="relative py-16 sm:py-20 lg:py-24 text-white text-center overflow-hidden"
+        style={{ backgroundColor: region.theme.primaryDark }}
+      >
+        <img
+          src="/Trendsetter-website-photos/professional_medical_scrubs.png"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          alt="Medical clinics linens and scrubs"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: region.isPH
+              ? 'linear-gradient(120deg, rgba(27,50,59,0.95) 0%, rgba(27,50,59,0.86) 100%)'
+              : 'linear-gradient(120deg, rgba(15,45,36,0.95) 0%, rgba(15,45,36,0.86) 100%)'
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C49A45]/20 border border-[#C49A45]/40 text-[#DFC07A] text-xs font-bold uppercase tracking-wider mb-5">
+            Outpatient &amp; Specialty Care
+          </p>
+          <h1 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+            Textile Solutions for Outpatient &amp; Specialty Clinics
+          </h1>
+          <p className="text-base sm:text-lg text-white/85 leading-relaxed max-w-2xl mx-auto">
+            High-turnover exam room linens, clinical staff scrubs, and compliant patient wear built for daily clinic workflows.
           </p>
         </div>
       </section>
@@ -23,106 +54,113 @@ export default function MedicalClinicsPage() {
       <IndustryTabs />
 
       {/* Categories */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Activity strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
-            <h3 
-              className="font-bold text-sm tracking-wider uppercase mb-5"
-              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
-            >
-              EXAM & TREATMENT ROOMS
-            </h3>
-            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Exam table covers/drapes</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Institutional-grade linens (T130/T180)</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Lightweight thermal blankets</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Medical-grade barrier pillows & fluid-resistant protectors</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Antimicrobial privacy/cubicle curtains</span>
-              </li>
+      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <div className="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/90">
+            <div className="w-12 h-12 rounded-xl bg-[var(--theme-color)]/10 text-[var(--theme-color)] flex items-center justify-center mb-6">
+              <Activity strokeWidth={1.75} size={26} />
+            </div>
+            <h2 className="font-display text-xl font-bold text-ink mb-5">
+              Exam &amp; Treatment Rooms
+            </h2>
+            <ul className="space-y-3.5 text-slate-600 text-sm sm:text-base leading-relaxed">
+              {[
+                'Exam table covers and clinical drapes',
+                'Institutional-grade linens (T-130 / T-180)',
+                'Lightweight thermal blankets',
+                'Medical-grade barrier pillows & fluid-resistant protectors',
+                'Antimicrobial privacy and cubicle curtains'
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <CheckCircle2 strokeWidth={1.75} size={18} className="text-[var(--theme-color)] shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Stethoscope strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
-            <h3 
-              className="font-bold text-sm tracking-wider uppercase mb-5"
-              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
-            >
-              STAFF & PATIENT WEAR
-            </h3>
-            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>High-turnover patient gowns (telemetry, maternity, pediatric)</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Industrial-wash scrubs (custom colors, logo embroidery)</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Clinical lab coats (short/long)</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Fall-prevention treaded footwear</span>
-              </li>
+          <div className="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/90">
+            <div className="w-12 h-12 rounded-xl bg-[var(--theme-color)]/10 text-[var(--theme-color)] flex items-center justify-center mb-6">
+              <Stethoscope strokeWidth={1.75} size={26} />
+            </div>
+            <h2 className="font-display text-xl font-bold text-ink mb-5">
+              Staff &amp; Patient Wear
+            </h2>
+            <ul className="space-y-3.5 text-slate-600 text-sm sm:text-base leading-relaxed">
+              {[
+                'High-turnover patient gowns (telemetry, maternity, pediatric)',
+                'Industrial-wash scrubs (custom colors & logo embroidery)',
+                'Clinical lab coats (short and long cuts)',
+                'Fall-prevention double-treaded footwear'
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <CheckCircle2 strokeWidth={1.75} size={18} className="text-[var(--theme-color)] shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate/10">
-            <Building strokeWidth={1.5} size={36} style={{ color: region.theme.primaryBg }} className="mb-6" />
-            <h3 
-              className="font-bold text-sm tracking-wider uppercase mb-5"
-              style={{ color: region.phone.includes('+63') ? '#8C6215' : region.theme.primaryBg }}
-            >
-              EVS, FACILITIES & PUBLIC AREAS
-            </h3>
-            <ul className="space-y-4 text-neutral-700 text-base leading-relaxed">
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Commercial-grade lobby textiles (heavy-duty upholstery covers)</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>Washroom textiles (bulk hand towels, bath mats)</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 strokeWidth={1.5} size={18} className="shrink-0 mr-3 mt-1" style={{ color: region.theme.primaryBg }} />
-                <span>EVS supplies (isolation laundry bags, industrial microfiber systems)</span>
-              </li>
+          <div className="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/90">
+            <div className="w-12 h-12 rounded-xl bg-[var(--theme-color)]/10 text-[var(--theme-color)] flex items-center justify-center mb-6">
+              <Building strokeWidth={1.75} size={26} />
+            </div>
+            <h2 className="font-display text-xl font-bold text-ink mb-5">
+              EVS, Facilities &amp; Public Areas
+            </h2>
+            <ul className="space-y-3.5 text-slate-600 text-sm sm:text-base leading-relaxed">
+              {[
+                'Commercial-grade lobby and waiting room textiles',
+                'Washroom textiles (bulk hand towels & bath mats)',
+                'EVS supplies (isolation laundry bags & microfiber systems)'
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <CheckCircle2 strokeWidth={1.75} size={18} className="text-[var(--theme-color)] shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
-
         </div>
 
-        {/* Optional Upsell Section */}
-        <div className="mt-12 max-w-3xl mx-auto border p-8 rounded-xl text-center bg-[var(--theme-color)]/5 border-[var(--theme-color)]/20">
-          <ShoppingBag strokeWidth={1.5} size={32} style={{ color: region.theme.primaryBg }} className="mx-auto mb-4" />
-          <h4 className="text-xl font-bold uppercase tracking-wider mb-2 text-slate">PATIENT DISCHARGE / WELCOME KITS</h4>
-          <p className="opacity-80 text-sm mb-4">Optional upsell: Custom branded tote bags for patient belongings or new-patient information packets.</p>
-          <Link to="/custom-programs" className="font-bold uppercase tracking-wider hover:underline" style={{ color: region.theme.primaryBg }}>EXPLORE CUSTOM BRANDING</Link>
+        {/* Custom Branding Upsell */}
+        <div className="mt-12 bg-white border border-slate-200/90 p-8 sm:p-10 rounded-2xl shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-start gap-4 text-left">
+            <div className="p-3.5 rounded-xl bg-[var(--theme-color)]/10 text-[var(--theme-color)] shrink-0">
+              <ShoppingBag strokeWidth={1.75} size={24} />
+            </div>
+            <div>
+              <h3 className="font-display text-xl font-bold text-ink mb-1">
+                Patient Discharge &amp; Welcome Kits
+              </h3>
+              <p className="text-sm text-slate-600 max-w-xl">
+                Custom-branded tote bags for patient belongings, embroidered staff uniforms, and tailored clinic packaging programs.
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/custom-programs"
+            className="inline-flex items-center gap-1.5 font-bold text-sm text-[var(--theme-color)] hover:underline shrink-0"
+          >
+            Explore Custom Branding <ArrowRight size={15} />
+          </Link>
         </div>
-        
-        <div className="mt-16 text-center px-4 sm:px-0">
-          <Link to="/contact" className="inline-block w-full sm:w-auto px-8 py-4 rounded-md font-bold text-lg shadow-md border-2 border-[var(--theme-color)] text-white bg-[var(--theme-color)] hover:bg-transparent hover:text-[var(--theme-color)] transition-all duration-300 ease-in-out text-center">
-            REQUEST QUOTE FOR CLINICS
+
+        {/* Bottom CTA */}
+        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-3.5">
+          <Link
+            to="/contact?inquiry=quote"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-lg font-bold text-sm sm:text-base text-white bg-[var(--theme-color)] hover:bg-[var(--theme-hover)] shadow-md transition-colors"
+          >
+            <span>Request Quote for Clinics</span>
+            <ArrowRight size={16} />
+          </Link>
+          <Link
+            to="/request-samples"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-lg font-semibold text-sm sm:text-base border border-slate-300 bg-white hover:border-[var(--theme-color)] hover:text-[var(--theme-color)] text-ink transition-colors"
+          >
+            <PackageCheck size={16} />
+            <span>Request Physical Samples</span>
           </Link>
         </div>
       </section>

@@ -1,133 +1,199 @@
 import React from 'react';
-import { Scissors, Tag, Package, Box, RefreshCcw, Download } from 'lucide-react';
+import {
+  Scissors,
+  Tag,
+  Package,
+  Box,
+  RefreshCcw,
+  Download,
+  ArrowRight,
+  PackageCheck
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRegion } from '../hooks/useRegion';
 
 export default function CustomProgramsPage() {
   const region = useRegion();
+
+  const capabilities = [
+    {
+      title: 'Private Labeling',
+      desc: 'Launch your own property-branded line or equip multi-site hospitality and healthcare groups with custom-labeled textiles and bespoke care tags.',
+      image: '/Trendsetter-website-photos/Private_Labeling.png',
+      icon: Tag
+    },
+    {
+      title: 'Custom Embroidery',
+      desc: 'Strengthen your brand identity with precision logo embroidery and monogramming on towels, robes, scrubs, and uniforms with exact Pantone matching.',
+      image: '/Trendsetter-website-photos/Bespoke_Embroidery_&_Monogramming.png',
+      icon: Scissors
+    },
+    {
+      title: 'Specialized Packaging',
+      desc: 'From retail-ready bundling for resort boutiques to protective vacuum packing for clinical supply rooms, we tailor packaging to your intake workflow.',
+      image: '/Trendsetter-website-photos/Tailored_Packaging_&_Bundling.png',
+      icon: Package
+    },
+    {
+      title: 'Bulk Order Fulfillment',
+      desc: region.isPH
+        ? 'Localized warehousing directly within our Laguna / Biñan & Metro Manila logistics corridor, ensuring linen closets stay stocked and large orders dispatch rapidly.'
+        : 'Domestic US fulfillment reserves coordinated through Los Angeles, safeguarding your facilities against bottlenecks with scheduled recurring replenishment.',
+      image: '/Trendsetter-website-photos/fulfillment_warehouse.png',
+      icon: Box
+    },
+    {
+      title: 'Sourcing & Weaving Flexibility',
+      desc: 'Operating unique mattress depths, custom banquet drops, or proprietary fabric blends? Our mills adapt weaving and cutting dimensions to your tech pack.',
+      image: '/Trendsetter-website-photos/Sourcing_&_Weaving_Flexibility.png',
+      icon: RefreshCcw
+    }
+  ];
+
   return (
-    <section className="py-12 md:py-20 bg-neutral-bg text-slate min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ '--theme-color': region.theme.primaryBg }}>
-        <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[var(--theme-color)]">Flexible Customization for Institutional Buyers</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto text-neutral-800">
-            Bespoke textile solutions for institutional branding and specialized operational requirements.
+    <div
+      className="text-ink min-h-screen font-sans"
+      style={{ backgroundColor: region.theme.pageBg }}
+    >
+      {/* Editorial Dark Hero */}
+      <section
+        className="relative py-16 sm:py-20 lg:py-24 text-white text-center overflow-hidden"
+        style={{ backgroundColor: region.theme.primaryDark }}
+      >
+        <img
+          src="/Trendsetter-website-photos/Bespoke_Embroidery_&_Monogramming.png"
+          alt="Custom institutional textile manufacturing"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: region.isPH
+              ? 'linear-gradient(120deg, rgba(27,50,59,0.95) 0%, rgba(27,50,59,0.86) 100%)'
+              : 'linear-gradient(120deg, rgba(15,45,36,0.95) 0%, rgba(15,45,36,0.86) 100%)'
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C49A45]/20 border border-[#C49A45]/40 text-[#DFC07A] text-xs font-bold uppercase tracking-wider mb-5">
+            Custom Manufacturing &amp; Private Label
+          </p>
+          <h1 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+            Flexible Customization for Institutional Buyers
+          </h1>
+          <p className="text-base sm:text-lg text-white/85 leading-relaxed max-w-2xl mx-auto">
+            Bespoke weaving, Pantone-matched embroidery, private labeling, and tailored logistics built around your facility&apos;s exact specifications.
           </p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
-          
-          <div className="bg-white border border-slate/10 rounded-2xl shadow-sm hover:shadow-md hover:border-deep-teal transition-all overflow-hidden flex flex-col">
-            <img src="/Trendsetter-website-photos/Private_Labeling.png" alt="Private Labeling" className="w-full h-48 object-cover" />
-            <div className="p-8 flex-grow">
-              <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Tag strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
+      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Capabilities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-16">
+          {capabilities.map((cap) => {
+            const Icon = cap.icon;
+            return (
+              <div
+                key={cap.title}
+                className="bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:shadow-xl hover:border-[var(--theme-color)]/40 transition-all overflow-hidden flex flex-col"
+              >
+                <div className="h-48 overflow-hidden bg-slate-100">
+                  <img
+                    src={cap.image}
+                    alt={cap.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-7 flex-grow flex flex-col">
+                  <div className="w-11 h-11 rounded-xl bg-[var(--theme-color)]/10 text-[var(--theme-color)] flex items-center justify-center mb-4">
+                    <Icon strokeWidth={1.75} size={22} />
+                  </div>
+                  <h2 className="font-display text-xl font-bold mb-2.5 text-ink">
+                    {cap.title}
+                  </h2>
+                  <p className="leading-relaxed text-sm text-slate-600">{cap.desc}</p>
+                </div>
               </div>
-              <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Private Labeling</h2>
-              <p className="leading-relaxed text-sm text-neutral-800">
-                Launch your own property-branded retail line or equip your nationwide hotel chain with exclusive custom-labeled textiles, complete with bespoke care tags.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white border border-slate/10 rounded-2xl shadow-sm hover:shadow-md hover:border-deep-teal transition-all overflow-hidden flex flex-col">
-            <img src="/Trendsetter-website-photos/Bespoke_Embroidery_&_Monogramming.png" alt="Custom Embroidery" className="w-full h-48 object-cover" />
-            <div className="p-8 flex-grow">
-              <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Scissors strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
-              </div>
-              <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Custom Embroidery</h2>
-              <p className="leading-relaxed text-sm text-neutral-800">
-                Enhance your property's brand identity with precision logo embroidery on towels, robes, and uniforms. Exact Pantone matching available.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white border border-slate/10 rounded-2xl shadow-sm hover:shadow-md hover:border-deep-teal transition-all overflow-hidden flex flex-col">
-            <img src="/Trendsetter-website-photos/Tailored_Packaging_&_Bundling.png" alt="Specialized Packaging" className="w-full h-48 object-cover" />
-            <div className="p-8 flex-grow">
-              <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Package strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
-              </div>
-              <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Specialized Packaging</h2>
-              <p className="leading-relaxed text-sm text-neutral-800">
-                From retail-ready bundling for resort boutiques to sterilized vacuum packing for medical facilities, we adapt packaging to your needs.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white border border-slate/10 rounded-2xl shadow-sm hover:shadow-md hover:border-deep-teal transition-all overflow-hidden flex flex-col">
-            <img src="/Trendsetter-website-photos/fulfillment_warehouse.png" alt="Bulk Order Fulfillment" className="w-full h-48 object-cover" />
-            <div className="p-8 flex-grow">
-              <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <Box strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
-              </div>
-              <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Bulk Order Fulfillment</h2>
-              <p className="leading-relaxed text-sm text-neutral-800">
-                Massive localized warehousing directly within Metro Manila, ensuring your linen closets are never empty and large orders are fulfilled quickly.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white border border-slate/10 rounded-2xl shadow-sm hover:shadow-md hover:border-deep-teal transition-all overflow-hidden flex flex-col">
-            <img src="/Trendsetter-website-photos/Sourcing_&_Weaving_Flexibility.png" alt="Sourcing Flexibility" className="w-full h-48 object-cover" />
-            <div className="p-8 flex-grow">
-              <div className="bg-neutral-bg w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-slate/5">
-                <RefreshCcw strokeWidth={1.5} size={28} className="text-[var(--theme-color)]" />
-              </div>
-              <h2 className="text-2xl font-bold mb-4 text-[var(--theme-color)]">Sourcing Flexibility</h2>
-              <p className="leading-relaxed text-sm text-neutral-800">
-                Operating unique mattress depths or require specific proprietary blends? Our facilities can adapt weaving and cutting dimensions to your specifications.
-              </p>
-            </div>
-          </div>
-
+            );
+          })}
         </div>
 
         {/* Quality Assurance Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-10 text-center text-[var(--theme-color)]">The Engineering Behind Our Craftsmanship</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm text-left">
-              <h3 className="text-xl font-bold mb-4 text-[var(--theme-color)]">Collar Recovery & Anti-Deformation</h3>
-              <p className="text-sm leading-relaxed text-neutral-800">
-                We eliminate 'bacon neck' in our knit wear. All collars are engineered with spandex/elastane-blended ribbing to ensure 100% elastic recovery and lay-flat geometry after industrial laundering.
+        <div className="mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#9A7426] mb-2">
+              Quality Engineering
+            </p>
+            <h2 className="font-display text-3xl font-bold text-ink">
+              The Engineering Behind Our Craftsmanship
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200/90 shadow-xs text-left">
+              <h3 className="font-display text-lg font-bold mb-3 text-ink">
+                Collar Recovery &amp; Anti-Deformation
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                We eliminate collar curling in our knitwear. Collars are engineered with elastane-blended ribbing for consistent recovery and lay-flat geometry after industrial laundering.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm text-left">
-              <h3 className="text-xl font-bold mb-4 text-[var(--theme-color)]">Strict Geometrical Tolerances</h3>
-              <p className="text-sm leading-relaxed text-neutral-800">
-                While the standard fast-fashion tolerance is up to 1/2-inch variance, we enforce strict 1/4-inch to 1/8-inch manufacturing tolerances. Every bulk delivery aligns perfectly with your master pattern.
+            <div className="bg-white p-8 rounded-2xl border border-slate-200/90 shadow-xs text-left">
+              <h3 className="font-display text-lg font-bold mb-3 text-ink">
+                Strict Geometrical Tolerances
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                While standard retail tolerances allow up to 1/2-inch variance, we enforce tight 1/4-inch to 1/8-inch manufacturing tolerances so every bulk delivery matches your master pattern.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm text-left">
-              <h3 className="text-xl font-bold mb-4 text-[var(--theme-color)]">Statistical Quality Verification (AQL)</h3>
-              <p className="text-sm leading-relaxed text-neutral-800">
-                We utilize rigorous Acceptable Quality Level (AQL) statistical sampling standards. Every batch destined for clinical or hospitality use undergoes systematic stress testing for stitch density (SPI) and seam strength.
+            <div className="bg-white p-8 rounded-2xl border border-slate-200/90 shadow-xs text-left">
+              <h3 className="font-display text-lg font-bold mb-3 text-ink">
+                Statistical Quality Verification (AQL)
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                Every clinical and hospitality production batch undergoes Acceptable Quality Level (AQL) sampling for stitch density (SPI), tensile strength, and seam durability.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="rounded-2xl p-12 text-center max-w-4xl mx-auto shadow-xl text-white" style={{ backgroundColor: region.theme.primaryBg }}>
-          <h2 className="text-3xl font-bold mb-6 text-white">Start Your Custom Project</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-white font-medium opacity-100">
-            Our procurement engineers are ready to review your tech packs or help develop specifications from scratch. 
+        {/* Start Your Custom Project CTA */}
+        <div
+          className="rounded-2xl p-8 sm:p-12 text-center shadow-lg text-white"
+          style={{ backgroundColor: region.theme.primaryDark }}
+        >
+          <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3 text-white">
+            Start Your Custom Textile Program
+          </h2>
+          <p className="text-sm sm:text-base mb-8 max-w-2xl mx-auto text-white/80 leading-relaxed">
+            Our procurement specialists are ready to review your tech packs, provide physical fabric swatches, or help develop specifications from scratch.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
-            <Link to="/contact" className="inline-block px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-md bg-[#F5F5DC] hover:opacity-80" style={{ color: region.theme.primaryBg }}>
-              START CUSTOM ORDER
-            </Link>
-            <a 
-              href={region.catalogueUrl} 
-              download
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-wider transition-colors shadow-sm border-2 border-white text-white hover:bg-white hover:text-slate"
+          <div className="flex flex-col sm:flex-row justify-center gap-3.5 items-center">
+            <Link
+              to="/contact?inquiry=custom"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-bold text-sm sm:text-base bg-[#C49A45] hover:bg-[#DFC07A] text-[#0F172A] shadow-md transition-colors"
             >
-              <Download strokeWidth={1.5} size={20} /> PDF CATALOGUE
+              <span>Start Custom Order</span>
+              <ArrowRight size={16} />
+            </Link>
+            <Link
+              to="/request-samples"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm sm:text-base bg-white/10 hover:bg-white/20 border border-white/25 text-white transition-colors"
+            >
+              <PackageCheck size={16} />
+              <span>Request Physical Samples</span>
+            </Link>
+            <a
+              href={region.catalogueUrl}
+              download
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm sm:text-base border border-white/25 text-white hover:bg-white hover:text-ink transition-colors"
+            >
+              <Download strokeWidth={1.75} size={16} />
+              <span>PDF Catalogue</span>
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
