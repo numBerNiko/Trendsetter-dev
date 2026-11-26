@@ -7,35 +7,30 @@ export default function IndustryTabs() {
   const region = useRegion();
 
   const tabClass = ({ isActive }) =>
-    `py-4 px-2 text-sm md:text-base font-bold uppercase tracking-wider border-b-4 transition-colors flex items-center gap-2 ${
+    `py-3.5 px-3 sm:px-4 text-xs sm:text-sm font-semibold border-b-2 transition-colors flex items-center gap-2 whitespace-nowrap shrink-0 min-h-[48px] ${
       isActive
-        ? ''
-        : 'text-neutral-500 border-transparent hover:text-neutral-800'
+        ? 'text-[var(--theme-color)] border-[var(--theme-color)]'
+        : 'text-slate-500 border-transparent hover:text-ink hover:border-slate-300'
     }`;
 
-  const tabStyle = ({ isActive }) =>
-    isActive
-      ? {
-          color: region.theme.primaryBg,
-          borderBottomColor: region.theme.primaryBg,
-        }
-      : {};
-
   return (
-    <div className="bg-white border-b border-slate/10 sticky top-20 z-45 shadow-sm">
+    <div
+      className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-[68px] lg:top-[76px] z-30"
+      style={{ '--theme-color': region.theme.primaryBg }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center space-x-8 md:space-x-12">
-          <NavLink to="/industries/nursing-homes" className={tabClass} style={tabStyle}>
-            <HeartHandshake strokeWidth={1.5} size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
-            <span>Nursing Homes</span>
+        <div className="flex justify-start sm:justify-center gap-2 sm:gap-8 overflow-x-auto">
+          <NavLink to="/industries/nursing-homes" className={tabClass}>
+            <HeartHandshake strokeWidth={1.75} size={17} />
+            <span>Nursing Homes &amp; Hospitals</span>
           </NavLink>
-          <NavLink to="/industries/medical-clinics" className={tabClass} style={tabStyle}>
-            <Stethoscope strokeWidth={1.5} size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
+          <NavLink to="/industries/medical-clinics" className={tabClass}>
+            <Stethoscope strokeWidth={1.75} size={17} />
             <span>Medical Clinics</span>
           </NavLink>
-          <NavLink to="/industries/hotels" className={tabClass} style={tabStyle}>
-            <Hotel strokeWidth={1.5} size={18} className={region.phone.includes('+63') ? 'text-yellow-600' : 'text-green-900'} />
-            <span>Hotels & Resorts</span>
+          <NavLink to="/industries/hotels" className={tabClass}>
+            <Hotel strokeWidth={1.75} size={17} />
+            <span>Hotels, Resorts &amp; F&amp;B</span>
           </NavLink>
         </div>
       </div>
